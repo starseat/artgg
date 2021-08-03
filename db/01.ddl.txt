@@ -1,0 +1,10 @@
+CREATE TABLE `ci_sessions` (
+  `id` varchar(48) NOT NULL DEFAULT '0',
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',
+  `timestamp` int unsigned NOT NULL DEFAULT '0',
+  `user_agent` varchar(128) NOT NULL,
+  `last_activity` int unsigned NOT NULL DEFAULT '0',
+  `data` text NOT NULL,
+  PRIMARY KEY (`id`,`ip_address`),
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
