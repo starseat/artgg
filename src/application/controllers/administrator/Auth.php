@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-include_once(APPPATH . 'controllers/_admin/AdminController.php');
+include_once(APPPATH . 'controllers/administrator/AdminController.php');
 
 class Auth extends AdminController {
 	public function __construct()

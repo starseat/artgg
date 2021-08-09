@@ -19,8 +19,8 @@ class Admin extends Base_Controller
 			log_message('artgg', '[admin] login ok');
 		}
 		else {
-			log_message('artgg', '[admin] is not login. redirect [/_admin/auth/login]');
-			redirect('/_admin/auth/login');
+			log_message('artgg', '[admin] is not login. redirect [/administrator/auth/login]');
+			redirect('/administrator/auth/login');
 		}
 		
 	}
