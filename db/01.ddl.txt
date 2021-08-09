@@ -7,4 +7,27 @@ CREATE TABLE `ci_sessions` (
   `data` text NOT NULL,
   PRIMARY KEY (`id`,`ip_address`),
   KEY `ci_sessions_timestamp` (`timestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+
+/**
+ * 아트경기 회원
+ * - member_type:
+ *  + A: Admin
+ *  + M: Manager
+ *  + B: Basic
+ */
+CREATE TABLE artgg_members (
+	seq BIGINT NOT NULL AUTO_INCREMENT,
+  user_id VARCHAR(32) NOT NULL,    
+	email VARCHAR(64) NULL,
+	name VARCHAR(32) NULL DEFAULT NULL,
+	password VARCHAR(128) NOT NULL,
+	member_type CHAR(1) NOT NULL DEFAULT 'B',
+	created_at DATETIME NOT NULL DEFAULT now(),
+	updated_at DATETIME NOT NULL DEFAULT now(),
+	deleted_at DATETIME NULL DEFAULT NULL,
+	PRIMARY KEY (seq, user_id),
+	UNIQUE INDEX user_id (user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+
+
