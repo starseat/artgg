@@ -4,3 +4,5 @@
 </footer>
 </div>
 </div>
+
+<script src="/public/admin/js/common.js"></script>

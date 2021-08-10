@@ -11,6 +11,20 @@ class Base_Controller extends CI_Controller {
 		$this->load->helper(array('url', 'date'));
 	}
 
+	protected function _header()
+	{
+		$this->load->view('fragments/head');
+		$this->load->view('fragments/header');
+
+		$this->load->view('fragments/navi');
+	}
+
+	protected function _footer()
+	{
+		$this->load->view('fragments/footer');
+		$this->load->view('fragments/tail');
+	}
+
 	/* **************************************************************************************************** */
 	/* **************************************************************************************************** */
 	/* UTIL */
