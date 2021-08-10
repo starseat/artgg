@@ -13,4 +13,17 @@ class AdminController extends Base_Controller {
 		// 	redirect('/administrator/auth/login');
 		// }
 	}
+
+	protected function _header() {
+		$this->load->view('admin/fragments/head');
+		$this->load->view('admin/fragments/header');
+
+		$this->load->view('admin/fragments/navi');
+		$this->load->view('admin/fragments/navi_top');
+	}
+
+	protected function _footer() {
+		$this->load->view('admin/fragments/footer');
+		$this->load->view('admin/fragments/tail');
+	}
 }

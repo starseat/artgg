@@ -14,4 +14,20 @@ class Main extends AdminController
 		log_message('artgg', '[admin.main] enter..');
 		$this->load->view('admin/main');
 	}
+
+	/**
+	 * 사이트 해더, 푸터 자동 추가
+	 */
+	public function _remap($method)
+	{
+		// 해더
+		$this->_header();
+
+		if (method_exists($this, $method)) {
+			$this->{"${method}"}();
+		}
+
+		// 푸터
+		$this->_footer();
+	}
 }
