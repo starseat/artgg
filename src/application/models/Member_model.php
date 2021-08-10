@@ -3,7 +3,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Member_model extends Base_Model
 {
-
+	const MEMBER_TYPE_ADMIN = 'A';
+	const MEMBER_TYPE_MANAGER = 'M';
+	const MEMBER_TYPE_BASIC = 'B';
+	
 	public function __construct()
 	{
 		parent::__construct();
