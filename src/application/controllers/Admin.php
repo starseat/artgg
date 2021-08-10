@@ -17,6 +17,7 @@ class Admin extends Base_Controller
 		if ($this->session->userdata('is_login')) {
 			// todo..
 			log_message('artgg', '[admin] login ok');
+			redirect('/administrator/main');
 		}
 		else {
 			log_message('artgg', '[admin] is not login. redirect [/administrator/auth/login]');
