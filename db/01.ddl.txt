@@ -1,3 +1,7 @@
+
+/**
+ * CI 세션
+ */
 CREATE TABLE `ci_sessions` (
   `id` varchar(48) NOT NULL DEFAULT '0',
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
@@ -18,7 +22,7 @@ CREATE TABLE `ci_sessions` (
  */
 CREATE TABLE artgg_members (
 	seq BIGINT NOT NULL AUTO_INCREMENT,
-  user_id VARCHAR(32) NOT NULL,    
+	user_id VARCHAR(32) NOT NULL,    
 	email VARCHAR(64) NULL,
 	name VARCHAR(32) NULL DEFAULT NULL,
 	password VARCHAR(128) NOT NULL,
@@ -28,6 +32,25 @@ CREATE TABLE artgg_members (
 	deleted_at DATETIME NULL DEFAULT NULL,
 	PRIMARY KEY (seq, user_id),
 	UNIQUE INDEX user_id (user_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/**
+ * 아트경기 프로그램의 파일
+ */
+CREATE TABLE artgg_file (
+	seq BIGINT NOT NULL AUTO_INCREMENT, 
+	target_seq BIGINT NOT NULL, 
+    target_type VARCHAR(16) NOT NULL,   -- 'program, notice, promotion'
+	sort TINYINT, 
+    real_name VARCHAR(256) NOT NULL, 
+	save_name VARCHAR(512) NOT NULL, 
+    upload_path VARCHAR(2048) NOT NULL, 
+	caption VARCHAR(1024), 
+	link VARCHAR(1024), 
+	type VARCHAR(1) NOT NULL DEFAULT 'I', -- I: image, V: video, F: file, T: thumbnail
+	storage_type VARCHAR(1) NOT NULL DEFAULT 'L', -- L: local, W: Web	
+    created_at DATETIME NOT NULL DEFAULT now(),
+	PRIMARY KEY (`seq`, `target_seq`, `target_type` )
+) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
 
 
