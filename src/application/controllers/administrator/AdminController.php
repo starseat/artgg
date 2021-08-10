@@ -8,10 +8,18 @@ class AdminController extends Base_Controller {
 
 		$this->load->library('session');
 
-		// $this->load->helper('url');
-		// if (!$this->session->userdata('is_login')) {
-		// 	redirect('/administrator/auth/login');
-		// }
+		if (!$this->session->userdata('is_login')) {
+			$url1 = $this->uri->segment(2);
+			if (empty($url1) || $url1 != 'auth') {
+				return redirect('/administrator/auth/login');
+			}
+			else {
+				$url2 = $this->uri->segment(3);
+				if(empty($url2) || !($url2 == 'login' || $url2 == 'logout') ) {
+					return redirect('/administrator/auth/login');
+				}
+			}			
+		}
 	}
 
 	protected function _header() {

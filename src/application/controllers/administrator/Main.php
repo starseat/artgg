@@ -11,7 +11,6 @@ class Main extends AdminController
 
 	public function index()
 	{
-		log_message('artgg', '[admin.main] enter..');
 		$this->load->view('admin/main');
 	}
 

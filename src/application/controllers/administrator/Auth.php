@@ -10,27 +10,30 @@ class Auth extends AdminController {
 	}
 
 	public function index() {
-		log_message('artgg', '[auth] enter..');
 		if ($this->session->userdata('is_login')) {
-			log_message('artgg', '[auth] login ok');
+			// log_message('artgg', '[auth] login ok');
+			return redirect('/administrator/main');
 		}
 		else {
-			log_message('artgg', '[auth] is not login.. go to login()');
-			$this->login();
+			// log_message('artgg', '[auth] is not login.. go to login()');
+			return $this->login();
 		}
 	}
 
 	public function login() {
 		$this->load->helper('alert');
-
+		log_message('artgg', '[Auth.login] enter..');
 		if ($this->session->userdata('is_login')) {
+			log_message('artgg', '[Auth.login] login ok');
 			return redirect('/administrator/main');
 		}
 
+		log_message('artgg', '[Auth.login] is not login..');
 		if($this->input->method() == 'post') {
 			return $this->_loginAction();
 		}
 		else { // if($this->input->method() == 'get') {
+			log_message('artgg', '[Auth.login] show login page.');
 			return $this->_loginView();
 		}
 	}
@@ -77,9 +80,7 @@ class Auth extends AdminController {
 
 	private function _loginView() {
 		return $this->load->view('admin/login');
-	}
-
-	
+	}	
 
 	public function logout() {
 		$this->load->helper('alert');
