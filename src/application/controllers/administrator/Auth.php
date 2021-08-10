@@ -24,7 +24,6 @@ class Auth extends AdminController {
 		$this->load->helper('alert');
 
 		if ($this->session->userdata('is_login')) {
-			$this->load->helper('url');
 			return redirect('/administrator/main');
 		}
 

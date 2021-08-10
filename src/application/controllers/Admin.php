@@ -13,7 +13,6 @@ class Admin extends Base_Controller
 	public function index()
 	{
 		log_message('artgg', '[admin] enter..');
-		$this->load->helper('url');
 		if ($this->session->userdata('is_login')) {
 			// todo..
 			log_message('artgg', '[admin] login ok');
