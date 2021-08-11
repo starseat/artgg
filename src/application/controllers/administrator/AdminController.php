@@ -6,8 +6,8 @@ class AdminController extends Base_Controller {
 	{
 		parent::__construct();
 
-		$this->load->library('session');
-		$this->load->helper(array('result'));
+		$this->load->library(array('session', 'form_validation'));
+		$this->load->helper(array('form', 'result', 'alert'));
 
 		if (!$this->session->userdata('is_login')) {
 			$url1 = $this->uri->segment(2);

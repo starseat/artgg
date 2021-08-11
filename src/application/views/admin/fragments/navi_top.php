@@ -19,7 +19,7 @@
 					</a>
 					<ul class="dropdown-menu fsz-sm">
 						<li>
-							<a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+							<a href="<?= base_url('/administrator/main/changepw'); ?>" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
 								<i class="ti-user mR-10"></i>
 								<span>비밀번호 변경</span>
 							</a>

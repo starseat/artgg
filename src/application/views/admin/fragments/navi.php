@@ -7,10 +7,10 @@
 				<div class="peer peer-greed"><a class="sidebar-link td-n" href="<?= base_url('/administrator/auth/login'); ?>">
 						<div class="peers ai-c fxw-nw">
 							<div class="peer">
-								<div class="logo"><img src="/public/admin/template/adminator/assets/static/images/logo.png" alt=""></div>
+								<div class="logo"><img src="/public/admin/imgs/logo.png" alt="admin logo"></div>
 							</div>
 							<div class="peer peer-greed">
-								<h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+								<h5 class="lh-1 mB-0 logo-text"></h5> <!-- 관리자 페이지 -->
 							</div>
 						</div>
 					</a></div>
@@ -21,7 +21,16 @@
 			</div>
 		</div><!-- ### $Sidebar Menu ### -->
 		<ul class="sidebar-menu scrollable pos-r">
-			<li class="nav-item mT-30 actived"><a class="sidebar-link" href="<?= base_url('/administrator/auth/login'); ?>"><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="dropdown-toggle" href="javascript:void(0);">
+					<span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span>
+					<span class="title">Main</span> <span class="arrow"><i class="ti-angle-right"></i></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="sidebar-link" href="<?= base_url('/administrator/main/intro'); ?>">인트로</a></li>
+					<li><a class="sidebar-link" href="<?= base_url('/administrator/main/image'); ?>">메인 이미지</a></li>
+				</ul>
+			</li>
 			<li class="nav-item"><a class="sidebar-link" href="email.html"><span class="icon-holder"><i class="c-brown-500 ti-email"></i> </span><span class="title">Email</span></a></li>
 			<li class="nav-item"><a class="sidebar-link" href="compose.html"><span class="icon-holder"><i class="c-blue-500 ti-share"></i> </span><span class="title">Compose</span></a></li>
 			<li class="nav-item"><a class="sidebar-link" href="calendar.html"><span class="icon-holder"><i class="c-deep-orange-500 ti-calendar"></i> </span><span class="title">Calendar</span></a></li>

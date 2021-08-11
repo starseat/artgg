@@ -38,6 +38,34 @@ class Member_model extends Base_Model
 		return $result_data;
 	}
 
+	public function getPassword($userData) {
+		$result_data = array();
+
+		$sql = "SELECT password FROM artgg_members WHERE seq = ? AND user_id = ? AND deleted_at IS NULL";
+		$query_result = $this->db->query($sql, array($userData['seq'], $userData['user_id']));
+
+		if ($query_result->num_rows() > 0) {
+			$result_data['result'] = true;
+			$result_data['message'] = 'success';
+			$result_data['data'] = $query_result->row()->password;
+		} else {
+			$result_data['result'] = false;
+			$result_data['message'] = '비밀번호를 찾을 수 없습니다.';
+		}
+		
+		return $result_data;
+	}
+
+	public function changePassword($userData) {
+		$sql = "UPDATE artgg_members SET password = ? WHERE seq = ? AND user_id = ? AND deleted_at IS NULL";
+
+		$this->db->trans_start();
+		$this->db->query($sql, array(
+			$this->password_encrypt($userData['new_password']), $userData['seq'], $userData['user_id']
+		));
+		$this->db->trans_complete();
+	}
+
 
 	public function password_encrypt($password)
 	{
