@@ -45,7 +45,9 @@ CREATE TABLE artgg_file (
     real_name VARCHAR(256) NOT NULL, 
 	save_name VARCHAR(512) NOT NULL, 
     upload_path VARCHAR(2048) NOT NULL, 
-	caption VARCHAR(1024), 
+	caption1 VARCHAR(1024), 
+	caption2 VARCHAR(128), 
+	caption3 VARCHAR(128), 
 	link VARCHAR(1024), 
 	type VARCHAR(1) NOT NULL DEFAULT 'I', -- I: image, V: video, F: file, T: thumbnail
 	storage_type VARCHAR(1) NOT NULL DEFAULT 'L', -- L: local, W: Web	
