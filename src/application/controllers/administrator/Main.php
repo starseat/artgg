@@ -20,11 +20,30 @@ class Main extends AdminController
 		}
 		else { // if($this->input->method() == 'get') {
 			$this->load->view('admin/main/change_password');
-		}		
+		}
 	}
 
 	public function intro() {
-		$this->load->view('admin/main/intro');
+		$requestUrl = $this->uri->segment(4);
+		if(!empty($requestUrl) && $requestUrl == 'upload') {
+			if($this->input->method() != 'post') {
+				return redirect('/administrator/main/intro');
+			}
+
+			$result_data = $this->_uploadImage('intro');
+			$alert_message = '';
+			if($result_data['result']) {
+				$alert_message = '이미지가 등록되었습니다.';
+			}
+			else {
+				$alert_message = $result_data['message'];
+			}
+			return alert($alert_message, base_url('/administrator/main/intro'));
+		}
+		else {
+
+			$this->load->view('admin/main/intro');
+		}
 	}
 
 	public function image() {
@@ -63,6 +82,31 @@ class Main extends AdminController
 		// log_message('artgg', '[Main._changePasswordAction] new userData:: ' . json_encode($userData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 		$this->member_model->changePassword($userData);
 		return alert('비밀번호가 변경되었습니다.', base_url('/administrator/main/changepw'));
+	}
+
+	private function _uploadImage($target) {
+		$this->load->model('file_model');
+
+		$result_data = $this->file_model->multiUploadImages($target);
+		log_message('artgg', '[Main._uploadImage] result_data:: ' . json_encode($result_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+		if(!$result_data['result']) {
+			return $result_data;
+		}
+
+		$uploadFiles = $result_data['data'];
+		$uploadCount = count($uploadFiles);
+		$insertInfo = array(
+			'target_seq' => 0, 
+			'target' => $target, 
+			'type' => File_model::TYPE_IMAGE, 
+			'storage_type' => File_model::IMAGE_STORAGE_TYPE_LOCAL
+		);
+
+		for($i=0; $i<$uploadCount; $i++) {
+			$this->file_model->insertFile($insertInfo, $uploadFiles[$i]);
+		}
+
+		return makeResultSuccess();
 	}
 
 	/**

@@ -14,7 +14,7 @@ class Member_model extends Base_Model
 
 	public function login($loginData)
 	{
-		$result_data = array();
+		$result_data = null;
 
 		$sql = "SELECT seq, user_id, email, name, password, member_type FROM artgg_members WHERE user_id = ? AND deleted_at IS NULL";
 
@@ -23,34 +23,27 @@ class Member_model extends Base_Model
 		if ($query_result->num_rows() > 0) {
 			$userInfo = $query_result->row_array();
 			if ($this->password_matches($loginData['password'], $userInfo['password'])) {
-				$result_data['result'] = true;
-				$result_data['message'] = 'success';
-				$result_data['data'] = array_diff($query_result->row_array(), array('password'));;
+				$result_data = makeResultSuccess(array_diff($query_result->row_array(), array('password')));
 			} else {
-				$result_data['result'] = false;
-				$result_data['message'] = '비밀번호가 일치하지 않습니다.';
+				$result_data = makeResultError('비밀번호가 일치하지 않습니다.');
 			}
 		} else {
-			$result_data['result'] = false;
-			$result_data['message'] = '사용자를 찾을 수 없습니다.';
+			$result_data = makeResultError('사용자를 찾을 수 없습니다.');
 		}
 
 		return $result_data;
 	}
 
 	public function getPassword($userData) {
-		$result_data = array();
+		$result_data = null;
 
 		$sql = "SELECT password FROM artgg_members WHERE seq = ? AND user_id = ? AND deleted_at IS NULL";
 		$query_result = $this->db->query($sql, array($userData['seq'], $userData['user_id']));
 
 		if ($query_result->num_rows() > 0) {
-			$result_data['result'] = true;
-			$result_data['message'] = 'success';
-			$result_data['data'] = $query_result->row()->password;
+			$result_data = makeResultSuccess($query_result->row()->password);
 		} else {
-			$result_data['result'] = false;
-			$result_data['message'] = '비밀번호를 찾을 수 없습니다.';
+			$result_data = makeResultError('비밀번호를 찾을 수 없습니다.');
 		}
 		
 		return $result_data;

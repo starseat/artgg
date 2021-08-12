@@ -11,6 +11,8 @@ class Base_Model extends CI_Model {
 
 	public function __construct() {
 		parent::__construct();
+
+		$this->load->helper(array('result', 'alert'));
 	}
 
 	protected function getPagingInfo($current_page, $total_item_count) {

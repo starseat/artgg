@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-function makeResultSuccess($data) {
+function makeResultSuccess($data = '') {
 	$resultArray = [
-		'code' => 0, 
-		'result' => TRUE
+		'result' => TRUE, 
+		'message' => 'success'
 	];
 
 	if( isset($data) && !empty($data)) {
@@ -16,24 +16,23 @@ function makeResultSuccess($data) {
 
 function makeResultSuccessOnData($data) {
 	return [
-		'code' => 0,
 		'result' => TRUE,
+		'message' => 'success', 
 		'data' => $data
 	];
 }
 
-function makeResultError($code = '', $msg = '') {
+function makeResultError($msg = '') {
 	return [
-		'code' => $code,
 		'message' => $msg,
 		'result' => FALSE
 	];
 }
 
-function makeResult($code, $msg = '', $data = '') {
+
+function makeResult($result, $msg = '', $data = '') {
 	return [
-		'code' => $code,
-		'result' => ($code == 0 ? TRUE : FALSE), 
+		'result' => $result, 
 		'message' => $msg,
 		'data' => $data
 	];
@@ -41,13 +40,13 @@ function makeResult($code, $msg = '', $data = '') {
 
 
 function makeResultErrorNotLogin($msg = 'Not logged in.') {
-	return makeResultError(-1, $msg);
+	return makeResultError($msg);
 }
 
 function makeResultErrorNotAllowedHttpMethod($msg = 'Not allowed http method.') {
-	return makeResultError(-2, $msg);
+	return makeResultError($msg);
 }
 
 function makeResultErrorParam($msg = 'Invalid parameter.') {
-	return makeResultError(-3, $msg);
+	return makeResultError($msg);
 }
