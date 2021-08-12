@@ -62,7 +62,11 @@ class File_model extends Base_Model
 		";
 
 		$query_result = $this->db->query($sql, array($target));
-		return makeResultSuccess($query_result->result_array());
+		$file_data_list = $query_result->result_array();
+		if($file_data_list = null || count($file_data_list) == 0) {
+			$file_data_list = [];
+		}
+		return makeResultSuccessOnData($file_data_list);
 	}
 
 

@@ -24,7 +24,10 @@
 								<?php
 									}
 								}
+								else {
 								?>
+								<div class="swiper-slide">등록된 이미지가 없습니다.</div>
+								<?php } ?>
 							</div>
 
 							<!-- Add Pagination -->
