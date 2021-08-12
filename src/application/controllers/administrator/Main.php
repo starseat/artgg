@@ -40,9 +40,9 @@ class Main extends AdminController
 			}
 			return alert($alert_message, base_url('/administrator/main/intro'));
 		}
-		else {
-
-			$this->load->view('admin/main/intro');
+		else {			
+			$this->load->model('file_model');
+			$this->load->view('admin/main/intro', array('intros' => $this->file_model->getFiles('intro')['data']));
 		}
 	}
 

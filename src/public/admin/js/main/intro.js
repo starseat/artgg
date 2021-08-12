@@ -22,3 +22,7 @@ function submitIntroImage(e) {
 
 	$('#insertImageModalForm').submit();
 }
+
+function showUpdateContentsModal() {
+	$('#updateContentsModal').modal('show');
+}

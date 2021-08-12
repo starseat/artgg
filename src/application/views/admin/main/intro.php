@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="text-end m-10">
 					<button type="button" class="btn btn-primary mR-10" onclick="showInsertImageModal()">이미지 추가</button>
-					<button type="button" class="btn btn-secondary mR-10" onclick="showModifyContentsModal()">컨텐츠 관리</button>
+					<button type="button" class="btn btn-secondary mR-10" onclick="showUpdateContentsModal()">컨텐츠 관리</button>
 				</div>
 			</div>
 			<div class="row">
@@ -14,12 +14,17 @@
 
 						<div class="swiper-container swiper-youtube-container">
 							<div class="swiper-wrapper">
-
-								<div class="swiper-slide"><img class="swiper-lazy" src="/public/admin/temp/1.png"></div>
-								<div class="swiper-slide"><img class="swiper-lazy" src="/public/admin/temp/2.png"></div>
-								<div class="swiper-slide"><img class="swiper-lazy" src="/public/admin/temp/3.png"></div>
-								<div class="swiper-slide"><img class="swiper-lazy" src="/public/admin/temp/4.png"></div>
-
+								<?php
+								if (!empty($intros) && count($intros) > 0) {
+									foreach ($intros as $item) {
+								?>
+										<div class="swiper-slide">
+											<img class="swiper-lazy" src="<?= $item['upload_path'] . $item['save_name']; ?>" alt="<?= $item['real_name']; ?>">
+										</div>
+								<?php
+									}
+								}
+								?>
 							</div>
 
 							<!-- Add Pagination -->
@@ -45,19 +50,18 @@
 			</div>
 			<div class="modal-body">
 				<?php
-					// csrf 
-					$attributes = array(
-						'id' => 'insertImageModalForm',
-						'name' => 'insertImageModalForm',
-						'enctype' => 'multipart/form-data'
-					);
+				// csrf 
+				$attributes = array(
+					'id' => 'insertImageModalForm',
+					'name' => 'insertImageModalForm',
+					'enctype' => 'multipart/form-data'
+				);
 
-					echo form_open('/administrator/main/intro/upload', $attributes);
+				echo form_open('/administrator/main/intro/upload', $attributes);
 				?>
-					<input type="hidden" id="insert_type_image" name="insert_type" value="image" />
-					<div class="form-group">
-						<div id="intro_images"></div>
-					</div>
+				<div class="form-group">
+					<div id="intro_images"></div>
+				</div>
 				</form>
 			</div>
 			<div class="modal-footer">
@@ -68,5 +72,42 @@
 	</div>
 </div>
 
+<div class="modal fade" id="updateContentsModal" tabindex="-1" aria-labelledby="updateContentsModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="updateContentsModalLabel">컨텐츠 관리</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div id="item-contents-box">
+					<?php
+					if (!empty($intros) && count($intros) > 0) {
+						foreach ($intros as $item) {
+					?>
+							<div class="row item-box">
+								<input type="hidden" id="item-seq-<?= $item['seq']; ?>" class="item-seq" value="<?= $item['seq']; ?>">
+								<div class="col-2"><img class="w-100 h-100" src="<?= $item['upload_path'] . $item['save_name']; ?>" alt="<?= $item['real_name']; ?>"></div>
+								<div class="col-8"><input type="text" class="form-control w-100" id="item-link-<?= $item['seq']; ?>"></div>
+								<div class="col-2"><button class="btn btn-danger w-100" onclick="deleteContents(event, <?= $item['seq']; ?>);">삭제</div>
+							</div>
+					<?php
+						}
+					}
+					?>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+				<button type="button" class="btn btn-primary">적용</button>
+			</div>
+		</div>
+	</div>
+</div>
 
+<script src="https://code.jquery.com/ui/1.13.0-alpha.1/jquery-ui.min.js" integrity="sha256-ahTP8JLHwIplWgufAohh+E04ayoLEUBEwcH04eUmIdA=" crossorigin="anonymous"></script>
 <script src="/public/admin/js/main/intro.js"></script>
+
+<style>
+	.item-box { border: solid 1px #cecece; margin: 1rem; }
+</style>
