@@ -40,17 +40,19 @@ CREATE TABLE artgg_members (
 CREATE TABLE artgg_file (
 	seq BIGINT NOT NULL AUTO_INCREMENT, 
 	target_seq BIGINT NOT NULL, 
-    target_type VARCHAR(16) NOT NULL,   -- 'program, notice, promotion'
+    target VARCHAR(16) NOT NULL,   -- 'program, notice, promotion'
 	sort TINYINT, 
     real_name VARCHAR(256) NOT NULL, 
 	save_name VARCHAR(512) NOT NULL, 
     upload_path VARCHAR(2048) NOT NULL, 
-	caption VARCHAR(1024), 
+	caption1 VARCHAR(1024), 
+	caption2 VARCHAR(128), 
+	caption3 VARCHAR(128), 
 	link VARCHAR(1024), 
 	type VARCHAR(1) NOT NULL DEFAULT 'I', -- I: image, V: video, F: file, T: thumbnail
 	storage_type VARCHAR(1) NOT NULL DEFAULT 'L', -- L: local, W: Web	
     created_at DATETIME NOT NULL DEFAULT now(),
-	PRIMARY KEY (`seq`, `target_seq`, `target_type` )
+	PRIMARY KEY (`seq`, `target_seq`, `target` )
 ) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
 
 
