@@ -14,6 +14,7 @@ function init() {
 
     // initPageable();
     // initFullpage();
+    initPageScroll();
 }
 
 var _w;
@@ -512,4 +513,17 @@ function initFullpage() {
     // $('#artgg-content-wrap').fullpage({
     //     anchors: ['section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8']
     // });
+}
+
+function initPageScroll() {
+    $('#artgg-content-wrap').on('mousewheel DOMMouseScroll', function(event) {  // 
+        var delta = event.originalEvent.deltaY;
+        console.log(delta);
+        if(delta > 0) {
+            console.log('down');
+        }
+        else {
+            console.log('up');
+        }
+    });
 }

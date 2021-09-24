@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-sequence {position: absolute;}
+.image-sequence img {display: none;position: absolute;height: 100%;width: 100%;}
+.image-sequence img:first-child {display: inline;}
+div.test { width: 100%; height: 600px; }
+.test1 { background-color: red;}
+.test2 { background-color: blue;}
+.test3 { background-color: orange;}
+.test4 { background-color: green;}
+    </style>
+</head>
+<body>
+    <!-- <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div> -->
+
+    <div class="scene" id="scene-1">
+        <div class="image-sequence">
+            <div class="test test1"></div>
+            <div class="test test2"></div>
+            <div class="test test3"></div>
+            <div class="test test4"></div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="vendor/jquery/jquery.mousewheel.js"></script>
+    <script>
+        // https://spacemonkey925.tistory.com/1
+        // var win_h = $(window).height();
+        // $('.section').each(function(index) {
+        //     $(this).attr('data-index', win_h * index);
+        // });
+
+        // $('.section').on('mousewheel', function(e) {
+        //     var sectionPos = parseInt($(this).attr('data-index'));
+
+        //     if(e.originalEvent.wheelDelta >= 0) {
+        //         $('html,body').stop().animate({scrollTop: sectionPos - win_h});
+        //         }
+        //     else {
+        //         $('html,body').stop().animate({scrollTop: sectionPos + win_h});
+        //     }
+        //     return false;
+        // });
+
+        // https://blog.naver.com/PostView.naver?blogId=mootory&logNo=221795725830&parentCategoryNo=&categoryNo=25&viewDate=&isShowPopularPosts=true&from=search
+        $(function () {
+
+                initScene1();
+                function initScene1() {
+                    var $container = $('#scene-1 .image-sequence'),
+                        $images = $container.find('.test'),
+                        frameLength = $images.length,
+                        currentFrame = 0,
+                        counter = 0, // 애니메이션의 진행 카운터
+                        velocity = 0, // 애니메이션의 속도
+
+                        timer = null,
+                        imageAspectRatio = 864 / 486;
+
+                    $container.on('mousewheel', function (event, delta) {
+                        // 마우스 휠의 방향에 따라 속도에 가산 또는 감산
+                        if (delta < 0) {
+                            velocity += 1.5;
+                        } else if (delta > 0) {
+                            velocity -= 1.5;
+                        }
+                        startAnimation();
+                    });
+
+                    function startAnimation() {
+                        if (!timer) { // 이미 실행중인 애니메이션이 없으면
+                            timer = setInterval(animateSequence, 1000 / 30);
+                        }
+                    }
+
+                    function stopAnimation() {
+                        clearInterval(timer);
+                        timer = null;
+                    }
+
+                    function animateSequence() {
+
+                        var nextFrame;
+                        // 속도 부드럽게 줄임
+                        velocity *= 0.9;
+                        if (-0.00001 < velocity && velocity < 0.00001) {
+                            stopAnimation();
+                        } else {
+                            counter = (counter + velocity) % frameLength; //전체 이미지수에서 제한 
+                        }
+
+                        // 카운터의 수치를 정수화. 해당 프레임을 표시
+                        nextFrame = Math.floor(counter);
+                        if (currentFrame !== nextFrame) {
+                            $images.eq(nextFrame).show();
+                            $images.eq(currentFrame).hide();
+                            currentFrame = nextFrame;
+                        }
+                    }
+
+                    // 창 리사이즈 될때마다 이미지비율 유지하면서 가득 참
+                    $(window).on('resize', function () {
+                        var $window = $(this),
+                            windowWidth = $window.width(),
+                            windowHeight = $window.height();
+                        if (imageAspectRatio > windowWidth / windowHeight) {
+                            $container.css({
+                                width: windowHeight * imageAspectRatio,
+                                height: '100%',
+                                top: 0,
+                                left: (windowWidth - windowHeight * imageAspectRatio) / 2
+                            });
+                        } else {
+                            $container.css({
+                                width: '100%',
+                                height: windowWidth / imageAspectRatio,
+                                top: (windowHeight - windowWidth / imageAspectRatio) / 2,
+                                left: 0
+                            });
+                        }
+                    });
+
+                    $(window).trigger('resize');
+                }
+
+            });
+
+
+            // https://kookyungmin.github.io/web/2018/08/01/jquery_17/
+    </script>
+</body>
+</html>
