@@ -9,22 +9,19 @@
     <title>아트경기 2021</title>
     <link rel="canonical" href="https://url">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="title">
-    <meta property="og:description" content="deesc">
+    <meta property="og:title" content="아트경기 2021">
+    <meta property="og:description" content="아트경기 2021">
     <meta property="og:url" content="url">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./js/slick.min.js"></script>
-    <script type="text/javascript" src="./js/artgg.infoWindow.js"></script>
-    <script type="text/javascript" src="ui.js"></script>
+    
+    <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css" media="all" /> -->
     <link rel="stylesheet" type="text/css" href="./css/slick.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/animation.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" media="all" />
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap" id="artgg-content-wrap">
         <nav id="nav" class="common_lnb_w active">
             <h1 class="h1_logo">
                 <a href="#section1" class="gnb_logo_link page-move">
@@ -134,7 +131,7 @@
         <!-- 콘텐츠 -->
 
         <!-- 메뉴1 -->
-        <div id="section1" class="section1_cont_w">
+        <div id="section1" class="section1_cont_w" data-anchor="section1">
             <div class="intro_artgg_visual">
                 <div class="section_inner">
                     <i class="sectionDim fadeIn"></i>
@@ -177,7 +174,7 @@
 
 
         <!-- 메뉴2 : 아트경기 -->
-        <div id="section2" class="section section2_cont_w">
+        <div id="section2" class="section section2_cont_w" data-anchor="section2">
             <div class="intro_artgg_visual">
                 <div class="section_inner">
                     <div class="intro_logo"><img src="./img/intro_logo.png" alt="아트경기" class="intro_artgg_img"></div>
@@ -221,7 +218,7 @@
         </div>
 
         <!-- 메뉴3 : 아트경기 소개 -->
-        <div id="section3" class="section section3_cont_w">
+        <div id="section3" class="section section3_cont_w" data-anchor="section3">
             <div class="section_inner">
                 <div class="section_cont">
                     <strong class="section_title">
@@ -306,7 +303,7 @@
         </div>
 
         <!-- 메뉴4 : 온라인 갤러리 -->
-        <div id="section4" class="section section4_cont_w">
+        <div id="section4" class="section section4_cont_w" data-anchor="section4">
             <div class="section_inner">
                 <div class="article_gallery_w">
                     <a href="#" class="online_gallery_inner">
@@ -345,7 +342,7 @@
         </div>
 
         <!-- 메뉴5 : 행사일정(지도) -->
-        <div id="section5" class="section section5_cont_w">
+        <div id="section5" class="section section5_cont_w" data-anchor="section5">
             <div class="section_inner">
                 <div class="map_area">
                     <div class="btn_daily_info">전체일정</div>
@@ -797,7 +794,7 @@
         </div>
 
         <!-- 메뉴6 :  E도록 -->
-        <div id="section6" class="section section6_cont_w">
+        <div id="section6" class="section section6_cont_w" data-anchor="section6">
             <div class="section_inner">
                 <div class="section_cont">
                     e도록
@@ -829,7 +826,7 @@
 
 
         <!-- 메뉴7 : 이벤트참여 -->
-        <div id="section7" class="section section7_cont_w">
+        <div id="section7" class="section section7_cont_w" data-anchor="section7">
             <div class="section_inner">
                 <div class="section_cont">
                     <div class="slick_slide_list">
@@ -901,7 +898,7 @@
 
         </div>
         <!-- 메뉴8 : 공지사항 -->
-        <div id="section8" class="section section8_cont_w">
+        <div id="section8" class="section section8_cont_w" data-anchor="section8">
             <!-- 공지사항 팝업활성화시 클래스 추가  -->
             <div class="section_inner">
                 <div class="board_list_w">
@@ -1153,6 +1150,13 @@
     <!--#front-->
 
 
+    <!-- <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>    
+    <script type="text/javascript" src="./js/artgg.infoWindow.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
 </body>
 
 </html>
