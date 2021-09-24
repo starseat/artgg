@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     
     <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css" media="all" /> -->
-    <link rel="stylesheet" type="text/css" href="./css/slick.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./vendor/slick-1.6.0/slick.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/animation.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" media="all" />
 </head>
@@ -131,7 +131,7 @@
         <!-- 콘텐츠 -->
 
         <!-- 메뉴1 -->
-        <div id="section1" class="section1_cont_w" data-anchor="section1">
+        <div id="section1" class="section1_cont_w">
             <div class="intro_artgg_visual">
                 <div class="section_inner">
                     <i class="sectionDim fadeIn"></i>
@@ -174,7 +174,7 @@
 
 
         <!-- 메뉴2 : 아트경기 -->
-        <div id="section2" class="section section2_cont_w" data-anchor="section2">
+        <div id="section2" class="section section2_cont_w" data-anchor="section2" data-menuanchor="section2">
             <div class="intro_artgg_visual">
                 <div class="section_inner">
                     <div class="intro_logo"><img src="./img/intro_logo.png" alt="아트경기" class="intro_artgg_img"></div>
@@ -218,7 +218,7 @@
         </div>
 
         <!-- 메뉴3 : 아트경기 소개 -->
-        <div id="section3" class="section section3_cont_w" data-anchor="section3">
+        <div id="section3" class="section section3_cont_w" data-anchor="section3" data-menuanchor="section3">
             <div class="section_inner">
                 <div class="section_cont">
                     <strong class="section_title">
@@ -303,7 +303,7 @@
         </div>
 
         <!-- 메뉴4 : 온라인 갤러리 -->
-        <div id="section4" class="section section4_cont_w" data-anchor="section4">
+        <div id="section4" class="section section4_cont_w" data-anchor="section4" data-menuanchor="section4">
             <div class="section_inner">
                 <div class="article_gallery_w">
                     <a href="#" class="online_gallery_inner">
@@ -342,7 +342,7 @@
         </div>
 
         <!-- 메뉴5 : 행사일정(지도) -->
-        <div id="section5" class="section section5_cont_w" data-anchor="section5">
+        <div id="section5" class="section section5_cont_w" data-anchor="section5" data-menuanchor="section5">
             <div class="section_inner">
                 <div class="map_area">
                     <div class="btn_daily_info">전체일정</div>
@@ -794,7 +794,7 @@
         </div>
 
         <!-- 메뉴6 :  E도록 -->
-        <div id="section6" class="section section6_cont_w" data-anchor="section6">
+        <div id="section6" class="section section6_cont_w" data-anchor="section6" data-menuanchor="section6">
             <div class="section_inner">
                 <div class="section_cont">
                     e도록
@@ -826,7 +826,7 @@
 
 
         <!-- 메뉴7 : 이벤트참여 -->
-        <div id="section7" class="section section7_cont_w" data-anchor="section7">
+        <div id="section7" class="section section7_cont_w" data-anchor="section7" data-menuanchor="section7">
             <div class="section_inner">
                 <div class="section_cont">
                     <div class="slick_slide_list">
@@ -898,7 +898,7 @@
 
         </div>
         <!-- 메뉴8 : 공지사항 -->
-        <div id="section8" class="section section8_cont_w" data-anchor="section8">
+        <div id="section8" class="section section8_cont_w" data-anchor="section8" data-menuanchor="section8">
             <!-- 공지사항 팝업활성화시 클래스 추가  -->
             <div class="section_inner">
                 <div class="board_list_w">
@@ -1080,7 +1080,7 @@
             </div>
         </div>
         <!-- footer 영역 -->
-        <div class="footer">
+        <div class="footer" id="section9" data-anchor="section9" data-menuanchor="section9">
             <div class="footer_list_w">
                 <div class="footer_logo_list">
                     <a href="#none" class="footer_logo_cont">
@@ -1150,13 +1150,14 @@
     <!--#front-->
 
 
-    <!-- <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="./vendor/jquery/jquery-3.6.0.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
-    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./js/slick.min.js"></script>    
+    <script type="text/javascript" src="./vendor/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./vendor/slick-1.6.0/slick-1.6.0.min.js"></script>
+    <script type="text/javascript" src="./vendor/fullPage.js-2.9.7/dist/jquery.fullpage.min.js"></script>
     <script type="text/javascript" src="./js/artgg.infoWindow.js"></script>
-    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript" src="./js/ui.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,8 @@ function init() {
     create();
     addEvent();
 
-    initPageable();
+    // initPageable();
+    // initFullpage();
 }
 
 var _w;
@@ -461,7 +462,7 @@ var MapControl = (function () {
 function initPageable() {
     new Pageable("#artgg-content-wrap", {
         childSelector: "[data-anchor]", // CSS3 selector string for the pages
-        anchors: [], // define the page anchors
+        anchors: ['section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'], // define the page anchors
         pips: true, // display the pips
         animation: 400, // the duration in ms of the scroll animation
         delay: 0, // the delay in ms before the scroll animation starts
@@ -505,4 +506,10 @@ function initPageable() {
             // do something when scrolling ends
         },
     });
+}
+
+function initFullpage() {
+    // $('#artgg-content-wrap').fullpage({
+    //     anchors: ['section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8']
+    // });
 }
