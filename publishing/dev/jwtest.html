@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .section {
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .s1 {
+            background-color: #ff7040;
+        }
+        
+        .s2 {
+            background-color: #e8e87b;
+        }
+        
+        .s3 {
+            background-color: #69a7ff;
+        }
+        
+        .s4 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jwtest">
+        <!-- div.s$*4 -->
+        <div class="section s1" jw-data-anchor="section1"></div>
+        <div class="section s2" jw-data-anchor="section2"></div>
+        <div class="section s3" jw-data-anchor="section3"></div>
+        <div class="section s4" jw-data-anchor="section4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/jquery.jwPageScroll.js"></script>
+    <script>
+        $('#jwtest').jwPageScroll();
+    </script>
+</body>
+
+</html>
