@@ -346,7 +346,7 @@
 
 .layer_pop .photo {
     width: 48.5%;
-    height: 400px;
+    /* height: 400px; */
     float: left;
 }
 

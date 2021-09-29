@@ -11,6 +11,7 @@ require_once('head.php');
     
 <!--  GNB -->
 <nav id="nav" class="common_lnb_w"><!-- 모바일 gnb 오픈 gnb_open -->
+    <!-- <button class="admin_logout">로그아웃</button> -->
     <h1 class="h1_logo">
         <a href="" class="logo_link">
             <span class="icon_logo_gnb">

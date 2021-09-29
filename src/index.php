@@ -755,6 +755,7 @@
         <div class="section8_cont_w">
             <div class="section_inner">
                 <div class="board_list_w">
+                    <!-- <button type="button" class="admin_writer">글쓰기</button> -->
                     <div class="board_list_inner">
                         <table>
                             <colgroup>
@@ -780,15 +781,12 @@
 
                     <!-- board layer popup -->
                     <div class="layer_popup_w">
-                        <strong class="popup_title">
-                            (8/9 9pm) 이광기의 live경매쇼 2021 작가의 첫 경매를 시작합니다!
+                        <strong class="popup_title" id="notice-detail-title">
                         </strong>
-                        <div class="popup_text_w">
-                            <p class="popup_text">
-                                본문
-                            </p>
+                        <div class="popup_text_w" id="notice-detail-content">
+                            <!-- <p class="popup_text">본문</p> -->
                         </div>
-                        <button type="button" class="popup_close" title="팝업 닫기">
+                        <button type="button" class="popup_close" title="팝업 닫기" onclick="closePopup();">
                             <span class="icon_close_x">
                                 <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
                                     <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>

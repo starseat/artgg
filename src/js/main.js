@@ -9,7 +9,6 @@ function init() {
 
     initFullpage();
     initNaviEvent();
-    initNoticeEvent();
 
     getInstargramData();
     getNoticeList(1);
@@ -42,17 +41,6 @@ function initNaviEvent() {
     $('.btn_allmenu').on('click', function() {
         $('.common_lnb_w').toggleClass('gnb_open');
         $(this).addClass('btn_gnb_close');
-    });
-}
-
-function initNoticeEvent() {
-    // 게시판 상세 팝업
-    $('.board_list_inner tr').on('click', function() {
-        $('body').addClass('board_popup');
-    });
-    // 게시판 팝업 닫기
-    $('.popup_close').on('click', function() {
-        $('body').removeClass('board_popup');
     });
 }
 
@@ -111,7 +99,7 @@ function getNoticeList(page) {
     $.ajax({
         type: "GET",
         data: { page: page },
-        url: './api/get_notice.php',
+        url: './api/get_notice_list.php',
         success: function(resultData) {
             var resultObj = JSON.parse(resultData);
             writeNoticeList(resultObj.notice_list);
@@ -174,4 +162,31 @@ function writeNoticePage(paging, current) {
     }
 
     $noticePaging.append(_item);
+}
+
+function getNoticeView(seq) {
+    $.ajax({
+        type: "GET",
+        data: { seq: seq },
+        url: './api/get_notice.php',
+        success: function(resultData) {
+            // console.log('[getNoticeView] resultData: ', resultData);
+            var resultObj = JSON.parse(resultData);
+            $('#notice-detail-title').text(resultObj.title);
+            $('#notice-detail-content').html(resultObj.contents);
+
+            openPopup();
+        },
+        error: function() {}
+    });
+}
+
+function openPopup() {
+    $('body').addClass('board_popup');
+    $.fn.fullpage.setAllowScrolling(false);
+}
+
+function closePopup() {
+    $('body').removeClass('board_popup');
+    $.fn.fullpage.setAllowScrolling(true);
 }
