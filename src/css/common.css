@@ -823,6 +823,10 @@ select {
     box-sizing: border-box;
 }
 
+.instargram-box {
+    border: solid 2px #000;
+}
+
 .mb_image_w {
     display: block;
     position: relative;
@@ -878,6 +882,11 @@ select {
 .mbif_text {
     font-size: 20px;
     font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .mbif_date {
@@ -886,6 +895,14 @@ select {
     font-size: 18px;
     font-family: 'Roboto';
     font-weight: 400;
+}
+
+.sns_icon_instar {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 24px;
+    height: 24px;
 }
 
 
