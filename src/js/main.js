@@ -12,6 +12,7 @@ function init() {
     initNoticeEvent();
 
     getInstargramData();
+    getNoticeList(1);
 }
 
 function initFullpage() {
@@ -29,18 +30,10 @@ function initFullpage() {
             }
 
             _activateLeftNav(destination);
-            // if(direction == 'up') {
-            //     $('.section ').height(window.innerHeight); $('.fp-tableCell').height(window.innerHeight);
-            // }
-            console.log('[fullpage.onLeave] origin: ', origin);
-            console.log('[fullpage.onLeave] destination: ', destination);
-            console.log('[fullpage.onLeave] direction: ', direction);
-        },
-        afterLoad: function(origin, destination, direction) {},
-        // afterRender: function(){ $('.section ').height(window.innerHeight); $('.fp-tableCell').height(window.innerHeight); console.log('[afterRender]');},
-        afterResize: function(width, height) { console.log('[afterResize]'); },
-        afterReBuild: function() { console.log('[afterReBuild]'); },
-        afterResponsive: function(isResponsive) { console.log('[afterResponsive]'); },
+            // console.log('[fullpage.onLeave] origin: ', origin);
+            // console.log('[fullpage.onLeave] destination: ', destination);
+            // console.log('[fullpage.onLeave] direction: ', direction);
+        }
     });
 }
 
@@ -110,4 +103,75 @@ function moveFullpage(index) {
 function downFullpage(index) {
     _activateLeftNav(index);
     $.fn.fullpage.moveSectionDown();
+}
+
+function getNoticeList(page) {
+    if (!page) { page = 1; }
+
+    $.ajax({
+        type: "GET",
+        data: { page: page },
+        url: './api/get_notice.php',
+        success: function(resultData) {
+            var resultObj = JSON.parse(resultData);
+            writeNoticeList(resultObj.notice_list);
+            writeNoticePage(resultObj.paging_info, page);
+        },
+        error: function() {}
+    });
+}
+
+function writeNoticeList(list) {
+    var $noticeTable = $('#notice-list');
+    $noticeTable.empty();
+    for (var i = 0; i < list.length; i++) {
+        var notice = list[i];
+
+        var _item = '<tr onclick="getNoticeView(' + notice.seq + ');">';
+
+        _item += '<td>' + notice.no + '</td>';
+        _item += '<td><p>' + notice.title + '</p><span class="board_date">' + notice.created_at + '</span></td>';
+        _item += '<td>' + notice.created_at + '</td>';
+        _item += '<td>' + notice.view_count + '</td>';
+
+        _item += '</tr>';
+
+        $noticeTable.append(_item);
+    }
+}
+
+function writeNoticePage(paging, current) {
+    var $noticePaging = $('#notice-paging');
+    $noticePaging.empty();
+
+    var _item = '<ul class="paging_list">';
+    for (var i = paging.page_start; i <= paging.page_end; i++) {
+        if (i == current) {
+            _item += '<li class="paging_cont paging_current">';
+            _item += '<a href="javascript:void(0);" class="paging_btn"><span class="pgb_text">' + i + '</span></a>';
+            _item += '</li>';
+        } else {
+            _item += '<li class="paging_cont">';
+            _item += '<a href="javascript:void(0);" class="paging_btn" onclick="getNoticeList(' + i + ');" ><span class="pgb_text">' + i + '</span></a>';
+            _item += '</li>';
+        }
+    }
+
+    if (paging.page_prev > 0) {
+        _item += '<button class="paging_move_l" title="이전목록" onclick="getNoticeList(' + paging.page_prev + '">';
+        _item += '<span class="pg_move_cont">';
+        _item += '<img src="./img/paging_arrow.png" alt="이전목록">';
+        _item += '</span>';
+        _item += '</button>';
+    }
+
+    if (paging.page_next < paging.page_total) {
+        _item += '<button class="paging_move_r" title="다음목록" onclick="getNoticeList(' + paging.page_next + '">';
+        _item += '<span class="pg_move_cont">';
+        _item += '<img src="./img/paging_arrow.png" alt="다음목록">';
+        _item += '</span>';
+        _item += '</button>';
+    }
+
+    $noticePaging.append(_item);
 }

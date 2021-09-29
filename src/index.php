@@ -7,12 +7,13 @@
                 <div class="section_inner">
                     <i class="sectionDim zoomIn"></i><!-- 뒷배경 커지는 dim -->
                     <div class="intro_logo" >
-                        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"><!-- 로고 slide up -->
+                        <div><!-- 로고 slide up / data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="top-bottom"  -->
                             <img src="./img/intro_logo.png" alt="아트경기" class="intro_artgg_img">
                         </div>
                     </div>
                 </div>
             </div>
+                            
             <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(2);">
                 <span class="icon_mouse">
                     <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
@@ -698,8 +699,8 @@
                                 </div>
                             </a>
                             <a href="javascript:void(0);" class="slick_list_cont" id="instargram-link" target="_blank">
-                                <div class="module_box_w_type1 instargram-box">
-                                    <div class="mb_image_w">
+                                <div class="module_box_w_type1">
+                                    <div class="mb_image_w instargram-box">
                                         <div class="mb_image_inner">
                                             <img id="instargram-media" src="" class="mb_image" alt="artgg instargram image">
                                         </div>
@@ -770,83 +771,11 @@
                                 <th scope="col">조회수</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td>12</td>
-                                <td>
-                                    <p>(8/9 9pm) 이광기의 live경매쇼 2021 작가의 첫 경매를 시작합니다!</p>
-                                    <span class="board_date">2021-04-30 11:32:12</span>
-                                </td>
-                                <td>2021-04-30 11:32:12</td>
-                                <td>102</td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td>
-                                    <p>공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다.</p>
-                                    <span class="board_date">2021-04-30 11:32:12</span>
-                                </td>
-                                <td>2021-04-30 11:32:12</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>
-                                    <p>공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다.</p>
-                                    <span class="board_date">2021-04-30 11:32:12</span>
-                                </td>
-                                <td>2021-04-30 11:32:12</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>
-                                    <p>공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다.</p>
-                                    <span class="board_date">2021-04-30 11:32:12</span>
-                                </td>
-                                <td>2021-04-30 11:32:12</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>
-                                    <p>공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다. 공지사항 제목 들어오는 영역, 노출은 1줄까지 됩니다.</p>
-                                    <span class="board_date">2021-04-30 11:32:12</span>
-                                </td>
-                                <td>2021-04-30 11:32:12</td>
-                                <td>55</td>
-                            </tr>
+                            <tbody id="notice-list">
                             </tbody>
                         </table>
                     </div>
-                    <div class="board_list_paging">
-                        <ul class="paging_list">
-                            <li class="paging_cont paging_current">
-                                <a href="#none" class="paging_btn">
-                                    <span class="pgb_text">1</span>
-                                </a>
-                            </li>
-                            <li class="paging_cont">
-                                <a href="#none" class="paging_btn">
-                                    <span class="pgb_text">2</span>
-                                </a>
-                            </li>
-                            <li class="paging_cont">
-                                <a href="#none" class="paging_btn">
-                                    <span class="pgb_text">3</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <button class="paging_move_l" title="이전목록">
-                            <span class="pg_move_cont">
-                                <img src="./img/paging_arrow.png" alt="이전목록">
-                            </span>
-                        </button>
-                        <button class="paging_move_r" title="다음목록">
-                            <span class="pg_move_cont">
-                                <img src="./img/paging_arrow.png" alt="이전목록">
-                            </span>
-                        </button>
+                    <div class="board_list_paging" id="notice-paging">
                     </div>
 
                     <!-- board layer popup -->

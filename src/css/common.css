@@ -594,8 +594,8 @@ select {
     z-index: 2;
     text-align: center;
     vertical-align: middle;
-    font-size: 70px;
-    line-height: 116px;
+    font-size: 60px;
+    line-height: 96px;
     font-weight: 400;
 }
 
@@ -824,7 +824,7 @@ select {
 }
 
 .instargram-box {
-    border: solid 2px #000;
+    border: solid 4px #000;
 }
 
 .mb_image_w {
