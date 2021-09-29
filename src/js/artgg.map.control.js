@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 var MapControl = (function() {
     var mapData = [{
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/업클로즈02.jpg',
             title: '업클로즈02',
             date: '5.19 - 5.23 (11:00 ~ 22:00)',
             cooperation: '주관 : ㈜아트플레이스',
@@ -20,7 +20,7 @@ var MapControl = (function() {
             more: "https://www.ggcf.kr/archives/exhibit/2021-아트경기-팝업갤러리"
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/아트로드77.jpg',
             title: '아트경기x 아트로드77',
             date: '10.7 - 10.17 (10:00 ~ 17:00), 월요일휴관',
             cooperation: '주관 : 올댓큐레이팅<br>후원 : (사)헤이리, 범우재, 바른손이앤에이',
@@ -38,7 +38,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/신장동 할로윈 아트페어.png',
             title: '신장동 할로윈 아트마켓',
             date: '<br>10.20 - 10.31 10:00 ~ 18:00 (금, 토: ~ 20:00)',
             cooperation: '주관 : 생강컴퍼니',
@@ -55,7 +55,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/Art For Ur FLEX.jpg',
             title: 'Art For Ur FLEX',
             date: '10.1 - 10.14 (10:30 ~ 22:00)',
             cooperation: '주관 : KAN<br>협력 : 현대백화점',
@@ -73,7 +73,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/업클로즈03.jpg',
             title: '업클로즈03',
             date: '10.20 - 10.31 (11:00 ~ 19:00)',
             cooperation: '주관 : ㈜아트플레이스',
@@ -91,7 +91,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/DMZ아트페어.PNG',
             title: 'DMZ 아트페어',
             date: '10.28 - 10.31 (10:00 ~ 17:00)',
             cooperation: '주관 : 스튜디오끼',
@@ -123,7 +123,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/이광기의live경매쇼.png',
             title: '이광기의Live 경매쇼 – 아트경기선정작가',
             date: '<br>8.9 - 12.8 격주월요일 (21:00 ~ )',
             cooperation: '주관 : 스튜디오끼',
@@ -140,7 +140,7 @@ var MapControl = (function() {
             more: 'https://www.ggcf.kr/archives/139962'
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/아트경기x오픈갤러리.jpg',
             title: '아트경기x 오픈갤러리',
             date: '9.27 - 11.30',
             cooperation: '제휴 : 오픈갤러리',
@@ -156,7 +156,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/제로베이스x아트경기.png',
             title: 'ZEROBASE x 아트경기',
             date: '2021. 12월',
             cooperation: '제휴 : 서울옥션<br>후원 : 페르노리카코리아',
@@ -173,7 +173,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/sample/sample_photo.png',
+            photo: './img/event/대구아트페어.png',
             title: '2021 대구아트페어',
             date: '<br>11.4 - 11.7 11:00 ~ 19:30 (일요일~18:00)',
             cooperation: '주관 : 올댓큐레이팅',
