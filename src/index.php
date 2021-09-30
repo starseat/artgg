@@ -824,8 +824,8 @@
                     <div class="layer_popup_w">
                         <strong class="popup_title" id="notice-detail-title">
                         </strong>
-                        <div class="popup_text_w" id="notice-detail-content">
-                            <!-- <p class="popup_text">본문</p> -->
+                        <div class="popup_text_w">
+                            <div class="popup_text" id="notice-detail-content"></div>
                         </div>
                         <button type="button" class="popup_close" title="팝업 닫기" onclick="closeNoticePopup();">
                             <span class="icon_close_x">
