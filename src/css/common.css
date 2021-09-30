@@ -838,11 +838,14 @@ select {
     max-width: 1200px;
     height: 730px;
     background-color: #F7F7F7;
+    padding:0;
 }
 
 
 /* section7 : 이벤트 참여 */
-
+.section7_cont_w .section_cont {
+    padding:60px 14px;
+}
 .slick_slide_list {}
 
 .slick_list_inner {
@@ -1656,7 +1659,7 @@ select {
     }
     .slick_list_cont {
         float:none;
-        width:80%;
+        width:92%;
         margin:0 auto;
     }
     .slick_list_cont:last-child {
@@ -1668,9 +1671,6 @@ select {
     }
     .slick_list_cont .mbif_date{
         margin-top:0;
-    }
-    .instargram-box:after {
-        border-width:6px;
     }
     .sns_icon_instar {
         right:25px;

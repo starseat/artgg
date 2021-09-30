@@ -112,6 +112,7 @@ function _activateLeftNav(index) {
 
 function moveFullpage(index) {
     _activateLeftNav(index);
+    $('#nav').removeClass('gnb_open');
     $.fn.fullpage.moveTo(index);
 }
 
