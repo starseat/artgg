@@ -723,7 +723,7 @@
                         <div class="slick_list_inner">
                             <a href="#" class="slick_list_cont">
                                 <div class="module_box_w_type1">
-                                    <div class="mb_image_w">
+                                    <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">
                                             <img src="./img/event_post.png" class="mb_image" alt="이벤트 포스트">
                                         </div>
@@ -741,7 +741,7 @@
                             </a>
                             <a href="javascript:void(0);" class="slick_list_cont" id="instargram-link" target="_blank">
                                 <div class="module_box_w_type1">
-                                    <div class="mb_image_w instargram-box">
+                                    <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">
                                             <img id="instargram-media" src="" class="mb_image" alt="artgg instargram image">
                                         </div>
