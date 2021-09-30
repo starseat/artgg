@@ -266,6 +266,13 @@
 }
 
 
+/* 공공기관미술품임대전시 일정 위치 광명 -> 수원 변경 */
+
+#area_7 {
+    transform: translate(50px, 68px);
+}
+
+
 /* Map Window info */
 
 .layer_pop {
