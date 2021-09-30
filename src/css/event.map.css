@@ -706,3 +706,13 @@
         line-height: 15px;
     }
 }
+
+@media screen and (max-height: 824px) and (orientation: landscape) {
+    .map_area .svg_wrap {
+        padding: 50px
+    }
+    .map_area table .title,
+    .map_area table .date {
+        font-size: 0.6em;
+    }
+}
