@@ -14,6 +14,11 @@ function init() {
     getNoticeList(1);
 
     getIntroduceInfo();
+
+    resizeEventMap();
+    $(window).resize(function() {
+        resizeEventMap();
+    });
 }
 
 function initFullpage() {
@@ -234,4 +239,47 @@ function closeIntroducePopup() {
 function clearPopup() {
     $('body').removeClass('section3_popup');
     $('body').removeClass('board_popup');
+}
+
+function openEventMapAllPopup() {
+    var w = $(window).width();
+    if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
+
+    $(".map_info").addClass("active");
+    if (w <= 720) $("body").addClass("scroll_hidden map_fixed");
+
+    $.fn.fullpage.setAllowScrolling(false);
+}
+
+function closeEventMapAllPopup() {
+    if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
+    $(".map_info").removeClass("active");
+    $("body").removeClass("scroll_hidden map_fixed");
+
+    $.fn.fullpage.setAllowScrolling(true);
+}
+
+function resizeEventMap() {
+    // if (window.innerWidth <= 768) {
+    //     // 지도만
+    //     var tempWidth = window.innerWidth * 10;
+    //     var tempHeight = window.innerHeight * 7;
+    //     if (tempWidth > tempHeight) {
+    //         if (!(window.innerWidth > ($('.svg_wrap').width() + 30))) {
+    //             var tempGap = tempWidth - tempHeight;
+    //             var per = parseInt((tempGap + '').substr(0, 2), 10) + 10;
+    //             var oriWidth = $('.svg_wrap').width();
+    //             $('.svg_wrap').width(oriWidth - ((oriWidth * per) / 100));
+    //         } else {
+    //             $('.svg_wrap').width(window.innerWidth - 20);
+    //         }
+
+    //     } else {
+    //         $('.svg_wrap').width(window.innerWidth - 20);
+    //     }
+
+    // } else {
+    //     // 지도 + 일정
+
+    // }
 }

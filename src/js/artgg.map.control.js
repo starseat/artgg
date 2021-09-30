@@ -200,18 +200,21 @@ var MapControl = (function() {
     });
     //전체일정 닫기(사이드창 닫기)
     $(".btn_info_close").on("click", function() {
-        if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
-        $(".map_info").removeClass("active");
-        $("body").removeClass("scroll_hidden map_fixed");
+        // if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
+        // $(".map_info").removeClass("active");
+        // $("body").removeClass("scroll_hidden map_fixed");
+
+        closeEventMapAllPopup();
     });
     //전체일정 열기(사이드창 열기)
     $(".btn_daily_info").on("click", function() {
-        console.log('?123');
-        var w = $(window).width();
-        if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
+        // var w = $(window).width();
+        // if (!$(".map_info").hasClass("use_ani")) $(".map_info").addClass("use_ani");
 
-        $(".map_info").addClass("active");
-        if (w <= 720) $("body").addClass("scroll_hidden map_fixed");
+        // $(".map_info").addClass("active");
+        // if (w <= 720) $("body").addClass("scroll_hidden map_fixed");
+
+        openEventMapAllPopup();
     });
     //맵 사이즈 조정
     $(window).on("resize", function() {

@@ -646,11 +646,16 @@
     .layer_pop .info_title .title {
         display: block;
     }
+    /*
     .map_fixed .section5_cont_w {
         z-index: 1000;
     }
     .map_area .map_info {
         position: fixed;
+    }
+    */
+    .map_fixed .fullpage-wrapper {
+        z-index: 1000;
     }
     /* #area_2{
           transform: scale(1.3) translate(-29px, -39px);
