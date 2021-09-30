@@ -8,10 +8,12 @@ function init() {
     AOS.init();
 
     initFullpage();
-    initNaviEvent();
+    initEvent();
 
     getInstargramData();
     getNoticeList(1);
+
+    getIntroduceInfo();
 }
 
 function initFullpage() {
@@ -26,6 +28,10 @@ function initFullpage() {
                 $('#nav').hide();
             } else {
                 $('#nav').fadeIn();
+
+                // if (destination == 3) {
+                //     setIntroduceYoutubeAutoPlay();
+                // }
             }
 
             _activateLeftNav(destination);
@@ -36,12 +42,34 @@ function initFullpage() {
     });
 }
 
-function initNaviEvent() {
-    //모바일 lnb오픈
+function initEvent() {
+    // 모바일 lnb오픈
     $('.btn_allmenu').on('click', function() {
         $('.common_lnb_w').toggleClass('gnb_open');
         $(this).addClass('btn_gnb_close');
     });
+}
+
+function getIFrameYoutubeLink(youtube_id) {
+    // return 'https://www.youtube.com/embed/' + youtube_id + '?rel=0';
+    return 'https://www.youtube.com/embed/' + youtube_id + '?autoplay=1';
+}
+
+var __isYoutubeAutoPlay = false;
+
+function getIntroduceInfo() {
+    // view 에 직접 src 추가
+    // $('#target_youtube_view').attr('src', getIFrameYoutubeLink('3riELB0MHYM'));
+}
+
+function setIntroduceYoutubeAutoPlay() {
+    if (__isYoutubeAutoPlay) return;
+
+    var _link = $('#target_youtube_view').attr('src');
+    _link += '&amp;autoplay=1';
+    $('#target_youtube_view').attr('src', _link);
+    __isYoutubeAutoPlay = true;
+
 }
 
 function getInstargramData() {
@@ -83,7 +111,6 @@ function _activateLeftNav(index) {
 }
 
 function moveFullpage(index) {
-    console.log('[moveFullpage] index: ', index);
     _activateLeftNav(index);
     $.fn.fullpage.moveTo(index);
 }
@@ -175,18 +202,35 @@ function getNoticeView(seq) {
             $('#notice-detail-title').text(resultObj.title);
             $('#notice-detail-content').html(resultObj.contents);
 
-            openPopup();
+            openNoticePopup();
         },
         error: function() {}
     });
 }
 
-function openPopup() {
+function openNoticePopup() {
+    clearPopup();
     $('body').addClass('board_popup');
     $.fn.fullpage.setAllowScrolling(false);
 }
 
-function closePopup() {
+function closeNoticePopup() {
     $('body').removeClass('board_popup');
     $.fn.fullpage.setAllowScrolling(true);
+}
+
+function openIntroducePopup() {
+    clearPopup();
+    $('body').addClass('section3_popup');
+    $.fn.fullpage.setAllowScrolling(false);
+}
+
+function closeIntroducePopup() {
+    $('body').removeClass('section3_popup');
+    $.fn.fullpage.setAllowScrolling(true);
+}
+
+function clearPopup() {
+    $('body').removeClass('section3_popup');
+    $('body').removeClass('board_popup');
 }

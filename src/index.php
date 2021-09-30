@@ -7,7 +7,7 @@
                 <div class="section_inner">
                     <i class="sectionDim zoomIn"></i><!-- 뒷배경 커지는 dim -->
                     <div class="intro_logo" >
-                        <div><!-- 로고 slide up / data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="top-bottom"  -->
+                        <div class="slideUp"><!-- 로고 slide up / data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="top-bottom"  -->
                             <img src="./img/intro_logo.png" alt="아트경기" class="intro_artgg_img">
                         </div>
                     </div>
@@ -87,8 +87,7 @@
             <div class="section_inner">
                 <div class="section_cont">
                     <strong class="section_title">
-                        <span>경기 미술품 활성화 사업</span>
-                        아트경기 소개
+                        <span>경기 미술품 활성화 사업</span>아트경기 소개
                     </strong>
                     <div class="article_introduce_w">
                         <!-- 좌측 : 텍스트 영역 -->
@@ -125,16 +124,14 @@
                         </div>
                         <!-- 우측 : 폼,영상 -->
                         <div class="introduce_form_w">
-                            <div class="introduce_form">
-                                폼영역
-                            </div>
+                            <div class="introduce_form"></div>
                             <div class="introduce_btn">
-                                <a href="#none" class="introduce_btn_link">
+                                <a href="javascript:void(0);" class="introduce_btn_link" id="introduceDetailBtn" onclick="openIntroducePopup()">
                                     <img src="./img/section3_introduce_btn.png" alt="자세히보기">
                                 </a>
                             </div>
-                            <div class="introduce_player">
-                                vod영역
+                            <div class="introduce_player" id="target_youtube_box">
+                                <iframe id="target_youtube_view" width="510" height="300" src="https://www.youtube.com/embed/3riELB0MHYM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -152,12 +149,56 @@
                                 </g>
                                 </g>
                             </svg>
-                        </span>
-                    </a>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <!-- 모바일 레이어 팝업 -->
+            <div class="layer_popup_w detail_popup">
+                <div class="detaile_view_w">
+                    <div class="introduce_text_group">
+                        <div class="text_group">
+                            <strong>예술가의 창작 활동을 지원합니다</strong>
+                            <p>
+                                경기도와 경기문화재단이 주최하는 경기 미술품 활성화 사업(아트경기)
+                                은 경기도 예술가의 지속적인 창작 활동과 건강한 미술시장의 발전을
+                                위합니다. 2021 아트경기는 경기도 지역에서 활발하게 활동 중인 시각
+                                예술분야 작가 42인을 선정, 경기도 내외 오프라인부터 온라인까지 다
+                                양한 행사를 통해 작품을 선보입니다.
+                            </p>
+                        </div>
+                        <div class="text_group">
+                            <strong>건강한 미술시장을 희망합니다</strong>
+                            <p>
+                                아트경기는 미술시장을 구성하는 창작, 유통, 향유 세 분야의 순환에
+                                주목하여 예술이 일상이 되는 경기도를 만들어가고자 합니다.
+                                “위대한 작품은 탄생하는 것이 아니라 인위적으로 만들어진다”라는
+                                예술사회학자 세라 손튼(Sarah Thornton)의 말처럼, 세대를 걸쳐
+                                사랑받는 작품이 등장하기에는 미술시장의 역할이 무엇보다 중요합니다.
+                            </p>
+                        </div>
+                        <div class="text_group">
+                            <strong>우리의 일상을 예술로 이어줍니다</strong>
+                            <p>
+                                미술장터, 팝업갤러리, 공공기관 미술품 임대전시, 아트페어, 온라인
+                                사업으로 구성된 이번 아트경기 는 경기도 내외 다양한 지역에서
+                                경기도 작가의 작품을 선보입니다. 경기도 예술인의 작품이 개인의 곁에
+                                스며들어 예술과 함께하는 삶이 될 수 있기를 기대합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="introduce_form"></div>
+                </div>
+                <button type="button" class="popup_close" title="팝업 닫기" onclick="closeIntroducePopup()">
+                    <span class="icon_close_x">
+                        <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
+                            <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
         </div>
-    </div>
 
     <!-- S4 : 온라인 갤러리 -->
     <div id="section4"class="section fullpage-section">
@@ -650,8 +691,8 @@
     <div id="section6" class="section fullpage-section">
         <div class="section6_cont_w">
             <div class="section_inner">
-                <div class="section_cont">
-                    e도록
+                <div class="section_cont" id="e-dolog-box">
+                    <iframe src="https://ebooknara.com/ebook/artgg/09"></iframe>
                 </div>
                 <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(7);">
                     <span class="icon_mouse">
@@ -684,16 +725,16 @@
                                 <div class="module_box_w_type1">
                                     <div class="mb_image_w">
                                         <div class="mb_image_inner">
-                                            <img src="//img2.sbs.co.kr/img/seditor/VD/2021/07/25/p6K1627222026847-640-0.jpg" class="mb_image" alt="뉴질랜드 vs 온두라스 하이라이트 [남자축구 조별예선]">
+                                            <img src="./img/event_post.png" class="mb_image" alt="이벤트 포스트">
                                         </div>
                                     </div>
                                     <div class="mb_info_w">
                                         <div class="mb_infoline_inner">
-                                            <span class="label_dott bgcolor_pink"></span>
+                                            <!-- <span class="label_dott bgcolor_pink"></span> -->
                                             <div class="mbif_text">
-                                                아트경기 X 아트로드77
+                                                <!-- 아트경기 X 아트로드77 -->
                                             </div>
-                                            <span class="mbif_date">2020.10.23~11.1</span>
+                                            <span class="mbif_date"><!--2020.10.23~11.1--></span>
                                         </div>
                                     </div>
                                 </div>
@@ -786,7 +827,7 @@
                         <div class="popup_text_w" id="notice-detail-content">
                             <!-- <p class="popup_text">본문</p> -->
                         </div>
-                        <button type="button" class="popup_close" title="팝업 닫기" onclick="closePopup();">
+                        <button type="button" class="popup_close" title="팝업 닫기" onclick="closeNoticePopup();">
                             <span class="icon_close_x">
                                 <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
                                     <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
@@ -805,10 +846,10 @@
         <div class="footer" id="footer">
             <div class="footer_list_w">
                 <div class="footer_logo_list">
-                    <a href="#none" class="footer_logo_cont">
+                    <a href="javascript:void(0);" class="footer_logo_cont">
                         <span class="flc_01"><img src="./img/logo_gyeonggi.png" alt="새로운경기,공정한세상"></span>
                     </a>
-                    <a href="#none" class="footer_logo_cont">
+                    <a href="javascript:void(0);" class="footer_logo_cont">
                         <span class="flc_02"><img src="./img/logo_ggcf.png" alt="경기문화재단"></span>
                     </a>
                 </div>
@@ -826,7 +867,7 @@
                 </div>
                 <!-- sns -->
                 <div class="footer_sns_list">
-                    <a href="#none" class="footer_sns_cont">
+                    <a href="https://www.facebook.com/artgg.official" class="footer_sns_cont" target="_blank">
                         <span class="icon_sns_facebook">
                             <svg width="32" height="32" viewBox="0 0 32 32">
                                 <g id="Facebook-f_Logo-Blue-Logo.wine" transform="translate(0 -3)">
@@ -836,7 +877,7 @@
                             </svg>
                         </span>
                     </a>
-                    <a href="#none" class="footer_sns_cont">
+                    <a href="https://www.instagram.com/artgg_official" class="footer_sns_cont" target="_blank">
                         <span class="icon_sns_instargram">
                             <svg width="32" height="32" viewBox="0 0 32 32">
                                 <g id="svg_instargram_group" data-name="svg_instargram_group" transform="translate(-3254.661 -6989.661)">
