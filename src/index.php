@@ -57,7 +57,7 @@
                     경기도 작가의 미술품을<br/>
                     <span class="text_marker">당신의 일상과 잇다</span>
                 </p>
-                <a href="javascript:void(0);" class="btn_quick_online page-move" onclick="downFullpage(5);">
+                <a href="javascript:void(0);" class="btn_quick_online page-move" onclick="moveFullpage(4);">
                     온라인갤러리<br/>바로가기
                 </a>
             </div>
