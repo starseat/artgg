@@ -22,4 +22,14 @@ ob_start(); // Initiate the output buffer
     <link rel="stylesheet" type="text/css" href="./css/animation.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" media="all" />
     <link rel="stylesheet" type="text/css" href="./css/event.map.css" media="all" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE2MVT34FV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VE2MVT34FV');
+    </script>
 </head>
