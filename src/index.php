@@ -58,7 +58,7 @@
                     <span class="text_marker">당신의 일상과 잇다</span>
                 </p>
                 <a href="javascript:void(0);" class="btn_quick_online page-move" onclick="moveFullpage(4);">
-                    온라인갤러리<br/>바로가기
+                    온라인 전시관<br/>바로가기
                 </a>
             </div>
             <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(3);">
@@ -200,7 +200,7 @@
             </div>
         </div>
 
-    <!-- S4 : 온라인 갤러리 -->
+    <!-- S4 : 온라인 전시관 -->
     <div id="section4"class="section fullpage-section">
         <div class="section4_cont_w">
             <div class="section_inner">
@@ -208,10 +208,10 @@
                     <a href="./gallery" class="online_gallery_inner" target="_blank" >
                         <div class="online_gallery_cont">
                             <div class="spinner-block">
-                                <span class="gallery_enter">온라인 갤러리<br/>입장하기</span>
+                                <span class="gallery_enter">온라인 전시관<br/>입장하기</span>
                                 <div class="spinner spinner-3"></div>
                             </div>
-                            <strong>2021 아트경기 작가의 작품을 <br/>실감형 온라인 갤러리에서 만나보세요.</strong>
+                            <strong>2021 아트경기 작가의 작품을 <br/>실감형 온라인 전시관에서 만나보세요.</strong>
                         </div>
                     </a>
                 </div>
@@ -582,11 +582,11 @@
                                     <ol>
                                         <li>
                                             <div class="title">아트경기x아트로드 77</div>
-                                            <span class="date">21.10.7 - 21.10.17<br> (10:00 ~ 17:00), 월요일휴관</span>
+                                            <span class="date">21.10.7 - 21.10.17</span>
                                         </li>
                                         <li>
                                             <div class="title">신장동 할로윈 아트마켓</div>
-                                            <span class="date">21.10.21 - 21.10.31</span>
+                                            <span class="date">21.10. - 21.10.31</span>
                                         </li>
                                     </ol>
                                 </td>
@@ -597,19 +597,19 @@
                                     <ol>
                                         <li>
                                             <div class="title">Art For Ur FLEX</div>
-                                            <span class="date">21.10.1 - 21.10.14<br> (10:30 ~ 22:00)</span>
+                                            <span class="date">21.10.1 - 21.10.14</span>
                                         </li>
                                         <li>
                                             <div class="title">업클로즈 02</div>
-                                            <span class="date">21.5.19 - 21.5.23<br> (11:00 ~ 22:00)</span>
+                                            <span class="date">21.5.19 - 21.5.23</span>
                                         </li>
                                         <li>
                                             <div class="title">업클로즈 03</div>
-                                            <span class="date">21.10.20 - 21.10.31<br> (11:00 ~ 19:00)</span>
+                                            <span class="date">21.10.2 - 21.11.1</span>
                                         </li>
                                         <li>
                                             <div class="title">DMZ 아트페어</div>
-                                            <span class="date">21.10.28 - 21.10.31<br> (10:00 ~ 17:00)</span>
+                                            <span class="date">21.10.28 - 21.10.31</span>
                                         </li>
                                     </ol>
                                 </td>
@@ -631,11 +631,11 @@
                                     <ol>
                                         <li>
                                             <div class="title">이광기의 Live경매쇼</div>
-                                            <span class="date">21.8.9 - 21.12.8<br> 격주월요일 (21:00 ~ )</span>
+                                            <span class="date">21.8.9 - 21.12.8</span>
                                         </li>
                                         <li>
                                             <div class="title">ZEROBASE x 아트경기</div>
-                                            <span class="date">21.12</span>
+                                            <span class="date">21.12.17 – 21.12.22</span>
                                         </li>
                                         <li>
                                             <div class="title">아트경기 x 오픈갤러리</div>
@@ -650,8 +650,7 @@
                                     <ol>
                                         <li>
                                             <div class="title">2021 대구아트페어</div>
-                                            <span class="date">21.11.4 - 21.11.7<br> 11:00 ~ 19:30
-                                                (일요일~18:00)</span>
+                                            <span class="date">21.11.4 - 21.11.7</span>
                                         </li>
                                     </ol>
                                 </td>
