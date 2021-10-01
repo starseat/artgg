@@ -131,7 +131,7 @@
                                 </a>
                             </div>
                             <div class="introduce_player" id="target_youtube_box">
-                                <iframe id="target_youtube_view" width="510" height="300" src="https://www.youtube.com/embed/3riELB0MHYM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe id="target_youtube_view" width="510" height="300" src="https://www.youtube.com/embed/3riELB0MHYM?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
