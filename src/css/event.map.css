@@ -266,10 +266,30 @@
 }
 
 
-/* 공공기관미술품임대전시 일정 위치 광명 -> 수원 변경 */
+/* 행사지도 마커 위치 변경 */
+
+#area_1 {
+    transform: translate(0px, 120px);
+}
+
+#area_2 {
+    transform: translate(-20px, 70px);
+}
 
 #area_7 {
     transform: translate(50px, 68px);
+}
+
+#area_8 {
+    transform: translate(-430px, 170px);
+}
+
+#area_9 {
+    transform: translate(-326px, 286px);
+}
+
+#area_10 {
+    transform: translate(-380px, 360px);
 }
 
 
