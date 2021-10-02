@@ -293,6 +293,13 @@
 }
 
 
+/* wifi 아이콘 삭제 요청 */
+
+#wifi_icon {
+    display: none;
+}
+
+
 /* Map Window info */
 
 .layer_pop {
