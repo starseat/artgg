@@ -276,8 +276,20 @@
     transform: translate(-20px, 70px);
 }
 
+#area_5 {
+    transform: translate(0, 20px);
+}
+
 #area_7 {
     transform: translate(50px, 68px);
+}
+
+#area_7_2 {
+    transform: translate(-96px, -156px);
+}
+
+#area_7_3 {
+    transform: translate(94px, -186px);
 }
 
 #area_8 {

@@ -11,7 +11,9 @@ require_once('head.php');
     
 <!--  GNB -->
 <nav id="nav" class="common_lnb_w"><!-- 모바일 gnb 오픈 gnb_open -->
-    <!-- <button class="admin_logout">로그아웃</button> -->
+    <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
+    <button class="admin_logout" onclick="javascript: location.href='./admin/action/logout.php';">로그아웃</button>
+    <?php } ?>
     <h1 class="h1_logo">
         <a href="" class="logo_link">
             <span class="icon_logo_gnb">

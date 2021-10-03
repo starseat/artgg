@@ -1,5 +1,6 @@
 <?php
 ob_start(); // Initiate the output buffer
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="ko">

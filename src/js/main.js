@@ -37,7 +37,15 @@ function initFullpage() {
                 // if (destination == 3) {
                 //     setIntroduceYoutubeAutoPlay();
                 // }
+
+                if (destination == 6) {
+                    setTimeout(function() {
+                        $('#fbToolBar .button.right').eq(1).on('click', function() { console.log('eq(1)'); });
+                    }, 2000);
+                }
             }
+
+
 
             _activateLeftNav(destination);
             // console.log('[fullpage.onLeave] origin: ', origin);

@@ -511,6 +511,22 @@
                                     d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z"
                                     transform="translate(0 0)" />
                             </g>
+                            <g id="area_7_2" class="btn-area" data-index="6">
+                                <title>공공기관미술품임대전시</title>
+                                <path id="icon-arrow-4" data-name="icon-arrow" class="cls-11"
+                                    d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-4" data-name="icon-box" class="cls-12"
+                                    d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z"
+                                    transform="translate(0 0)" />
+                            </g>
+                            <g id="area_7_3" class="btn-area" data-index="6">
+                                <title>공공기관미술품임대전시</title>
+                                <path id="icon-arrow-6" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z"
+                                    transform="translate(0 0)" />
+                                <path id="icon-box-6" data-name="icon-box" class="cls-12"
+                                    d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z"
+                                    transform="translate(0 0)" />
+                            </g>
                             <g id="area_1" class="btn-area" data-index="0">
                                 <title>업클로즈02</title>
                                 <path id="icon-arrow-9" data-name="icon-arrow" class="cls-9" d="M194.53,328h24v32Z"
@@ -605,7 +621,7 @@
                                         </li>
                                         <li>
                                             <div class="title">업클로즈 03</div>
-                                            <span class="date">21.10.2 - 21.11.1</span>
+                                            <span class="date">21.10.21 - 21.11.1</span>
                                         </li>
                                         <li>
                                             <div class="title">DMZ 아트페어</div>
@@ -620,7 +636,7 @@
                                     <ol>
                                         <li>
                                             <div class="title">공공기간 미술품 임대전시</div>
-                                            <span class="date">21.9 - 21.12</span>
+                                            <span class="date">21.9월 - 21.12월</span>
                                         </li>
                                     </ol>
                                 </td>
@@ -795,7 +811,9 @@
         <div class="section8_cont_w">
             <div class="section_inner">
                 <div class="board_list_w">
-                    <!-- <button type="button" class="admin_writer">글쓰기</button> -->
+                    <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
+                    <a href="./admin/write.php" class="admin_writer" target="_blank">글쓰기</a>
+                    <?php } ?>
                     <div class="board_list_inner">
                         <table>
                             <colgroup>
