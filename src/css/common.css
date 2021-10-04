@@ -880,10 +880,20 @@ select {
 .slick_list_cont {
     display: block;
     float: left;
+    position:Relative;
     width: 50%;
-    padding: 0 40px;
+    padding:30px 40px;
     box-sizing: border-box;
 }
+.event-box .mb_info_w {
+    display:none;
+}
+.slick_slide_stext {
+    position:absolute;
+    right:40px;
+    top:0;
+}
+
 
 .mb_image_w {
     display: block;
@@ -1214,7 +1224,10 @@ select {
     display:inline-block;
     padding-right:10px;
 }
-
+#notice-update {
+    color:#3783e0;
+    font-weight:700;
+}
 .popup_close {
     display: block;
     position: Absolute;
@@ -1535,7 +1548,10 @@ select {
         padding: 0 26px;
     }
     .slick_list_cont {
-        padding: 0 14px;
+        padding:30px 14px;
+    }
+    .slick_slide_stext{
+        right:14px;
     }
     .board_list_w {
         padding: 115px 40px 0;
@@ -1758,6 +1774,13 @@ select {
     float: none;
     width: 92%;
     margin: 0 auto;
+}
+.event-box .mb_info_w {
+    display:block;
+    text-align:center;
+}
+.event-box .label_dott {
+    display:none;
 }
 .slick_list_cont:last-child {
     display: none;

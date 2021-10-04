@@ -108,6 +108,10 @@ function doDelete(event) {
     event.preventDefault();
     event.stopPropagation();
 
+    if (!confirm('정말 삭제하시겠습니까?')) {
+        return false;
+    }
+
     const notice_seq = parseInt($('#notice_seq').val(), 10);
     if (notice_seq == 0) {
         alert('잘못된 접근 입니다.');

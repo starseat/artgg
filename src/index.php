@@ -747,7 +747,7 @@
                                         <div class="mb_infoline_inner">
                                             <!-- <span class="label_dott bgcolor_pink"></span> -->
                                             <div class="mbif_text">
-                                                <!-- 아트경기 X 아트로드77 -->
+                                                ↑ 클릭하면 아트경기 인스타그램으로 이동합니다. ↑
                                             </div>
                                             <span class="mbif_date"><!--2020.10.23~11.1--></span>
                                         </div>
@@ -755,6 +755,7 @@
                                 </div>
                             </a>
                             <a href="javascript:void(0);" class="slick_list_cont" id="instargram-link" target="_blank">
+                                <span class="slick_slide_stext">아트경기인스타그램(@artgg.official)</span>
                                 <div class="module_box_w_type1">
                                     <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">
@@ -839,8 +840,19 @@
 
                     <!-- board layer popup -->
                     <div class="layer_popup_w">
-                        <strong class="popup_title" id="notice-detail-title">
-                        </strong>
+                        <strong class="popup_title" id="notice-detail-title"></strong>
+                        <div class="popup_date_w">
+                            <span class="date_text" id="notice-detail-createdat">등록일 : 21.10.01</span>
+                            <span class="date_text">/</span>
+                            <span class="date_text" id="notice-detail-updatedat">수정일 : 21.10.04</span>
+                            <span class="date_text">/</span>
+                            <span class="date_text" id="notice-detail-view">조회수 : 3건</span>
+                            <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
+                                <span class="date_text">/</span>
+                                <button type="button" class="date_text" id="notice-update">수정하기</button>
+                            <?php } ?>
+                        </div>
+                        <input type="hidden" id="notice-detail-seq" val="0">
                         <div class="popup_text_w">
                             <div class="popup_text" id="notice-detail-content"></div>
                         </div>
@@ -922,4 +934,14 @@
 
 <?php require_once('./fragment/footer.php'); ?>
 
+<?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
+<script>
+$(document).ready(function() {
+    $('#notice-update').on('click', function() {
+        var url = './admin/write.php?seq=' + $('#notice-detail-seq').val();
+        window.open(url, '_blank'); 
+    });
+});
+</script>
+<?php } ?>
 <?php require_once('./fragment/tail.php'); ?>

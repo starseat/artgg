@@ -17,6 +17,10 @@ include_once('./action/login_check.php');
             margin-left: 10px;
             margin-right: 10px;
         }
+
+        #notice_form_delete_btn {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -64,7 +68,7 @@ include_once('./action/login_check.php');
                     <div class="row">
                         <div class="col-xs-6 text-left">
                             <button class="btn btn-secondary" id="notice_form_reset_btn" onclick="doReset(event)">초기화</button>
-                            <!-- <button class="btn btn-danger" id="notice_form_delete_btn" onclick="doDelete(event)">삭제</button> -->
+                            <button class="btn btn-danger" id="notice_form_delete_btn" onclick="doDelete(event)">삭제</button>
                         </div>
                         <div class="col-xs-6 text-right">
                             <button class="btn btn-primary" onclick="doSubmit(event)">저장</button>

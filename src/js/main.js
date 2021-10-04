@@ -216,6 +216,12 @@ function getNoticeView(seq) {
             $('#notice-detail-title').text(resultObj.title);
             $('#notice-detail-content').html(resultObj.contents);
 
+            $('#notice-detail-createdat').text('등록일 : ' + resultObj.created_at);
+            $('#notice-detail-updatedat').text('수정일 : ' + resultObj.updated_at);
+            $('#notice-detail-view').text('조회수 : ' + resultObj.view_count);
+
+            $('#notice-detail-seq').val(resultObj.seq);
+
             openNoticePopup();
         },
         error: function() {}
