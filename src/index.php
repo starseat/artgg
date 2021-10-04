@@ -736,7 +736,7 @@
                 <div class="section_cont">
                     <div class="slick_slide_list">
                         <div class="slick_list_inner">
-                            <a href="#" class="slick_list_cont">
+                            <a href="https://www.instagram.com/p/CUlmZjahsgJ/?utm_medium=copy_link" class="slick_list_cont" target="_blank">
                                 <div class="module_box_w_type1">
                                     <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">

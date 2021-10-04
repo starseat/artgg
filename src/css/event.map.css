@@ -658,11 +658,20 @@
     .map_area .btn_daily_info {
         display: inline-block;
     }
-    #area_8,
+    /* #area_8,
     #area_9,
     #area_10,
     #wifi_icon {
         transform: translateY(55px);
+    } */
+    #area_8 {
+        transform: translate(-430px, 170px);
+    }
+    #area_9 {
+        transform: translate(-326px, 286px);
+    }
+    #area_10 {
+        transform: translate(-380px, 360px);
     }
 }
 
@@ -706,11 +715,20 @@
     /* #area_2{
           transform: scale(1.3) translate(-29px, -39px);
       } */
-    #area_8,
+    /* #area_8,
     #area_9,
     #area_10,
     #wifi_icon {
         transform: translateX(-25px);
+    } */
+    #area_8 {
+        transform: translate(-430px, 170px);
+    }
+    #area_9 {
+        transform: translate(-326px, 286px);
+    }
+    #area_10 {
+        transform: translate(-380px, 360px);
     }
     .map_daegu,
     .point_daegu {
