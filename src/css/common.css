@@ -44,6 +44,8 @@
 #main-popup1,
 #main-popup2 {
     display: none;
+    max-width: 520px;
+    max-height: 600px;
 }
 
 
