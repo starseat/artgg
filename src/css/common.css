@@ -374,7 +374,8 @@ select {
     vertical-align: middle;
     width: 100%;
     height: 100vh;
-    background-image: url('../img/intro_bg.jpg');
+    /* background-image: url('../img/intro_bg.jpg'); */
+    background-image: url('../img/intro_bg.png');
     background-repeat: no-repeat;
     background-size: 2484px 1754px;
     background-position: center;
