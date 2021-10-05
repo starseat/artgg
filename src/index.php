@@ -1,5 +1,30 @@
 <?php require_once('./fragment/header.php'); ?>
 
+<div class="common_popup_w popup1" id="main-popup1">
+    <div class="common_popup_inner">
+        <img src="section3_introduce.png" alt="">
+    </div>
+    <button type="button" class="popup_close" title="팝업 닫기" onclick="closeMainPopup1();">
+            <span class="icon_close_x">
+                <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
+                    <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+                </svg>
+            </span>
+    </button>
+</div>
+<div class="common_popup_w popup2" id="main-popup2">
+    <div class="common_popup_inner">
+        <img src="./img/event_post.png" alt="">
+    </div>
+    <button type="button" class="popup_close" title="팝업 닫기" onclick="closeMainPopup2();">
+            <span class="icon_close_x">
+                <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
+                    <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+                </svg>
+            </span>
+    </button>
+</div>
+
 <div id="fullpage">
     <div id="section1" class="section fullpage-section">
         <div class="section1_cont_w">

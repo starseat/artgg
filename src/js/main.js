@@ -1,5 +1,8 @@
 $(document).ready(function() {
     init();
+
+    $('#main-popup1').hide();
+    $('#main-popup2').hide();
 });
 
 $('#nav').hide();
@@ -296,4 +299,12 @@ function resizeEventMap() {
     //     // 지도 + 일정
 
     // }
+}
+
+function closeMainPopup1() {
+    $('#main-popup1').hide();
+}
+
+function closeMainPopup2() {
+    $('#main-popup2').hide();
 }
