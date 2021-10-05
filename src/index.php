@@ -755,7 +755,7 @@
                                 </div>
                             </a>
                             <a href="javascript:void(0);" class="slick_list_cont" id="instargram-link" target="_blank">
-                                <span class="slick_slide_stext">아트경기인스타그램(@artgg.official)</span>
+                                <span class="slick_slide_stext">아트경기인스타그램(@artgg_official)</span>
                                 <div class="module_box_w_type1">
                                     <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">
