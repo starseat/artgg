@@ -2,7 +2,7 @@
 
 <div class="common_popup_w popup1" id="main-popup1">
     <div class="common_popup_inner">
-        <img src="section3_introduce.png" alt="">
+        <img src="./img/section3_introduce.png" alt="">
     </div>
     <button type="button" class="popup_close" title="팝업 닫기" onclick="closeMainPopup1();">
             <span class="icon_close_x">

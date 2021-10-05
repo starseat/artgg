@@ -1,8 +1,5 @@
 $(document).ready(function() {
     init();
-
-    $('#main-popup1').hide();
-    $('#main-popup2').hide();
 });
 
 $('#nav').hide();
