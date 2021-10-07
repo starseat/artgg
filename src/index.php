@@ -867,11 +867,11 @@
                     <div class="layer_popup_w">
                         <strong class="popup_title" id="notice-detail-title"></strong>
                         <div class="popup_date_w">
-                            <span class="date_text" id="notice-detail-createdat">등록일 : 21.10.01</span>
+                            <span class="date_text" id="notice-detail-createdat"></span>
                             <span class="date_text">/</span>
-                            <span class="date_text" id="notice-detail-updatedat">수정일 : 21.10.04</span>
+                            <span class="date_text" id="notice-detail-updatedat"></span>
                             <span class="date_text">/</span>
-                            <span class="date_text" id="notice-detail-view">조회수 : 3건</span>
+                            <span class="date_text" id="notice-detail-view"></span>
                             <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
                                 <span class="date_text">/</span>
                                 <button type="button" class="date_text" id="notice-update">수정하기</button>

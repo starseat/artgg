@@ -18,6 +18,9 @@ function init() {
     resizeEventMap();
     $(window).resize(function() {
         resizeEventMap();
+        if ($('#notice-detail-content').width() <= 640) {
+            $('#notice-detail-content .note-video-clip').css('width', '100%');
+        }
     });
 }
 
@@ -40,12 +43,10 @@ function initFullpage() {
 
                 if (destination == 6) {
                     setTimeout(function() {
-                        $('#fbToolBar .button.right').eq(1).on('click', function() { console.log('eq(1)'); });
+                        $('#tmpContainer #fbToolBar .button.right').on('click', function() { console.log('test'); });
                     }, 2000);
                 }
             }
-
-
 
             _activateLeftNav(destination);
             // console.log('[fullpage.onLeave] origin: ', origin);
