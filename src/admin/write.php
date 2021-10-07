@@ -89,8 +89,3 @@ include_once('./action/login_check.php');
 <script src="./js/write.notice.js"></script>
 </body>
 </html>
-
-
-
-
-

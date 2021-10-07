@@ -164,6 +164,7 @@ select {
 
 /* common */
 
+.admin_popup,
 .admin_logout {
     display: inline-block;
     padding: 3px 15px;
@@ -177,6 +178,11 @@ select {
     border: 1px solid #000;
 }
 
+.admin_popup {
+    right: 150px;
+}
+
+.admin_popup:hover,
 .admin_logout:hover {
     background-color: #000;
     color: #fff;
