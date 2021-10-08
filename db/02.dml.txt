@@ -1,5 +1,10 @@
 insert into artgg_members (user_id, name, password, member_type, created_at, updated_at)
 values ('admin', 'admin', '$2y$10$fQsR7C52KW7VeEl8NinHs.mWQF5MJ.10O5uPfC2MFvlQIfZ95MvM2', 'A', NOW(), NOW());
 
+insert into artgg_popup (seq, activate_yn, type, param)
+values (1, '0', 'link', '');
+
+insert into artgg_popup (seq, activate_yn, type, param)
+values (2, '0', 'link', '');
 
 commit;

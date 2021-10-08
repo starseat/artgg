@@ -56,3 +56,31 @@ CREATE TABLE artgg_file (
 ) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
 
 
+/**
+ * 아트경기 공지사항
+ *  - level: 3: 긴급, 2: 중요, 1: 일반
+ */
+CREATE TABLE artgg_notice (
+	seq BIGINT NOT NULL AUTO_INCREMENT, 
+    level TINYINT, 
+    title VARCHAR(512) NOT NULL, 
+    contents TEXT NOT NULL,
+	view_count INT NOT NULL DEFAULT 0, 
+	created_at DATETIME NOT NULL DEFAULT now(),
+	updated_at DATETIME NOT NULL DEFAULT now(),
+	deleted_at DATETIME NULL DEFAULT NULL, 
+	PRIMARY KEY (`seq` )
+) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
+
+
+/**
+ * 아트경기 팝업
+ */
+CREATE TABLE artgg_popup (
+	seq BIGINT NOT NULL, 
+	active_yn CHAR(1) NOT NULL, -- 0: off, 1: on
+    type VARCHAR(16) NOT NULL, -- link, notice
+	param VARCHAR(1024), -- link, notice => seq
+	updated_at DATETIME NOT NULL DEFAULT now(),
+	PRIMARY KEY (`seq` )
+) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
