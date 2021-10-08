@@ -13,7 +13,7 @@ require_once('head.php');
 <nav id="nav" class="common_lnb_w"><!-- 모바일 gnb 오픈 gnb_open -->
     <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
     <button class="admin_popup" onclick="javascript: location.href='./admin/popup.php';">팝업</button>
-    <button class="admin_logout" onclick="javascript: location.href='./admin/action/logout.php';">로그아웃2</button>
+    <button class="admin_logout" onclick="javascript: location.href='./admin/action/logout.php';">로그아웃</button>
     <?php } ?>
     <h1 class="h1_logo">
         <a href="" class="logo_link">
