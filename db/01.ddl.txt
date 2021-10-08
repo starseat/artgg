@@ -78,7 +78,7 @@ CREATE TABLE artgg_notice (
  */
 CREATE TABLE artgg_popup (
 	seq BIGINT NOT NULL, 
-	active_yn CHAR(1) NOT NULL, -- 0: off, 1: on
+	use_yn CHAR(1) NOT NULL, -- 0: off, 1: on
     type VARCHAR(16) NOT NULL, -- link, notice
 	param VARCHAR(1024), -- link, notice => seq
 	updated_at DATETIME NOT NULL DEFAULT now(),
