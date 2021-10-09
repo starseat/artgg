@@ -240,3 +240,81 @@ function password_matches($password, $hashed_password) {
         return 0;
     }
 }
+
+function isUploadBannedItem($file_name) {
+    // 파일 업로드 금지
+    $ban_list = array('php', 'html', 'css', 'js'); // 금지 파일 확장자 수정 필요!!
+    $exp_file_name = explode('.', $file_name);
+
+    // 확장자 소문자로 가져오기
+    $ext = strtolower($exp_file_name[sizeof($exp_file_name) - 1]);
+    if (in_array($ext, $ban_list)) {
+        return false;
+    }
+    return true;
+}
+
+function uploadPopupImage($upload_file) {
+    $ret_upload_file_array_item = [
+        'upload_file_path' => '',
+        'file_name' => '',
+        'file_save_name' => ''
+    ];
+
+    $file_name = basename(convertUTF8String($upload_file['name']));
+
+    if (empty($file_name)) {
+        return null;
+    }
+
+    $file_temp_name = convertUTF8String($upload_file['tmp_name']);
+    //$file_type = $upload_files['type'][$i];
+    //$file_size = $upload_files['size'][$i];
+    //$file_error = $upload_files['error'][$i];
+
+    if (!isUploadBannedItem($file_name)) {
+        return null;
+    }
+
+    // if( $file_error != UPLOAD_ERR_OK ) {
+    //     $upload_error_msg = "";
+    //     switch( $error ) {
+    //         case UPLOAD_ERR_INI_SIZE:
+    //         case UPLOAD_ERR_FORM_SIZE:
+    //             $upload_error_msg = "파일이 너무 큽니다. ($error)";
+    //             break;
+    //         case UPLOAD_ERR_NO_FILE:
+    //             $upload_error_msg = "파일이 첨부되지 않았습니다. ($error)";
+    //             break;
+    //         default:
+    //             $upload_error_msg = "파일이 제대로 업로드되지 않았습니다. ($error)";
+    //     }
+    //     //error_alert($upload_error_msg);
+    //     exit;
+    // }
+
+    // if($file_size > 500000) {
+    //     //error_alert ("파일이 너무 큽니다.");
+    //     exit;
+    // }
+
+    $upload_path = '/upload/popup/';
+    $real_upload_path = '../../' . $upload_path;
+    if (!is_dir($real_upload_path)) {
+        mkdir($real_upload_path, 766, true);
+    }
+
+    $today = date("Ymd");
+    //$file_save_name = $today . '_' . uuidgen() . '_' . $file_name;
+    $file_save_name = $today . '_' . uuidgen() . '.' . getFileExtension($file_name);
+    $real_upload_file = $real_upload_path . $file_save_name;
+    //$move_resuslt = move_uploaded_file($file_temp_name, $upload_file);
+    $move_resuslt = move_uploaded_file($file_temp_name, $real_upload_file);
+    $ret_upload_file_array_item = [
+        'upload_file_path' => $upload_path,
+        'file_name' => $file_name,
+        'file_save_name' => $file_save_name
+    ];
+
+    return $ret_upload_file_array_item;
+}

@@ -14,6 +14,7 @@ function init() {
     getNoticeList(1);
 
     getIntroduceInfo();
+    getPopupInfo();
 
     resizeEventMap();
     $(window).resize(function() {
@@ -297,6 +298,83 @@ function resizeEventMap() {
     //     // 지도 + 일정
 
     // }
+}
+
+function getPopupInfo() {
+    $.ajax({
+        type: "GET",
+        url: './api/get_popup.php',
+        success: function(resultData) {
+            // console.log('[getPopupInfo] resultData:: ', resultData);
+            var resultObj = JSON.parse(resultData);
+            // console.log('[getPopupInfo] resultObj:: ', resultObj);
+            setPopupView(resultObj.popup)
+        },
+        error: function() {}
+    });
+}
+
+var actionPpopup1 = function() {};
+var actionPpopup2 = function() {};
+
+function setPopupView(popupList) {
+    for (var i = 0; i < popupList.length; i++) {
+        var _item = popupList[i];
+        var _index = i + 1;
+
+        if (_item.use_yn == '1') {
+            $('#main-popup' + _index + ' img').attr('src', _item.upload_path + _item.img_name_save);
+            $('#main-popup' + _index + ' img').attr('download', _item.img_name);
+
+            if (_index == 1) {
+                if (_item.type == 'link') {
+                    actionPpopup1 = function() { window.open(_item.param, '_blank'); };
+                } else {
+                    _popup1NoticeSeq = parseInt(_item.param, 10);
+                    actionPpopup1 = popup1moveAndShowNotice;
+                }
+            } else {
+                if (_item.type == 'link') {
+                    actionPpopup2 = function() { window.open(_item.param, '_blank'); };
+                } else {
+                    _popup2NoticeSeq = parseInt(_item.param, 10);
+                    actionPpopup2 = popup2moveAndShowNotice;
+                }
+            }
+
+            $('#main-popup' + _index).show();
+        } else {
+            $('#main-popup' + _index + ' img').attr('src', '');
+            $('#main-popup' + _index).hide();
+
+            if (_index == 1) {
+                actionPpopup1 = function() {};
+            } else {
+                actionPpopup2 = function() {};
+            }
+        }
+    }
+}
+
+var _popup1NoticeSeq = 0;
+var _popup2NoticeSeq = 0;
+
+function popup1moveAndShowNotice() {
+    closeMainPopup1();
+    _moveAndShowNotice(_popup1NoticeSeq);
+}
+
+function popup2moveAndShowNotice() {
+    closeMainPopup2();
+    _moveAndShowNotice(_popup2NoticeSeq);
+}
+
+function _moveAndShowNotice(seq) {
+    moveFullpage(8);
+
+    setTimeout(function() {
+        getNoticeView(seq);
+    }, 1000);
 }
 
 function closeMainPopup1() {
