@@ -81,6 +81,9 @@ CREATE TABLE artgg_popup (
 	use_yn CHAR(1) NOT NULL, -- 0: off, 1: on
     type VARCHAR(16) NOT NULL, -- link, notice
 	param VARCHAR(1024), -- link, notice => seq
+	img_name VARCHAR(128) NULL, 
+	img_name_save VARCHAR(256) NULL, 
+    upload_path VARCHAR(1024) NULL, 
 	updated_at DATETIME NOT NULL DEFAULT now(),
 	PRIMARY KEY (`seq` )
 ) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
