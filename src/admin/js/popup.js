@@ -206,6 +206,10 @@ function _submitPopup(index) {
     var popupImage = null;
     if ($(popupId + '_image_is_upload').val() == '1') {
         popupImage = $(popupId + '_image_form input[type=file]')[0].files[0] ? $(popupId + '_image_form input[type=file]')[0].files[0] : null;
+        if (!popupImage) {
+            alert('팝업 이미지를 등록해야 합니다.');
+            return false;
+        }
     }
     var popupType = $(popupId + '-type').val();
     var param = '';
