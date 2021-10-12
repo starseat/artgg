@@ -880,6 +880,11 @@ select {
     padding: 0
 }
 
+#e-dolog-box .full-screen-box {
+    width: 100%;
+    text-align: right;
+}
+
 
 /* section7 : 이벤트 참여 */
 

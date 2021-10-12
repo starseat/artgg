@@ -733,6 +733,9 @@
             <div class="section_inner">
                 <div class="section_cont" id="e-dolog-box">
                     <iframe src="https://ebooknara.com/ebook/artgg/09"></iframe>
+                    <div class="full-screen-box">
+                        <a href="https://ebooknara.com/ebook/artgg/09" target="_blank">전체 화면 보기</a>
+                    </div>
                 </div>
                 <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(7);">
                     <span class="icon_mouse">
