@@ -318,9 +318,9 @@ var actionPpopup1 = function() {};
 var actionPpopup2 = function() {};
 
 function setPopupView(popupList) {
-    for (var i = 0; i < popupList.length; i++) {
-        var _item = popupList[i];
-        var _index = i + 1;
+    for (let i = 0; i < popupList.length; i++) {
+        let _item = popupList[i];
+        let _index = i + 1;
 
         if (_item.use_yn == '1') {
             $('#main-popup' + _index + ' img').attr('src', _item.upload_path + _item.img_name_save);

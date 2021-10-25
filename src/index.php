@@ -1,5 +1,7 @@
 <?php require_once('./fragment/header.php'); ?>
-
+<style>
+    .common_popup_w { cursor: pointer; }
+</style>
 <div id="fullpage">
     <div id="section1" class="section fullpage-section">
         <!-- s:팝업 -->

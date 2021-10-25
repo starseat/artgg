@@ -1314,11 +1314,11 @@ select {
     max-width: 520px;
     max-height: 600px;
     position:Absolute;
-    left:50%;
+    left:2%;
     top:2%;
 }
-#main-popup1 {margin-left:-550px;}
-#main-popup2 {}
+#main-popup1 {}
+#main-popup2 {margin-left:550px;}
 
 
 /* -------------------- 태블릿 제어 -------------------- */
@@ -1337,7 +1337,7 @@ select {
         min-width:auto;
 
     }
-    #main-popup1 {margin-left:-420px;}
+    #main-popup2 {margin-left:420px;}
     .common_popup_w .popup_close {
         width: 58px;
         height: 58px;
