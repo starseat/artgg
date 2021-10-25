@@ -38,7 +38,7 @@ var MapControl = (function() {
             more: 'https://www.ggcf.kr/archives/142301'
         },
         {
-            photo: './img/event/신장동 할로윈 아트페어.jpg',
+            photo: './img/event/신장동 할로윈 아트마켓.jpg',
             title: '신장동 할로윈 아트마켓',
             date: '<br>10.20 - 10.31 10:00 ~ 18:00 (금, 토: ~ 20:00)',
             cooperation: '주관 : 생강컴퍼니',
