@@ -35,10 +35,10 @@ var MapControl = (function() {
                 { label: '2. 각양 각색의 일곱 갤러리', info: '헤이리 예술마을 내 갤러리 7곳이 각각 풍기는 특유의 분위기를 느껴보세요.' },
                 { label: '3. 다채로운 부대행사', info: '아트마켓과 미술전문가 강연 등, 미술장터를 특별하게 만들어주는 부대행사들에 자유롭게 참여보세요.' },
             ],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/142301'
         },
         {
-            photo: './img/event/신장동 할로윈 아트페어.png',
+            photo: './img/event/신장동 할로윈 아트페어.jpg',
             title: '신장동 할로윈 아트마켓',
             date: '<br>10.20 - 10.31 10:00 ~ 18:00 (금, 토: ~ 20:00)',
             cooperation: '주관 : 생강컴퍼니',
@@ -52,7 +52,7 @@ var MapControl = (function() {
                 { label: '1. 전시장으로 탈바꿈한 대안공간', info: '기존 전시공간에서 벗어나, 대안공간 한치각을 포함해 신장동 내 다양한 공간에 전시된 작품들을 만나보세요.' },
                 { label: '2. 경기도의 이태원, 그리고 할로윈', info: '인접한 미군 부대로 다양한 문화가 공존하는 신장동에서, 아트마켓, 거리 공연 등 다채로운 할로윈 축제를 느껴보세요.' }
             ],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/142920'
         },
         {
             photo: './img/event/Art For Ur FLEX.jpg',
@@ -70,10 +70,10 @@ var MapControl = (function() {
                 { label: '2. 작품이 담긴 굿즈를 내 곁에', info: '아트경기 작가의 작품이 판화와 아트포스터, 다양한 아트굿즈로 여러분을 찾아갑니다.' },
                 { label: '3. 리빙과 아트의 만남', info: '전시공간 내 가구와 인테리어 속에 자연스럽게 녹아든 미술품을 만나보세요.' },
             ],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/exhibit/2021-%ec%95%84%ed%8a%b8%ea%b2%bd%ea%b8%b0-%ed%8c%9d%ec%97%85%ea%b0%a4%eb%9f%ac%eb%a6%ac-%ea%b0%9c%ec%b5%9c?term=316'
         },
         {
-            photo: './img/event/업클로즈03.jpg',
+            photo: './img/event/업클로즈03.png',
             title: '업클로즈03',
             date: '10.21 - 11.1 (11:00 ~ 19:00)',
             cooperation: '주관 : ㈜아트플레이스',
@@ -88,11 +88,11 @@ var MapControl = (function() {
                 { label: '2. 미술시장 산책하기', info: '미술계 전문가가 들려주는 미술시장 이야기를 통해 한 발짝 더 미술시장에 다가가 보세요.' },
                 { label: '3. 다채로운 형식의 작품', info: '평면 뿐아니라 조각과 미디어아트에 이르는 다채로운 작품들이 빚어내는 럭셔리한 전시를 감상해보세요.' },
             ],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/exhibit/143012?term=316'
         },
         {
-            photo: './img/event/DMZ아트페어.PNG',
-            title: 'DMZ 아트페어',
+            photo: './img/event/아트 DMZ 페스티벌 파주일로.png',
+            title: '아트 DMZ 페스티벌 : 파주일로(坡州一路)',
             date: '10.28 - 10.31 (10:00 ~ 17:00)',
             cooperation: '주관 : 스튜디오 끼',
             place: {
@@ -100,7 +100,7 @@ var MapControl = (function() {
                 urls: [{ label: '끼URL', url: 'http://naver.me/Fn2iCiP5' }, { label: '문학수첩URL', url: 'http://naver.me/xNdHXrkp' }],
                 places: []
             },
-            about: 'DMZ 접경지역인 파주는 예로부터 경기 북부 문화예술의 중심지였습니다.<br>&lt;DMZ 아트페어&gt;는 파주를 기점으로 원로 작가와 아트경기 작가 간의 교류의장을 형성해 경기 북부 지역 문화예술을 재조명합니다.<br>지역 문화생태계가 집중되는 예술축제가 여러분들을 찾아갑니다.',
+            about: 'DMZ 접경지역인 파주는 예로부터 경기 북부 문화예술의 중심지였습니다.<br>&lt;아트 DMZ 페스티벌 : 파주일로(坡州一路)&gt;는 파주를 기점으로 원로 작가와 아트경기 작가 간의 교류의장을 형성해 경기 북부 지역 문화예술을 재조명합니다.<br>지역 문화생태계가 집중되는 예술축제가 여러분들을 찾아갑니다.',
             tip: [
                 { label: '1. 아트와 플리마켓', info: '전시와 함께 지역상인들의 플리마켓 “끼마켓”을 즐겨보세요.' },
                 { label: '2. 작가와의 토크쇼', info: '원로 작가와 아트경기 작가 사이에 오가는 진솔한 이야기를 들어보세요. (유튜브 라이브도 진행한답니다!)' },
@@ -153,7 +153,7 @@ var MapControl = (function() {
             tip: [{ label: '1. 작가 인터뷰', info: '오픈갤러리 SNS와 네이버 포스트에서 작가의 작업과정과 작품세계를 접해보세요.' },
                 { label: '2. 언제든 만날 수 있는 작품', info: '좋아하는 작가의 전시를 기다릴 필요 없이 수많은 작품을 오픈갤러리 웹사이트에서 골라 대면해보세요.' },
             ],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/141719'
         },
         {
             photo: './img/event/제로베이스x아트경기.png',

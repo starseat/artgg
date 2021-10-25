@@ -1943,13 +1943,15 @@ select {
     #section3 .text_group p {
         font-size: 16px;
     }
-    #section6 .icon_scroll_mouse {
+    /* #section6 .icon_scroll_mouse {
         display: none;
-    }
+    } */
 }
 
-@media screen and (min-height: 840px) and (orientation: landscape) {
+/* @media screen and (min-height: 840px) and (orientation: landscape) {
     #section6 .icon_scroll_mouse {
         display: block;
     }
-}
+} */
+
+#section6 .icon_scroll_mouse { display: none; }

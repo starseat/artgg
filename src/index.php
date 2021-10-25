@@ -523,7 +523,7 @@
                                     transform="translate(0 0)" />
                             </g>
                             <g id="area_x5F_6" class="btn-area" data-index="5">
-                                <title>DMZ 아트페어</title>
+                                <title>아트 DMZ 페스티벌 : 파주일로(坡州一路)</title>
                                 <path id="icon-arrow_5_" class="cls-9" d="M46.7,270.1h24v32L46.7,270.1z" />
                                 <path id="icon-box_5_" class="cls-10" d="M46.7,252.1h18c3.3,0,6,2.7,6,6v30l0,0h-24c-3.3,0-6-2.7-6-6v-24
                                     C40.7,254.8,43.4,252.1,46.7,252.1z" />
@@ -649,7 +649,7 @@
                                             <span class="date">21.10.21 - 21.11.1</span>
                                         </li>
                                         <li>
-                                            <div class="title">DMZ 아트페어</div>
+                                            <div class="title">아트 DMZ 페스티벌 : 파주일로(坡州一路)</div>
                                             <span class="date">21.10.28 - 21.10.31</span>
                                         </li>
                                     </ol>
@@ -660,7 +660,7 @@
                                 <td>
                                     <ol>
                                         <li>
-                                            <div class="title">공공기간 미술품 임대전시</div>
+                                            <div class="title">공공기관 미술품 임대전시</div>
                                             <span class="date">21.9월 - 21.12월</span>
                                         </li>
                                     </ol>
