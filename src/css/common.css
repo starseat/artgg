@@ -41,14 +41,6 @@
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
-#main-popup1,
-#main-popup2 {
-    display: none;
-    max-width: 520px;
-    max-height: 600px;
-}
-
-
 /* RESET */
 
 html,
@@ -368,8 +360,13 @@ select {
 }
 
 .btn_allmenu_x {
-    display: none;
+    none;
 }
+
+
+
+
+
 
 #slnb-6>.slnb_link {
     color: #000;
@@ -1274,8 +1271,8 @@ select {
 
 .common_popup_w {
     position: fixed;
-    left: 10%;
-    top: 10%;
+    left: 5%;
+    top: 5%;
     min-width: 500px;
     max-width: 100%;
     z-index: 999;
@@ -1284,8 +1281,8 @@ select {
 }
 
 .popup2 {
-    left: 20%;
-    top: 20%;
+    left: 40%;
+    top: 5%;
 }
 
 .common_popup_inner img {
@@ -1312,22 +1309,40 @@ select {
 }
 
 
+[id^="main-popup"]{
+    display: none;
+    max-width: 520px;
+    max-height: 600px;
+    position:Absolute;
+    left:50%;
+    top:2%;
+}
+#main-popup1 {margin-left:-550px;}
+#main-popup2 {}
+
+
 /* -------------------- 태블릿 제어 -------------------- */
 
 @media screen and (max-width:1536px) {
     /* 1536 */
     .common_popup_w {
-        left: 5%;
-        top: 5%;
-        max-width: 90%;
+        max-width:30%;
+        max-height:auto;
+
     }
-    .popup2 {
-        top: 10%;
+    [id^="main-popup"]{
+        max-height:auto;
+        width:400px;
+        max-width:400px;
+        min-width:auto;
+
     }
+    #main-popup1 {margin-left:-420px;}
     .common_popup_w .popup_close {
         width: 58px;
         height: 58px;
     }
+    .common_popup_w .icon_close_x {margin:-7px -7px 0 0;}
     /* T: GNB */
     .admin_logout {
         right: 115px;
@@ -1656,7 +1671,13 @@ select {
     }
 }
 
-
+@media screen and (max-width:850px) {
+    [id^="main-popup"]{
+        left:2%;
+        margin-left:0 !important;
+    }
+    #main-popup2 {top:450px;}
+}
 /* -------------------- 모바일 제어 -------------------- */
 
 @media screen and (max-width:720px) {
@@ -1666,13 +1687,16 @@ select {
         min-width: 95%;
         width: 95%;
     }
-    .popup2 {
-        top: 5%;
+    [id^="main-popup"]{
+        width:300px;
+        min-width:300px;
     }
+    #main-popup2 {top:350px;}
+
     .common_popup_w .popup_close {
         left: auto;
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
     }
     .common_popup_w .icon_close_x {
         right: 50%;
