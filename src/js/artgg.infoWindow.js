@@ -5,15 +5,19 @@
 
 function InfoWindow(
     selector,
-    info
+    info,
+    viewMapId
 ) {
     this.selector = $(selector);
     this.popLayer = "";
     this.info = info;
     this.bg = ""
     this.closeBtn = "";
+    this.viewMapId = viewMapId;
 
     this.init();
+
+    console.log('[InfoWindow] => ', this);
 }
 
 (function($) {
@@ -25,7 +29,8 @@ function InfoWindow(
         this.each(function(index) {
             var infoWindow = new InfoWindow(
                 this,
-                options.info
+                options.info,
+                options.viewMapId
             );
 
         });
@@ -45,7 +50,19 @@ $.extend(InfoWindow.prototype, {
         dom += '<span class="btn_close">Close</span>'
         dom += '<div class="container_info">'
         dom += '<div class="photo">'
-        dom += '<img src="' + this.info.photo + '" alt="img">'
+        if (this.info.photos && this.info.photos.length > 0) {
+            if (this.viewMapId) {
+                if (this.viewMapId == 'area_7') {
+                    dom += '<img src="' + this.info.photos[0] + '" alt="img">'
+                } else if (this.viewMapId == 'area_7_2') {
+                    dom += '<img src="' + this.info.photos[1] + '" alt="img">'
+                } else if (this.viewMapId == 'area_7_3') {
+                    dom += '<img src="' + this.info.photos[2] + '" alt="img">'
+                }
+            }
+        } else {
+            dom += '<img src="' + this.info.photo + '" alt="img">'
+        }
         dom += '</div>'
         dom += '<div class="info_box">'
         dom += '<div class="infos">'
@@ -64,6 +81,24 @@ $.extend(InfoWindow.prototype, {
             }
             dom += '</ol>'
             dom += '</div>'
+        }
+        if (this.info.place.places2 && this.info.place.places2.length > 0) {
+            dom += '<table style="margin-top: 10px;">';
+            dom += '<tbody>';
+            for (var i = 0; i < this.info.place.places2.length; i++) {
+                dom += '<tr>';
+                if (i == 0) {
+                    dom += '<td class="info-row cooperation">장소&nbsp;:&nbsp;</td>';
+                } else {
+                    dom += '<td></td>';
+                }
+                dom += '<td class="info-row cooperation">';
+                dom += this.info.place.places2[i];
+                dom += '</td>';
+                dom += '</tr>';
+            }
+            dom += '</tbody>'
+            dom += '</table>';
         }
         dom += '</div>'
         dom += '<div class="info-row cooperation">' + this.info.cooperation + '</div>'

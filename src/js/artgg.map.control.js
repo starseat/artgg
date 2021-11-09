@@ -3,7 +3,6 @@ $(document).ready(function() {
     var mapControl = new MapControl();
 });
 
-
 var MapControl = (function() {
     var mapData = [{
             photo: './img/event/업클로즈02.jpg',
@@ -110,13 +109,16 @@ var MapControl = (function() {
         },
         {
             photo: './img/event/공공기관임대.jpeg',
+            photos: ['./img/event/수원.jpg', './img/event/파주.jpg', './img/event/의정부.jpg'],
             title: '공공기관 미술품 임대 전시',
             date: '2021. 9월 - 12월',
             cooperation: '주관 : KAN',
             place: {
                 label: '경기도 내 공공기관 및 기업',
                 urls: [],
-                places: []
+                places: [],
+                places2: ['경기주택도시공사 본사', '파주의료원', '경기도청 북부청사']
+
             },
             about: '2021 아트경기 사업의 일환으로 도내 공공기관 내에 아트경기 작가의 미술작품 임대 및 전시합니다.<br> 공기관으로 미술품 수요를 확장하여 지속 가능한 예술 문화를 만들어가는 것을 목표로 합니다.<br>각 공간에 적합한 큐레이팅을 통해 회화, 판화뿐 아니라 조각, 공예, 영상에 이르는 다양한 장르의 작품이 전시될 예정입니다.<br>동시에 작가에게는 판매 위주의 비연속적 마케팅 위주의 시장에서 지속 가능한 거래의 방향으로 지속적인 수입을 창출을 돕습니다.',
             tip: [],
@@ -173,7 +175,7 @@ var MapControl = (function() {
             more: ''
         },
         {
-            photo: './img/event/대구아트페어.png',
+            photo: './img/event/대구아트페어.jpg',
             title: '2021 대구아트페어',
             date: '<br>11.4 - 11.7 11:00 ~ 19:30 (일요일~18:00)',
             cooperation: '주관 : 올댓큐레이팅',
@@ -184,19 +186,19 @@ var MapControl = (function() {
             },
             about: '아트페어는 미술작품이 새로운 컬렉터를 만날수있는 아주 좋은 통로인데요, 그래서 아트경기는 화랑미술제와 KIAF 등, 매년 아트페어에 참가해왔습니다.<br>올해는 대구컨벤션센터에서 개최되는 대구아트페어에서 아트경기부스를 만나볼 수 있습니다.',
             tip: [],
-            more: ''
+            more: 'https://www.ggcf.kr/archives/145034'
         },
     ];
     //상세정보 창
     $(".btn-area").on("click", function() {
         var index = $(this).data("index");
         $("body").infoWindow({
-            info: mapData[index]
+            info: mapData[index],
+            viewMapId: $(this).attr('id')
         });
         //모바일인 경우에만 스크롤 히든 처리
         var w = $(window).width();
         if (w <= 720) $("body").addClass("scroll_hidden");
-
     });
     //전체일정 닫기(사이드창 닫기)
     $(".btn_info_close").on("click", function() {
