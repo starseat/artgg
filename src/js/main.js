@@ -88,7 +88,9 @@ function setIntroduceYoutubeAutoPlay() {
 }
 
 function getInstargramData() {
-    var token = "IGQVJYZAk5jQnRBTmFPZAkl6dEt0MTVnTkFGd3gzRGtxcm5nTkVpVk5FRzJkUENZAa0ROSVVIbUNKR3lTRlNSVVVPemJmelNiVFhmMTQzN3RfLTYyZAHNmUThtSkpQeVZAmckFFZA1JCU0h5TFFhTDNVeUhnbAZDZD";
+    // https://blog.naver.com/PostView.naver?blogId=gocathy&logNo=222053516256
+    // Generate Token 에서 토큰만 갱신
+    var token = 'IGQVJVWFFraE5Oai16N3lhdDgxbkFYMGpFUm5RXzYtNTZAOeWNDTkswT0ZABcEhqYV9GenlhRm1lUWNrQjFfZAi14d0xoY0x4aXloMWhsclB0cE9VRE9zS2pKenNSXzVsc3R2aUNLdlU0M0twWjI4UW1acAZDZD';
     $.ajax({
         type: "GET",
         dataType: "jsonp",

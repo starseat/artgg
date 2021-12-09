@@ -52,12 +52,22 @@ $.extend(InfoWindow.prototype, {
         dom += '<div class="photo">'
         if (this.info.photos && this.info.photos.length > 0) {
             if (this.viewMapId) {
-                if (this.viewMapId == 'area_7') {
-                    dom += '<img src="' + this.info.photos[0] + '" alt="img">'
-                } else if (this.viewMapId == 'area_7_2') {
-                    dom += '<img src="' + this.info.photos[1] + '" alt="img">'
-                } else if (this.viewMapId == 'area_7_3') {
-                    dom += '<img src="' + this.info.photos[2] + '" alt="img">'
+                switch (this.viewMapId) {
+                    case 'area_7':
+                        { dom += '<img src="' + this.info.photos[0] + '" alt="img">' }
+                        break;
+                    case 'area_7_2':
+                        { dom += '<img src="' + this.info.photos[1] + '" alt="img">' }
+                        break;
+                    case 'area_7_3':
+                        { dom += '<img src="' + this.info.photos[2] + '" alt="img">' }
+                        break;
+                    case 'area_7_4':
+                        { dom += '<img src="' + this.info.photos[3] + '" alt="img">' }
+                        break;
+                    case 'area_7_5':
+                        { dom += '<img src="' + this.info.photos[4] + '" alt="img">' }
+                        break;
                 }
             }
         } else {

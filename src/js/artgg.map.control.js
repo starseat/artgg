@@ -109,7 +109,7 @@ var MapControl = (function() {
         },
         {
             photo: './img/event/공공기관임대.jpeg',
-            photos: ['./img/event/수원.jpg', './img/event/파주.jpg', './img/event/의정부.jpg'],
+            photos: ['./img/event/수원.jpg', './img/event/파주.jpg', './img/event/의정부.jpg', './img/event/공공기관임대-시흥.jpg', './img/event/공공기관임대-광주.jpg'],
             title: '공공기관 미술품 임대 전시',
             date: '2021. 9월 - 12월',
             cooperation: '주관 : KAN',
@@ -117,7 +117,7 @@ var MapControl = (function() {
                 label: '경기도 내 공공기관 및 기업',
                 urls: [],
                 places: [],
-                places2: ['경기주택도시공사 본사', '파주의료원', '경기도청 북부청사']
+                places2: ['경기주택도시공사 본사', '파주의료원', '경기도청 북부청사', '시흥 배곧1동 행정복지센터', '광주시문화재단 남한산성아트홀']
 
             },
             about: '2021 아트경기 사업의 일환으로 도내 공공기관 내에 아트경기 작가의 미술작품 임대 및 전시합니다.<br> 공기관으로 미술품 수요를 확장하여 지속 가능한 예술 문화를 만들어가는 것을 목표로 합니다.<br>각 공간에 적합한 큐레이팅을 통해 회화, 판화뿐 아니라 조각, 공예, 영상에 이르는 다양한 장르의 작품이 전시될 예정입니다.<br>동시에 작가에게는 판매 위주의 비연속적 마케팅 위주의 시장에서 지속 가능한 거래의 방향으로 지속적인 수입을 창출을 돕습니다.',
@@ -127,7 +127,7 @@ var MapControl = (function() {
         {
             photo: './img/event/이광기의live경매쇼.png',
             title: '이광기의 Live 경매쇼 – 아트경기 선정작가',
-            date: '<br>8.9 - 12.8 격주 월요일 (21:00 ~ )',
+            date: '<br>3월 ~ 11월 격주 월요일 (21:00 ~) ',
             cooperation: '주관 : 스튜디오 끼',
             place: {
                 label: '유튜브 "이광기의 광끼채널"',
@@ -158,7 +158,7 @@ var MapControl = (function() {
             more: 'https://www.ggcf.kr/archives/141719'
         },
         {
-            photo: './img/event/제로베이스x아트경기.png',
+            photo: './img/event/제로베이스x아트경기.jpg',
             title: 'ZEROBASE x 아트경기',
             date: '2021. 12.17 – 12.22',
             cooperation: '제휴 : 서울옥션<br>후원 : 페르노리카 코리아',
