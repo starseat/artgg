@@ -1182,6 +1182,18 @@ select {
     top: 1px;
 }
 
+#notice-table col:nth-child(1) {
+    width: 10%;
+}
+#notice-table col:nth-child(2) {
+    width: 55%;
+}
+#notice-table col:nth-child(3) {
+    width: 20%;
+}
+#notice-table col:nth-child(4) {
+    width: 15%;
+}
 
 /* section8 : 공지사항 : 레이어팝업 */
 

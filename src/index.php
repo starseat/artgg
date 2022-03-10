@@ -1,30 +1,28 @@
 <?php require_once('./fragment/header.php'); ?>
-<style>
-    .common_popup_w { cursor: pointer; }
-</style>
+
 <div id="fullpage">
     <div id="section1" class="section fullpage-section">
         <!-- s:팝업 -->
         <div class="common_popup_w popup1" id="main-popup1">
             <div class="common_popup_inner" onclick="actionPpopup1()">
-                <img src="" alt="아트경기 첫번째 팝업 이미지">
+                <img src="./img/temp_img.png" alt="아트경기 첫번째 팝업 이미지">
             </div>
             <button type="button" class="popup_close" title="팝업 닫기" onclick="closeMainPopup1();">
                 <span class="icon_close_x">
                     <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
-                        <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
+                        <path id="close_x1" data-name="close_x1" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
                     </svg>
                 </span>
             </button>
         </div>
         <div class="common_popup_w popup2" id="main-popup2">
             <div class="common_popup_inner" onclick="actionPpopup2()">
-                <img src="" alt="아트경기 두번째 팝업 이미지">
+                <img src="./img/temp_img.png" alt="아트경기 두번째 팝업 이미지">
             </div>
             <button type="button" class="popup_close" title="팝업 닫기" onclick="closeMainPopup2();">
                 <span class="icon_close_x">
                     <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
-                        <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
+                        <path id="close_x2" data-name="close_x2" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
                     </svg>
                 </span>
             </button>
@@ -46,21 +44,21 @@
 
             <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(2);">
                 <span class="icon_mouse">
-                    <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                        <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
+                    <svg id="scroll1" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                        <g id="intro_group1" data-name="intro_group1" transform="translate(-993 -937)" opacity="0.8">
                             <rect id="intro_svg_rect" data-name="intro_svg_rect" width="28" height="74" transform="translate(993 937)" fill="none" />
                             <g id="intro_svg_g" data-name="intro_svg_g" transform="translate(993 938)" fill="none" stroke="#000" stroke-width="2">
                                 <rect width="28" height="48" rx="14" stroke="none" />
                                 <rect x="1" y="1" width="26" height="46" rx="13" fill="none" />
                             </g>
                             <line id="intro_svg_line" data-name="intro_svg_line" y2="6" transform="translate(1007 948)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" />
-                            <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                            <g id="intro_svg_g2_1" data-name="intro_svg_g2_1" transform="translate(998 991.303) rotate(-45)">
+                                <rect id="intro_svg_g2_1_rect01" data-name="intro_svg_g2_1_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                <rect id="intro_svg_g2_1_rect02" data-name="intro_svg_g2_1_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                             </g>
-                            <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                            <g id="intro_svg_g3_1" data-name="intro_svg_g3_1" transform="translate(998 1001.303) rotate(-45)">
+                                <rect id="intro_svg_g3_1_rect01" data-name="intro_svg_g3_1_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                <rect id="intro_svg_g3_1_rect02" data-name="intro_svg_g3_1_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                             </g>
                         </g>
                     </svg>
@@ -93,15 +91,15 @@
             </div>
             <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(3);">
                 <span class="icon_mouse">
-                    <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                        <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                            <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                    <svg id="scroll2" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                        <g id="intro_group2" data-name="intro_group2" transform="translate(-993 -937)" opacity="0.8">
+                            <g id="intro_svg_g2_2" data-name="intro_svg_g2_2" transform="translate(998 991.303) rotate(-45)">
+                                <rect id="intro_svg_g2_2_rect01" data-name="intro_svg_g2_2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                <rect id="intro_svg_g2_2_rect02" data-name="intro_svg_g2_2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                             </g>
-                            <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                            <g id="intro_svg_g3_2" data-name="intro_svg_g3_2" transform="translate(998 1001.303) rotate(-45)">
+                                <rect id="intro_svg_g3_2_rect01" data-name="intro_svg_g3_2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                <rect id="intro_svg_g3_2_rect02" data-name="intro_svg_g3_2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                             </g>
                         </g>
                     </svg>
@@ -168,15 +166,15 @@
                     </div>
                     <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(4);">
                         <span class="icon_mouse">
-                            <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                                <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                                    <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                        <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                        <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                            <svg id="scroll3" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                                <g id="intro_group3" data-name="intro_group3" transform="translate(-993 -937)" opacity="0.8">
+                                    <g id="intro_svg_g2_3" data-name="intro_svg_g2_3" transform="translate(998 991.303) rotate(-45)">
+                                        <rect id="intro_svg_g2_3_rect01" data-name="intro_svg_g2_3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                        <rect id="intro_svg_g2_3_rect02" data-name="intro_svg_g2_3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                     </g>
-                                    <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                        <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                        <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                                    <g id="intro_svg_g3_3" data-name="intro_svg_g3_3" transform="translate(998 1001.303) rotate(-45)">
+                                        <rect id="intro_svg_g3_3_rect01" data-name="intro_svg_g3_3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                        <rect id="intro_svg_g3_3_rect02" data-name="intro_svg_g3_3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                     </g>
                                 </g>
                             </svg>
@@ -224,7 +222,7 @@
             <button type="button" class="popup_close" title="팝업 닫기" onclick="closeIntroducePopup()">
                 <span class="icon_close_x">
                     <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
-                        <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
+                        <path id="close_x3" data-name="close_x3" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
                     </svg>
                 </span>
             </button>
@@ -248,15 +246,15 @@
                 </div>
                 <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(5);">
                     <span class="icon_mouse">
-                        <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                            <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                                <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                    <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                        <svg id="scroll4" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                            <g id="intro_group4" data-name="intro_group4" transform="translate(-993 -937)" opacity="0.8">
+                                <g id="intro_svg_g2_4" data-name="intro_svg_g2_4" transform="translate(998 991.303) rotate(-45)">
+                                    <rect id="intro_svg_g2_4_rect01" data-name="intro_svg_g2_4_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g2_4_rect02" data-name="intro_svg_g2_4_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
-                                <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                    <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                                <g id="intro_svg_g3_4" data-name="intro_svg_g3_4" transform="translate(998 1001.303) rotate(-45)">
+                                    <rect id="intro_svg_g3_4_rect01" data-name="intro_svg_g3_4_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g3_4_rect02" data-name="intro_svg_g3_4_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
                             </g>
                         </svg>
@@ -278,7 +276,7 @@
                             </defs>
                             <g id="map">
                                 <rect id="rect_3661" data-name="rec_3661" class="cls-1" width="708" height="870" />
-                                <g id="경_" data-name="경 ">
+                                <g id="group_map" data-name="group_map">
                                     <g id="wleh">
                                         <path id="pass_1037" data-name="pass_1037" class="cls-2" d="M156.16,106.58s22-2.44,28.09-6.1S180.58,68.75,189.13,59s45.18-35.38,50.07-42.7,35.41-4.88,39.07,8.54,23.2,37.83,33,40.26,26.87,14.65,30.53,22,34.19,30.5,42.74,31.72,34.19,3.66,34.19,8.54,3.66,28.07,9.76,31.73,39.08,32.95,51.29,42.71,20.76,19.52,18.32,30.5-15.88,22-20.76,24.4-17.1,15.86-11,22,8.55,17.08,3.66,26.84,0,42.71,3.67,45.15,1.22,14.64,1.22,20.74,19.53,7.32,25.64,8.54,29.31,9.76,31.75,13.43,15.87,22,19.54,19.52,44,0,44,0,14.66,2.44,4.89,15.86S581.1,449.44,575,451.88s-8.55,19.53-1.23,35.39,24.43,34.17,8.55,36.61-14.65-6.1-15.87,2.44,7.32,22,6.1,28.06-1.22,23.19-6.1,35.39,0,28.06-4.89,43.92-9.77,24.4-14.65,24.4-11-4.88-11-4.88l-13.43,3.66-7.32,14.66c-4.89,9.76-2.45,22-12.22,22s-15.87-3.66-19.53-1.22-20.76,11-20.76,11l-22-17.08s-3.67,17.08,1.22,20.74,6.1,13.42,6.1,13.42-8.55,7.33-12.21,9.77-11,4.88-11,4.88l-24.42,1.22s-12.21,13.42-11,22-7.33,22-13.43,24.4-29.31,2.44-35.41,9.76-20.76,2.44-22-3.66-9.77-13.42-12.21-17.08-8.55-20.74-18.32-15.86-33,17.08-46.4,23.18-31.75-3.66-35.41-6.1-13.43-3.66-20.76,2.44-35.41-3.66-33-13.42-13.43-23.18-18.32-30.5S114.65,713,111,708.14s-9.76-18.3-7.32-24.4-9.77-8.54-3.67-19.53,14.66-26.84,13.44-30.5-1.22-11-11-7.32-14.66,11-17.1,18.3-9.77,9.76-13.43,6.1-12.22-13.42-7.33-22-11-26.84,0-33,37.85-3.66,45.18-4.88,20.76-20.74,20.76-24.4-45.18-4.88-48.85-7.32S59.69,541,65.8,536.1s15.87-6.1,7.33-14.64-8.55-12.2-3.67-13.43,42.74-15.86,42.74-15.86,12.21-12.2,8.55-17.08-18.32-12.2-18.32-18.3,1.22-20.74,4.89-25.63,8.54-9.76,14.65-7.32,18.32,4.88,14.65,11,7.33,22,7.33,22,20.76,2.44,24.42,2.44,2.44,12.2,0,19.52,13.43,11,14.65,14.64-2.44,18.3,6.11,18.3,28.08-6.1,28.08-6.1-4.88-3.66,2.45-9.76,15.87-20.74,23.2-20.74,25.64-2.44,33-3.66,17.09-15.86,11-22-6.11-11,0-18.3,3.66-36.61-11-29.29-28.09,1.22-25.65-4.88-1.22-14.64-2.44-20.74,4.89-24.4-2.44-28.07-17.1-20.74-25.64-3.66-13.44,25.63-17.1,31.73-11,7.32-15.88,6.1-9.77,19.52-24.42,24.4-24.42,0-29.31-4.88-14.65-9.77-18.31-3.66-22,11-25.65,2.44-11-20.75-18.31-18.3S62.13,384.8,56,389.68s-24.42,11-25.64,4.88,11-20.75-11-26.85S6,336,10.85,329.88,14.51,303,14.51,303s4.89-13.42,12.22-12.2,26.86,1.22,29.3,6.1,9.77,0,9.77,0-1.22-22,3.66-25.62,20.76-9.76,25.65-14.64,13.43-22,3.66-25.63-20.76-11-25.64-15.86-3.67-22,0-22h17.1s1.22-15.87,6.1-13.43S112.21,188.34,111,192s8.54,3.66,9.76-1.22,2.45-13.43,3.67-20.75-7.33-14.64,4.88-15.86,28.09-7.32,24.42-13.42-7.32-15.87-7.32-19.53S156.16,106.58,156.16,106.58Z" transform="translate(0 0)" />
                                         <g id="group_8189" data-name="group_8189">
@@ -379,8 +377,8 @@
                             </g>
                             <g id="area_2" class="btn-area" data-index="1">
                                 <title>아트경기x 아트로드77</title>
-                                <path id="icon-arrow" class="cls-7" d="M104.85,135h24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box" class="cls-8" d="M104.85,117h18a6,6,0,0,1,6,6v30h-24a6,6,0,0,1-6-6V123A6,6,0,0,1,104.85,117Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-1" class="cls-7" d="M104.85,135h24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-1" class="cls-8" d="M104.85,117h18a6,6,0,0,1,6,6v30h-24a6,6,0,0,1-6-6V123A6,6,0,0,1,104.85,117Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_3" class="btn-area" data-index="2">
                                 <title>신장동할로윈아트마켓</title>
@@ -394,39 +392,39 @@
                             </g>
                             <g id="area_5" class="btn-area" data-index="4">
                                 <title>업클로즈03</title>
-                                <path id="icon-arrow-4" data-name="icon-arrow" class="cls-9" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-4" data-name="icon-box" class="cls-10" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-4-1" data-name="icon-arrow" class="cls-9" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-4-1" data-name="icon-box" class="cls-10" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_x5F_6" class="btn-area" data-index="5">
                                 <title>아트 DMZ 페스티벌 : 파주일로(坡州一路)</title>
-                                <path id="icon-arrow_5_" class="cls-9" d="M46.7,270.1h24v32L46.7,270.1z" />
-                                <path id="icon-box_5_" class="cls-10" d="M46.7,252.1h18c3.3,0,6,2.7,6,6v30l0,0h-24c-3.3,0-6-2.7-6-6v-24
+                                <path id="icon-arrow_5-1" class="cls-9" d="M46.7,270.1h24v32L46.7,270.1z" />
+                                <path id="icon-box_5-1" class="cls-10" d="M46.7,252.1h18c3.3,0,6,2.7,6,6v30l0,0h-24c-3.3,0-6-2.7-6-6v-24
                                     C40.7,254.8,43.4,252.1,46.7,252.1z" />
                             </g>
                             <g id="area_7" class="btn-area" data-index="6">
                                 <title>공공기관미술품임대전시</title>
-                                <path id="icon-arrow-6" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-6" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-6-1" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-6-1" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_7_2" class="btn-area" data-index="6">
                                 <title>공공기관미술품임대전시</title>
-                                <path id="icon-arrow-4" data-name="icon-arrow" class="cls-11" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-4" data-name="icon-box" class="cls-12" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-4-2" data-name="icon-arrow" class="cls-11" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-4-2" data-name="icon-box" class="cls-12" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_7_3" class="btn-area" data-index="6">
                                 <title>공공기관미술품임대전시</title>
-                                <path id="icon-arrow-6" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-6" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-6-2" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-6-2" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_7_4" class="btn-area" data-index="6">
                                 <title>공공기관미술품임대전시</title>
-                                <path id="icon-arrow-6" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-6" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-6-3" data-name="icon-arrow" class="cls-11" d="M149,456.59h24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-6-3" data-name="icon-box" class="cls-12" d="M149,438.59h18a6,6,0,0,1,6,6v30H149a6,6,0,0,1-6-6v-24A6,6,0,0,1,149,438.59Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_7_5" class="btn-area" data-index="6">
                                 <title>공공기관미술품임대전시</title>
-                                <path id="icon-arrow-4" data-name="icon-arrow" class="cls-11" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
-                                <path id="icon-box-4" data-name="icon-box" class="cls-12" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
+                                <path id="icon-arrow-4-3" data-name="icon-arrow" class="cls-11" d="M270.72,384.06h-24v32Z" transform="translate(0 0)" />
+                                <path id="icon-box-4-3" data-name="icon-box" class="cls-12" d="M270.72,366.06h-18a6,6,0,0,0-6,6v30h24a6,6,0,0,0,6-6v-24A6,6,0,0,0,270.72,366.06Z" transform="translate(0 0)" />
                             </g>
                             <g id="area_1" class="btn-area" data-index="0">
                                 <title>업클로즈02</title>
@@ -558,15 +556,15 @@
             </div>
             <a href="javascript:void(0);#section6" class="icon_scroll_mouse page-move" onclick="downFullpage(6);">
                 <span class="icon_mouse">
-                    <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                        <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                            <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" class="icon_arrow_move" />
-                                <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" class="icon_arrow_move" />
+                    <svg id="scroll5" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                        <g id="intro_group5" data-name="intro_group5" transform="translate(-993 -937)" opacity="0.8">
+                            <g id="intro_svg_g2_5" data-name="intro_svg_g2_5" transform="translate(998 991.303) rotate(-45)">
+                                <rect id="intro_svg_g2_5_rect01" data-name="intro_svg_g2_5_rect01" width="2" height="13" rx="1" transform="translate(0)" class="icon_arrow_move" />
+                                <rect id="intro_svg_g2_5_rect02" data-name="intro_svg_g2_5_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" class="icon_arrow_move" />
                             </g>
-                            <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" class="icon_arrow_move" />
-                                <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" class="icon_arrow_move" />
+                            <g id="intro_svg_g3_5" data-name="intro_svg_g3_5" transform="translate(998 1001.303) rotate(-45)">
+                                <rect id="intro_svg_g3_5_rect01" data-name="intro_svg_g3_5_rect01" width="2" height="13" rx="1" transform="translate(0)" class="icon_arrow_move" />
+                                <rect id="intro_svg_g3_5_rect02" data-name="intro_svg_g3_5_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" class="icon_arrow_move" />
                             </g>
                         </g>
                     </svg>
@@ -587,15 +585,15 @@
                 </div>
                 <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(7);">
                     <span class="icon_mouse">
-                        <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                            <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                                <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                    <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                        <svg id="scroll6" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                            <g id="intro_group6" data-name="intro_group6" transform="translate(-993 -937)" opacity="0.8">
+                                <g id="intro_svg_g2_6" data-name="intro_svg_g2_6" transform="translate(998 991.303) rotate(-45)">
+                                    <rect id="intro_svg_g2_6_rect01" data-name="intro_svg_g2_6_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g2_6_rect02" data-name="intro_svg_g2_6_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
-                                <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                    <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                                <g id="intro_svg_g3_6" data-name="intro_svg_g3_6" transform="translate(998 1001.303) rotate(-45)">
+                                    <rect id="intro_svg_g3_6_rect01" data-name="intro_svg_g3_6_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g3_6_rect02" data-name="intro_svg_g3_6_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
                             </g>
                         </svg>
@@ -637,7 +635,7 @@
                                 <div class="module_box_w_type1">
                                     <div class="mb_image_w section7-media-box">
                                         <div class="mb_image_inner">
-                                            <img id="instargram-media" src="" class="mb_image" alt="artgg instargram image">
+                                            <img id="instargram-media" src="./img/instagram_icon.png" class="mb_image" alt="artgg instargram image">
                                         </div>
                                         <!-- 인스타 아이콘 -->
                                         <div class="sns_icon_instar">
@@ -667,15 +665,15 @@
                 </div>
                 <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(8);">
                     <span class="icon_mouse">
-                        <svg id="scroll" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
-                            <g id="intro_group" data-name="intro_group" transform="translate(-993 -937)" opacity="0.8">
-                                <g id="intro_svg_g2" data-name="intro_svg_g2" transform="translate(998 991.303) rotate(-45)">
-                                    <rect id="intro_svg_g2_rect01" data-name="intro_svg_g2_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g2_rect02" data-name="intro_svg_g2_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                        <svg id="scroll7" xmlns="http://www.w3.org/2000/svg" width="28" height="74" viewBox="0 0 28 74">
+                            <g id="intro_group7" data-name="intro_group7" transform="translate(-993 -937)" opacity="0.8">
+                                <g id="intro_svg_g2_7" data-name="intro_svg_g2_7" transform="translate(998 991.303) rotate(-45)">
+                                    <rect id="intro_svg_g2_7_rect01" data-name="intro_svg_g2_7_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g2_7_rect02" data-name="intro_svg_g2_7_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
-                                <g id="intro_svg_g3" data-name="intro_svg_g3" transform="translate(998 1001.303) rotate(-45)">
-                                    <rect id="intro_svg_g3_rect01" data-name="intro_svg_g3_rect01" width="2" height="13" rx="1" transform="translate(0)" />
-                                    <rect id="intro_svg_g3_rect02" data-name="intro_svg_g3_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
+                                <g id="intro_svg_g3_7" data-name="intro_svg_g3_7" transform="translate(998 1001.303) rotate(-45)">
+                                    <rect id="intro_svg_g3_7_rect01" data-name="intro_svg_g3_7_rect01" width="2" height="13" rx="1" transform="translate(0)" />
+                                    <rect id="intro_svg_g3_7_rect02" data-name="intro_svg_g3_7_rect02" width="2" height="13" rx="1" transform="translate(13.157 11.157) rotate(90)" />
                                 </g>
                             </g>
                         </svg>
@@ -694,12 +692,12 @@
                         <a href="./admin/write.php" class="admin_writer" target="_blank">글쓰기</a>
                     <?php } ?>
                     <div class="board_list_inner">
-                        <table>
+                        <table id="notice-table">
                             <colgroup>
-                                <col width="10%">
-                                <col width="55%">
-                                <col width="20%">
-                                <col width="15%">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -730,14 +728,14 @@
                                 <button type="button" class="date_text" id="notice-update">수정하기</button>
                             <?php } ?>
                         </div>
-                        <input type="hidden" id="notice-detail-seq" val="0">
+                        <input type="hidden" id="notice-detail-seq" value="0">
                         <div class="popup_text_w">
                             <div class="popup_text" id="notice-detail-content"></div>
                         </div>
                         <button type="button" class="popup_close" title="팝업 닫기" onclick="closeNoticePopup();">
                             <span class="icon_close_x">
                                 <svg width="20.707" height="20.707" viewBox="0 0 20.707 20.707">
-                                    <path id="close_x" data-name="close_x" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
+                                    <path id="close_x4" data-name="close_x4" d="M10,10,0,20,10,10,0,0,10,10,20,0,10,10,20,20Z" transform="translate(0.354 0.354)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1" />
                                 </svg>
                             </span>
                         </button>

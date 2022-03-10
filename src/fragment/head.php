@@ -34,4 +34,8 @@ session_start();
 
     gtag('config', 'G-VE2MVT34FV');
     </script>
+
+    <style>
+        .common_popup_w { cursor: pointer; }
+    </style>
 </head>
