@@ -94,6 +94,7 @@ require_once('head.php');
                         </a>
                     </li>
                 </ul>
+                <!--
                 <button type="button" class="btn_allmenu_x">
                     <span class="icon_close">
                         <svg width="15.213" height="14.222" viewBox="0 0 15.213 14.222">
@@ -104,6 +105,7 @@ require_once('head.php');
                         </svg>
                     </span>
                 </button>
+                -->
             </div>
         </div>
         <i class="snb_bg"></i>
