@@ -658,8 +658,7 @@ select {
 .btn_quick_online {
     display: inline-block;
     margin-top: 22px;
-    /* padding-top: 100px; */
-    padding-top: 80px;
+    padding-top: 100px;
     box-sizing: border-box;
     width: 214px;
     height: 234px;
@@ -668,8 +667,7 @@ select {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 173px auto;
-    /* font-size: 24px; */
-    font-size: 20px;
+    font-size: 24px;
     color: #000;
 }
 
@@ -731,7 +729,7 @@ select {
     float: right;
     width: 510px;
     position: Relative;
-    /* top: -50px; */
+    top: -50px;
 }
 
 .introduce_btn {
@@ -830,11 +828,6 @@ select {
     }
 }
 
-#section4-ebook-link {
-    font-size: 24px;
-    text-decoration: none;
-    font-weight: 500;
-}
 
 /* section5 : 행사일정(지도) */
 
@@ -1518,10 +1511,8 @@ select {
         width: 156px;
         height: 170px;
         margin-top: 60px;
-        /* padding-top: 70px; */
-        padding-top: 50px;
-        /* font-size: 16px; */
-        font-size: 13px;
+        padding-top: 70px;
+        font-size: 16px;
         line-height: 24px;
         background-size: 156px 170px;
     }
@@ -1556,7 +1547,7 @@ select {
     .introduce_form_w {
         float: right;
         width: 368px;
-        /* top: -30px; */
+        top: -30px;
     }
     .introduce_form {
         margin: 0 auto;
@@ -1602,9 +1593,6 @@ select {
     .section6_cont_w .section_cont {
         max-width: 688px;
         height: calc(100% - 180px);
-    }
-    #section4-ebook-link {
-        font-size: 14px;
     }
     /* T : section7 : 이벤트참여 */
     .slick_list_inner {
@@ -1746,15 +1734,13 @@ select {
         text-align: center;
     }
     .btn_quick_online {
-        /* padding-top: 65px; */
-        padding-top: 56px;
+        padding-top: 65px;
         margin-top: 30px;
         width: 140px;
         height: 152px;
         line-height: 20px;
         background-size: 140px 152px;
-        /* font-size: 14px; */
-        font-size: 12px;
+        font-size: 14px;
     }
     /* M : section3 :  */
     .introduce_text_group {

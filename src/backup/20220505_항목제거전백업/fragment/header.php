@@ -65,14 +65,47 @@ require_once('head.php');
                             </span>
                         </a>
                     </li>
-                    <li class="slnb_inner" id="slnb-7">
+                    <li class="slnb_inner" id="slnb-5">
                         <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(5);">
+                            <span class="slnb_txt_box">
+                                <span class="slnb_txt">행사일정</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="slnb_inner" id="slnb-6">
+                        <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(6);">
+                            <span class="slnb_txt_box">
+                                <span class="slnb_txt">E-도록</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="slnb_inner" id="slnb-7">
+                        <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(7);">
                             <span class="slnb_txt_box">
                                 <span class="slnb_txt">이벤트 참여</span>
                             </span>
                         </a>
                     </li>
+                    <li class="slnb_inner" id="slnb-8">
+                        <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(8);">
+                            <span class="slnb_txt_box">
+                                <span class="slnb_txt">공지사항</span>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
+                <!--
+                <button type="button" class="btn_allmenu_x">
+                    <span class="icon_close">
+                        <svg width="15.213" height="14.222" viewBox="0 0 15.213 14.222">
+                            <g transform="translate(0.677 0.736)">
+                                <line x1="13.859" y2="12.75" fill="none" stroke="#fff" stroke-width="2" />
+                                <line x1="13.859" y1="12.75" fill="none" stroke="#fff" stroke-width="2" />
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+                -->
             </div>
         </div>
         <i class="snb_bg"></i>
