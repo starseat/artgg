@@ -17,7 +17,8 @@ require_once('head.php');
             <button class="admin_popup" onclick="javascript: location.href='./admin/popup.php';">팝업</button>
             <button class="admin_logout" onclick="javascript: location.href='./admin/action/logout.php';">로그아웃</button>
         <?php } ?>
-        <h1 class="h1_logo">ㅤ <!-- 자동점검도구로 empty string 경고 떠서 특수문자 공백 추가  -->
+        <h1 class="h1_logo">ㅤ
+            <!-- 자동점검도구로 empty string 경고 떠서 특수문자 공백 추가  -->
             <a href="" class="logo_link">
                 <span class="icon_logo_gnb">
                     <svg id="gnb_logo" width="160" height="50" viewBox="0 0 160 50">
@@ -69,6 +70,13 @@ require_once('head.php');
                         <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(5);">
                             <span class="slnb_txt_box">
                                 <span class="slnb_txt">이벤트 참여</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="slnb_inner" id="slnb-8">
+                        <a href="javascript:void(0);" class="slnb_link" onclick="moveFullpage(6);">
+                            <span class="slnb_txt_box">
+                                <span class="slnb_txt">공지사항</span>
                             </span>
                         </a>
                     </li>

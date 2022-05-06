@@ -10,9 +10,8 @@ function init() {
     initFullpage();
     initEvent();
 
-    // 20220505 관련 항목 삭제
-    // getInstargramData();
-    // getNoticeList(1);
+    getInstargramData();
+    getNoticeList(1);
 
     getIntroduceInfo();
     getPopupInfo();
@@ -127,7 +126,7 @@ function getInstargramData() {
 function _activateLeftNav(index) {
     // 20220505 수정사항 반영. (온라인 전시관, 행사일정 영역 삭제)
     if(index > 4) {
-        index = 7;
+        index += 2;
     }
     $('.slnb_inner').removeClass('active');
     $('#slnb-' + index).addClass('active');
