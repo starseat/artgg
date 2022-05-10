@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
@@ -656,10 +656,9 @@ select {
 }
 
 .btn_quick_online {
-    display: inline-block;
-    margin-top: 22px;
-    /* padding-top: 100px; */
-    padding-top: 80px;
+    display: flex;
+    align-items:center;
+    margin:22px auto 0;
     box-sizing: border-box;
     width: 214px;
     height: 234px;
@@ -672,7 +671,7 @@ select {
     font-size: 20px;
     color: #000;
 }
-
+.btn_quick_text {width:100%; text-align:center; padding-top:20px;}
 
 /* section3 : 아트경기소개 */
 
@@ -770,7 +769,7 @@ select {
     width: 100%;
     max-width: 1100px;
     height: 0;
-    padding-top: 31.5%;
+    padding-top: 560px;
     background-image: url('../img/section4_onlinegallery.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -831,9 +830,11 @@ select {
 }
 
 #section4-ebook-link {
+    display:block;
     font-size: 24px;
     text-decoration: none;
     font-weight: 500;
+    margin-top:20px;
 }
 
 /* section5 : 행사일정(지도) */
@@ -1518,9 +1519,6 @@ select {
         width: 156px;
         height: 170px;
         margin-top: 60px;
-        /* padding-top: 70px; */
-        padding-top: 50px;
-        /* font-size: 16px; */
         font-size: 13px;
         line-height: 24px;
         background-size: 156px 170px;
@@ -1578,7 +1576,7 @@ select {
     }
     /* T : section4 : 온라인갤러리 */
     .article_gallery_w {
-        padding-top: 40.5%;
+        padding-top: 36.5%;
     }
     .spinner-block,
     .spinner.spinner-3:after,
@@ -1746,14 +1744,11 @@ select {
         text-align: center;
     }
     .btn_quick_online {
-        /* padding-top: 65px; */
-        padding-top: 56px;
         margin-top: 30px;
         width: 140px;
         height: 152px;
         line-height: 20px;
         background-size: 140px 152px;
-        /* font-size: 14px; */
         font-size: 12px;
     }
     /* M : section3 :  */

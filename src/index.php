@@ -86,7 +86,7 @@
                     <span class="text_marker">당신의 일상과 잇다</span>
                 </p>
                 <a href="javascript:void(0);" class="btn_quick_online page-move" onclick="moveFullpage(4);">
-                    2021 아트경기<br />온라인 전시관<br />바로가기
+                    <div class="btn_quick_text">2021 아트경기<br />온라인 전시관<br />바로가기</div>
                 </a>
             </div>
             <a href="javascript:void(0);" class="icon_scroll_mouse" onclick="downFullpage(3);">
