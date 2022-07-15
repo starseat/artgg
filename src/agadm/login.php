@@ -6,7 +6,7 @@ header('Content-Type: text/html; charset=UTF-8');
 if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) {
     echo '<meta http-equiv="refresh" content="0 url=../index.php" />';
     exit;
-} 
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,23 +23,23 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style>
         /* BASIC */
-        
+
         html {
             /* background-color: #56baed; */
         }
-        
+
         body {
             font-family: "Poppins", sans-serif;
             height: 100vh;
         }
-        
+
         a {
             color: #92badd;
             display: inline-block;
             text-decoration: none;
             font-weight: 400;
         }
-        
+
         h2 {
             text-align: center;
             font-size: 16px;
@@ -49,8 +49,9 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             margin: 40px 8px 10px 8px;
             color: #cccccc;
         }
+
         /* STRUCTURE */
-        
+
         .wrapper {
             display: flex;
             align-items: center;
@@ -60,7 +61,7 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             min-height: 100%;
             padding: 20px;
         }
-        
+
         #formContent {
             -webkit-border-radius: 10px 10px 10px 10px;
             border-radius: 10px 10px 10px 10px;
@@ -74,7 +75,7 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        
+
         #formFooter {
             background-color: #f6f6f6;
             border-top: 1px solid #dce8f1;
@@ -83,18 +84,20 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -webkit-border-radius: 0 0 10px 10px;
             border-radius: 0 0 10px 10px;
         }
+
         /* TABS */
-        
+
         h2.inactive {
             color: #cccccc;
         }
-        
+
         h2.active {
             color: #0d0d0d;
             border-bottom: 2px solid #5fbae9;
         }
+
         /* FORM TYPOGRAPHY*/
-        
+
         input[type=button],
         input[type=submit],
         input[type=reset] {
@@ -118,13 +121,13 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
-        
+
         input[type=button]:hover,
         input[type=submit]:hover,
         input[type=reset]:hover {
             background-color: #39ace7;
         }
-        
+
         input[type=button]:active,
         input[type=submit]:active,
         input[type=reset]:active {
@@ -134,7 +137,7 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -ms-transform: scale(0.95);
             transform: scale(0.95);
         }
-        
+
         input[type=text],
         input[type=password] {
             background-color: #f6f6f6;
@@ -156,19 +159,20 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -webkit-border-radius: 5px 5px 5px 5px;
             border-radius: 5px 5px 5px 5px;
         }
-        
+
         input[type=text]:focus,
         input[type=password]:focus {
             background-color: #fff;
             border-bottom: 2px solid #5fbae9;
         }
-        
+
         input[type=text]:placeholder {
             color: #cccccc;
         }
+
         /* ANIMATIONS */
         /* Simple CSS3 Fade-in-down Animation */
-        
+
         .fadeInDown {
             -webkit-animation-name: fadeInDown;
             animation-name: fadeInDown;
@@ -177,61 +181,67 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
-        
+
         @-webkit-keyframes fadeInDown {
             0% {
                 opacity: 0;
                 -webkit-transform: translate3d(0, -100%, 0);
                 transform: translate3d(0, -100%, 0);
             }
+
             100% {
                 opacity: 1;
                 -webkit-transform: none;
                 transform: none;
             }
         }
-        
+
         @keyframes fadeInDown {
             0% {
                 opacity: 0;
                 -webkit-transform: translate3d(0, -100%, 0);
                 transform: translate3d(0, -100%, 0);
             }
+
             100% {
                 opacity: 1;
                 -webkit-transform: none;
                 transform: none;
             }
         }
+
         /* Simple CSS3 Fade-in Animation */
-        
+
         @-webkit-keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         @-moz-keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         .fadeIn {
             opacity: 0;
             -webkit-animation: fadeIn ease-in 1;
@@ -244,32 +254,33 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             -moz-animation-duration: 1s;
             animation-duration: 1s;
         }
-        
+
         .fadeIn.first {
             -webkit-animation-delay: 0.4s;
             -moz-animation-delay: 0.4s;
             animation-delay: 0.4s;
         }
-        
+
         .fadeIn.second {
             -webkit-animation-delay: 0.6s;
             -moz-animation-delay: 0.6s;
             animation-delay: 0.6s;
         }
-        
+
         .fadeIn.third {
             -webkit-animation-delay: 0.8s;
             -moz-animation-delay: 0.8s;
             animation-delay: 0.8s;
         }
-        
+
         .fadeIn.fourth {
             -webkit-animation-delay: 1s;
             -moz-animation-delay: 1s;
             animation-delay: 1s;
         }
+
         /* Simple CSS3 Fade-in Animation */
-        
+
         .underlineHover:after {
             display: block;
             left: 0;
@@ -280,26 +291,31 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             content: "";
             transition: width 0.2s;
         }
-        
+
         .underlineHover:hover {
             color: #0d0d0d;
         }
-        
+
         .underlineHover:hover:after {
             width: 100%;
         }
+
         /* OTHERS */
-        
+
         *:focus {
             outline: none;
         }
-        
+
         #icon {
             width: 60%;
         }
-        
+
         .icon-box {
             font-size: 80px;
+        }
+
+        #err_msg {
+            color: red;
         }
     </style>
 
@@ -322,11 +338,13 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
             </div>
 
             <!-- Login Form -->
-            <form id="loginForm" name="loginForm" method="post" action="./action/login.php">
+            <form id="loginForm" name="loginForm" method="post" action="#">
                 <input type="text" id="login_id" name="login_id" class="fadeIn second" placeholder="login">
                 <input type="password" id="login_pw" name="login_pw" class="fadeIn third" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In" onclick="loginSubmit(event)">
+                <input type="button" class="fadeIn fourth" value="Log In" onclick="loginSubmit(event)">
             </form>
+            <span id="err_msg"></span>
+            <br>
 
             <!-- Remind Passowrd -->
             <!-- <div id="formFooter">
@@ -336,6 +354,8 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
         </div>
     </div>
     <script>
+        $('#err_msg').hide();
+
         function loginSubmit(event) {
             event.preventDefault();
             event.stopPropagation();
@@ -352,7 +372,42 @@ if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['
                 return false;
             }
 
-            $('#loginForm').submit();
+            // $('#loginForm').submit();
+            $.ajax({
+                cache: false,
+                url: './action/login.php',
+                type: 'POST',
+                data: {
+                    login_id: $('#login_id').val(),
+                    login_pw: $('#login_pw').val()
+                },
+                success: function(resultData) {
+                    console.log('login request result: ', resultData);
+                    var resultObj = JSON.parse(resultData);
+                    console.log('login request resultObj: ', resultObj);
+                    var isResult = false;
+                    if (resultObj) {
+                        if (resultObj.result > 0) {
+                            isResult = true;
+                        }
+                    }
+                    if (isResult && resultObj.result > 0) {
+                        $('#err_msg').hide();
+                        $('#err_msg').text('');
+                        location.href = '../index.php';
+                    } else {
+                        $('#err_msg').show();
+                        $('#err_msg').text('알 수 없는 오류가 발생하였습니다.');
+                        return false;
+                    }
+                }, // success 
+
+                error: function(xhr, status) {
+                    console.log('login request exception: ', xhr + ': ' + status);
+                }
+            });
+
+            return false;
         }
     </script>
 </body>

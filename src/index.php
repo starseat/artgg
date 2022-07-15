@@ -351,7 +351,7 @@
             <div class="section_inner">
                 <div class="board_list_w">
                     <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
-                        <a href="./admin/write.php" class="admin_writer" target="_blank">글쓰기</a>
+                        <a href="./agadm/write.php" class="admin_writer" target="_blank">글쓰기</a>
                     <?php } ?>
                     <div class="board_list_inner">
                         <table id="notice-table">
@@ -477,7 +477,7 @@
     <script>
         $(document).ready(function() {
             $('#notice-update').on('click', function() {
-                var url = './admin/write.php?seq=' + $('#notice-detail-seq').val();
+                var url = './agadm/write.php?seq=' + $('#notice-detail-seq').val();
                 window.open(url, '_blank');
             });
         });

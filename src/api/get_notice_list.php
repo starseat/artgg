@@ -1,7 +1,7 @@
 <?php
 
-include('../admin/common.php');
-include('../admin/db_conn.php');
+include('../agadm/common.php');
+include('../agadm/db_conn.php');
 
 header('Content-Type: text/html; charset=UTF-8');
 

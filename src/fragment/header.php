@@ -14,8 +14,8 @@ require_once('head.php');
     <nav id="nav" class="common_lnb_w">
         <!-- 모바일 gnb 오픈 gnb_open -->
         <?php if (isset($_SESSION['is_login']) && !empty($_SESSION['is_login']) && $_SESSION['is_login'] == 1) { ?>
-            <button class="admin_popup" onclick="javascript: location.href='./admin/popup.php';">팝업</button>
-            <button class="admin_logout" onclick="javascript: location.href='./admin/action/logout.php';">로그아웃</button>
+            <button class="admin_popup" onclick="javascript: location.href='./agadm/popup.php';">팝업</button>
+            <button class="admin_logout" onclick="javascript: location.href='./agadm/action/logout.php';">로그아웃</button>
         <?php } ?>
         <h1 class="h1_logo">
             <!-- 자동점검도구로 empty string 경고 떠서 특수문자 공백 추가  [ㅤ]-->

@@ -91,7 +91,7 @@ function getInstargramData() {
     // https://blog.naver.com/PostView.naver?blogId=gocathy&logNo=222053516256
     // Generate Token 에서 토큰만 갱신
     // https://developers.facebook.com/apps/264515868907394/instagram-basic-display/basic-display/?business_id=403629573607353
-    var token = 'IGQVJXMWhJNDV2YWZAUd0wxeldVSWNXVXVyUU8wOVBVVmZA6bEhfMEFMZAmNYX3kzSWlCalQwTWptaWlDdGE0MFlvZAE1PUkFTWHZANRXRDM0lVLWM5Rnc3NXpFdTV4djNlb0ZAUWXJLblZAmZAVRDcFhfd0Q1agZDZD';
+    var token = 'IGQVJVOU1NTEFfZAXA0NnFTeVIxQ2lmdUVZAY3dZAM1pDb2NQUk4tQkVBeUx5QVRNRkFsam1fMmFCOVZANMFdoSFVQWkhTUW9tY0ZAqTUpOU0RoQnM0ejFRY2doSVpFS3FyM3kzdkJTVkNpQlM5OTFTc3FOMgZDZD';
     $.ajax({
         type: "GET",
         dataType: "jsonp",

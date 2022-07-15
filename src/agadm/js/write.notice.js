@@ -142,7 +142,7 @@ function sendImageFile(element, file, editor, welEditable) {
     const formData = new FormData();
     formData.append('uploadImage', file);
 
-    const _url = '/admin/action/notice_image_submit.php';
+    const _url = '/agadm/action/notice_image_submit.php';
     $.ajax({
         data: formData,
         type: 'post',

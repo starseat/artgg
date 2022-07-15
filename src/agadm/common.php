@@ -220,7 +220,7 @@ function convertUTF8String($str) {
 
 // 비밀번호 암호화  // https://cnpnote.tistory.com/entry/passwordhash-%EC%82%AC%EC%9A%A9%EB%B2%95
 $password_options = [
-    'salt' => 'donmmelier_admin',
+    'salt' => 'artgg_agadm',
     'cost' => 12 // the default cost is 10
 ];
 
