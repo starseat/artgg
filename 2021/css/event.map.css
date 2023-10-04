@@ -1,0 +1,783 @@
+@charset "utf-8";
+
+/* section5 : 행사일정(지도) */
+
+.section5_cont_w {
+    background-color: #313131;
+    background-image: none;
+}
+
+.section5_cont_w:after {
+    display: none;
+}
+
+.map_area {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding-right: 510px;
+    box-sizing: border-box;
+}
+
+.map_area .map_svg {
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.map_area .svg_wrap {
+    width: 100%;
+}
+
+.map_area .btn_daily_info {
+    display: inline-block;
+    width: 116px;
+    height: 42px;
+    line-height: 42px;
+    background: #009b91 url(../img/icon_daily_arrow.png) no-repeat calc(100% - 15px) 50%;
+    background-size: 28px auto;
+    position: absolute;
+    right: 35px;
+    top: 143px;
+    box-shadow: 2px 2px 0 #fff;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 52px;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 600;
+    display: none;
+}
+
+.icon_arrow_move {
+    fill: #fff;
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .map_area .svg_wrap {
+        height: 100%;
+    }
+}
+
+.map_area .map_info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 510px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 50px;
+    padding-left: 80px;
+}
+
+.map_info table {
+    /* width: 370px; */
+    width: 100%;
+}
+
+.map_info.use_ani {
+    transition: transform ease 0.6s;
+}
+
+.map_info table th,
+.map_info table td {
+    border-bottom: 1px solid #a2a2a2;
+}
+
+.map_info table th {
+    border-right: 1px solid #a2a2a2;
+    color: #e73b8f;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 17px;
+}
+
+.map_info table .icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
+    transform: translateY(-3px);
+}
+
+.map_info table .icon.blue {
+    background-color: #0068b7;
+}
+
+.map_info table .icon.orange {
+    background-color: #ea552a;
+}
+
+.map_info table .icon.mint {
+    background-color: #009b91;
+}
+
+.map_info table .icon.yellow {
+    background-color: #ffe100;
+}
+
+.map_info table .icon.pink {
+    background-color: #e73b8f;
+}
+
+.map_info table td {
+    padding-top: 8px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+}
+
+.map_info table tr:first-child th,
+.map_info table tr:first-child td {
+    padding-top: 0;
+}
+
+.map_info table .title {
+    color: #fff;
+    font-size: 18px;
+}
+
+.map_info table .date {
+    color: #acacac;
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+}
+
+.map_info li {
+    margin-bottom: 10px;
+}
+
+.map_info .btn_info_close {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -5000px;
+    cursor: pointer;
+    display: none;
+}
+
+.map_info .btn_info_close:before,
+.map_info .btn_info_close:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    content: " ";
+    height: 28px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.map_info .btn_info_close:before {
+    transform: rotate(45deg);
+}
+
+.map_info .btn_info_close:after {
+    transform: rotate(-45deg);
+}
+
+.map_info table th {
+    width: 140px;
+}
+
+.btn-area {
+    cursor: pointer;
+}
+
+.cls-1 {
+    fill: none;
+}
+
+.cls-2 {
+    fill: #e73b8f;
+}
+
+.cls-3 {
+    fill: #e6f5f4;
+}
+
+.cls-4 {
+    fill: #b4c9c7;
+}
+
+.cls-5,
+.cls-6 {
+    isolation: isolate;
+}
+
+.cls-6 {
+    font-size: 13px;
+    fill: #505050;
+    font-family: NotoSansCJKkr-Light-KSCpc-EUC-H, Noto Sans CJK KR;
+    letter-spacing: -0.03em;
+}
+
+.cls-7 {
+    fill: #0c4d7e;
+}
+
+.cls-8 {
+    fill: #0068b7;
+}
+
+.cls-9 {
+    fill: #b23d1b;
+}
+
+.cls-10 {
+    fill: #ea552a;
+}
+
+.cls-11 {
+    fill: #066c65;
+}
+
+.cls-12 {
+    fill: #009b91;
+}
+
+.cls-13 {
+    fill: #d0ba18;
+}
+
+.cls-14 {
+    fill: #ffe100;
+}
+
+.cls-15 {
+    fill: #af3b74;
+}
+
+
+/* 행사지도 마커 위치 변경 */
+
+#area_1 {
+    transform: translate(0px, 120px);
+}
+
+#area_2 {
+    transform: translate(-20px, 70px);
+}
+
+#area_5 {
+    transform: translate(0, 20px);
+}
+
+#area_7 {
+    transform: translate(50px, 68px);
+}
+
+#area_7_2 {
+    transform: translate(-96px, -156px);
+}
+
+#area_7_3 {
+    transform: translate(94px, -186px);
+}
+
+#area_7_4 {
+    transform: translate(-64px, 14px);
+}
+
+#area_7_5 {
+    transform: translate(116px, 70px);
+}
+
+#area_8 {
+    transform: translate(-430px, 170px);
+}
+
+#area_9 {
+    transform: translate(-326px, 286px);
+}
+
+#area_10 {
+    transform: translate(-380px, 360px);
+}
+
+
+/* wifi 아이콘 삭제 요청 */
+
+#wifi_icon {
+    display: none;
+}
+
+
+/* Map Window info */
+
+.layer_pop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer_pop .layer_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.layer_pop .container {
+    width: 1090px;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px;
+    max-height: calc(100vh - 100px);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: window-view 0.6s forwards ease;
+}
+
+.layer_pop .container.remove {
+    animation: window-remove 0.4s forwards ease;
+    /* animation-direction: reverse; */
+}
+
+.layer_pop .btn_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -5000px;
+    cursor: pointer;
+}
+
+.layer_pop .btn_close:before,
+.layer_pop .btn_close:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    content: " ";
+    height: 28px;
+    width: 1px;
+    background-color: #333;
+}
+
+.layer_pop .btn_close:hover:before,
+.layer_pop .btn_close:hover:after {
+    background-color: #e73b8f;
+}
+
+.layer_pop .btn_close:before {
+    transform: rotate(45deg);
+}
+
+.layer_pop .btn_close:after {
+    transform: rotate(-45deg);
+}
+
+.layer_pop .photo {
+    width: 48.5%;
+    /* height: 400px; */
+    float: left;
+}
+
+.layer_pop .photo img {
+    width: 100%;
+}
+
+.layer_pop .info_box {
+    font-size: 16px;
+    width: 51.5%;
+    padding-left: 50px;
+    float: left;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(100vh - 220px);
+    line-height: normal;
+}
+
+.layer_pop .info_title {
+    font-size: 24px;
+    color: #e73b8f;
+    line-height: 25px;
+}
+
+.layer_pop .info_title .title {
+    margin-right: 10px;
+}
+
+.layer_pop .info_title .date {
+    font-size: 16px;
+}
+
+.layer_pop .info-row {
+    margin-bottom: 15px;
+}
+
+.layer_pop .cooperation {
+    font-size: 14px;
+    color: #505050;
+}
+
+.layer_pop .link {
+    display: block;
+    font-size: 13px;
+    color: rgb(134, 134, 134);
+    word-break: break-all;
+}
+
+.layer_pop .link a {
+    color: rgb(134, 134, 134);
+}
+
+.layer_pop .link a:hover {
+    color: #e73b8f;
+    text-decoration: underline;
+}
+
+.layer_pop .info_area_list {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #505050;
+}
+
+.layer_pop .info_area_list::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.layer_pop .info_area_list li {
+    float: left;
+    margin-right: 6px;
+}
+
+.layer_pop .info_area_list li:after {
+    content: ",";
+}
+
+.layer_pop .info_area_list li:last-child:after {
+    content: none;
+}
+
+.layer_pop .info_area_list li:last-child {
+    margin-right: 0;
+}
+
+.layer_pop .tip .info {
+    font-size: 14px;
+}
+
+.layer_pop .tip .info li {
+    margin-bottom: 8px;
+}
+
+.layer_pop .tip .info strong {
+    font-weight: 500;
+    display: block;
+}
+
+.layer_pop .more_link {
+    font-size: 12px;
+    color: rgb(134, 134, 134);
+}
+
+.layer_pop .more_link a {
+    color: rgb(134, 134, 134);
+}
+
+.layer_pop .more_link a:hover {
+    color: #e73b8f;
+    text-decoration: underline;
+}
+
+.scroll_hidden {
+    overflow: hidden !important;
+}
+
+.add_transition {
+    transition: all ease 0.6s;
+}
+
+@keyframes window-view {
+    from {
+        transform: scale3d(0.8, 0.8, 1);
+        opacity: 0;
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        -moz-transform: scale3d(0.8, 0.8, 1);
+        -ms-transform: scale3d(0.8, 0.8, 1);
+        -o-transform: scale3d(0.8, 0.8, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes window-remove {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+        transform: scale3d(0.9, 0.9, 1);
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+        -moz-transform: scale3d(0.9, 0.9, 1);
+        -ms-transform: scale3d(0.9, 0.9, 1);
+        -o-transform: scale3d(0.9, 0.9, 1);
+    }
+}
+
+
+/* -------------------- 태블릿 제어 -------------------- */
+
+@media screen and (max-width: 1536px) {
+    /* T : section5 : 행사일정(지도) */
+    .map_info table th {
+        font-size: 15px;
+    }
+    .map_info table .title {
+        font-size: 15px;
+    }
+    .map_info table .date {
+        font-size: 12px;
+    }
+    .map_info li {
+        margin-bottom: 10px;
+    }
+    .map_info table .icon {
+        transform: translateY(-2px);
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .layer_pop .container {
+        width: 90%;
+    }
+}
+
+
+/* -------------------- 태블릿 제어(세로) -------------------- */
+
+@media screen and (max-width: 768px) {
+    /* section5 : 행사일정(지도) */
+    .map_area {
+        padding: 0 35px;
+    }
+    .layer_pop .container {
+        width: 65%;
+    }
+    .layer_pop .photo {
+        width: 100%;
+        height: auto;
+        float: inherit;
+        max-height: inherit;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .layer_pop .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .layer_pop .info_box {
+        font-size: 14px;
+        width: 100%;
+        padding-left: 0;
+        max-height: none;
+        overflow: inherit;
+    }
+    .layer_pop .info_title {
+        font-size: 22px;
+        padding-top: 25px;
+    }
+    .layer_pop .info_title .date {
+        font-size: 14px;
+    }
+    .layer_pop .container_info {
+        height: calc(100vh - 220px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .map_area .map_info {
+        padding-left: 45px;
+        padding-right: 38px;
+        right: 0;
+        background-color: rgba(49, 49, 49, 0.95);
+        width: 400px;
+        border-right: 1px solid #707070;
+        align-items: flex-start;
+        /* transition: transform ease 0.6s; */
+        transform: translateX(400px);
+    }
+    .map_area .map_info.active {
+        transform: translateX(0);
+    }
+    .map_info table {
+        margin-top: 75px;
+    }
+    .map_info .btn_info_close {
+        display: inline-block;
+    }
+    .map_info table th {
+        font-size: 12px;
+        width: 100px;
+    }
+    .map_info table .title {
+        font-size: 12px;
+    }
+    .map_info table .date {
+        font-size: 10px;
+    }
+    .map_info li {
+        margin-bottom: 10px;
+    }
+    .map_info table .icon {
+        transform: translateY(-1px);
+    }
+    .map_area .btn_daily_info {
+        display: inline-block;
+    }
+    /* #area_8,
+    #area_9,
+    #area_10,
+    #wifi_icon {
+        transform: translateY(55px);
+    } */
+    #area_8 {
+        transform: translate(-430px, 170px);
+    }
+    #area_9 {
+        transform: translate(-326px, 286px);
+    }
+    #area_10 {
+        transform: translate(-380px, 360px);
+    }
+}
+
+
+/* -------------------- 모바일 제어 -------------------- */
+
+@media screen and (max-width: 720px) {
+    /* section5 : 행사일정(지도) */
+    .map_area {
+        padding: 0 5px;
+    }
+    .layer_pop .container {
+        width: 85%;
+        padding: 50px 15px 30px 15px;
+        max-height: calc(100vh - 50px);
+    }
+    .layer_pop .photo {
+        height: 248px;
+    }
+    .layer_pop .container_info {
+        height: calc(100vh - 131px);
+    }
+    .layer_pop .btn_close {
+        right: 12px;
+        top: 6px;
+    }
+    .layer_pop .info_title .title {
+        display: block;
+    }
+    /*
+    .map_fixed .section5_cont_w {
+        z-index: 1000;
+    }
+    .map_area .map_info {
+        position: fixed;
+    }
+    */
+    .map_fixed .fullpage-wrapper {
+        z-index: 1000;
+    }
+    /* #area_2{
+          transform: scale(1.3) translate(-29px, -39px);
+      } */
+    /* #area_8,
+    #area_9,
+    #area_10,
+    #wifi_icon {
+        transform: translateX(-25px);
+    } */
+    #area_8 {
+        transform: translate(-430px, 170px);
+    }
+    #area_9 {
+        transform: translate(-326px, 286px);
+    }
+    #area_10 {
+        transform: translate(-380px, 360px);
+    }
+    .map_daegu,
+    .point_daegu {
+        transform: translate(-100px, 45px);
+    }
+    .map_area .btn_daily_info {
+        width: 100px;
+        height: 36px;
+        line-height: 36px;
+        background-size: 25px auto;
+        padding-right: 46px;
+        right: 30px;
+        top: 75px;
+    }
+    .map_area .svg_wrap {
+        margin-top: 40px;
+    }
+    .map_area .map_info {
+        width: 100%;
+        padding-left: 20px;
+        transform: translateX(100%);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-bottom: 25px;
+    }
+    .map_info table {
+        margin-top: 40px;
+        width: 100%;
+    }
+    .map_info li {
+        margin-bottom: 10px;
+        line-height: 15px;
+    }
+}
+
+@media screen and (max-height: 824px) and (orientation: landscape) {
+    .map_area .svg_wrap {
+        padding: 50px
+    }
+    .map_area table .title,
+    .map_area table .date {
+        font-size: 0.6em;
+    }
+}
