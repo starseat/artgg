@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --marker-blue: rgb(0, 110, 220);
+            --marker-orange: rgb(255, 72, 23);
+            --marker-green: rgb(0, 171, 137);
+            --marker-yellow: rgb(251, 186, 0);
+            --marker-red: rgb(231, 52, 82);
+            --marker-purple: rgb(155, 0, 168);
+        }
+
+        .map-wrapper {
+            position: relative;
+            height: 100%;
+            width: 600px;
+        }
+        .map-markers {
+            position: absolute;
+            width: 100%;
+            aspect-ratio: 113/150;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .marker {
+            position: absolute;
+            width: 0;
+            height: 0;
+            cursor: pointer;
+            border-width: 8px;
+            border-style: solid;
+            border-radius: 50%;
+            z-index: 10;
+            box-sizing: border-box;
+            transform: translate(-50%) translateY(-50%);
+        }
+
+        .marker-blue {
+            border-color: var(--marker-blue);
+        }
+        .marker-orange {
+            border-color: var(--marker-orange);
+        }
+        .marker-green {
+            border-color: var(--marker-green);
+        }
+        .marker-yellow {
+            border-color: var(--marker-yellow);
+        }
+        .marker-purple {
+            border-color: var(--marker-purple);
+        }
+
+        .marker.active {
+            border-width: 12px;
+            z-index: 30;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="map-wrapper">
+        <img src="./imgs/seoul.svg">
+        <div class="map-markers">
+            <div class="marker marker-blue" style="top: 54.5807%; left: 33.2098%;">
+                <!-- <img src="./imgs/marker_blue.svg" alt="blue colored marker"> -->
+            </div>
+            <div class="marker marker-orange" style="top: 46.9917%; left: 27.9108%;">
+                <!-- <img src="./imgs/marker_orange.svg" alt="orange colored marker"> -->
+            </div>
+            <div class="marker marker-green" style="top: 62.0164%; left: 50.4815%;">
+                <!-- <img src="./imgs/marker_green.svg" alt="orange colored marker"> -->
+            </div>
+            <div class="marker marker-yellow" style="top: 34.6841%; left: 35.6548%;">
+                <!-- <img src="./imgs/marker_yellow.svg" alt="orange colored marker"> -->
+            </div>
+            <div class="marker marker-purple" style="top: 38.9882%; left: 69.9515%;">
+                <!-- <img src="./imgs/marker_purple.svg" alt="orange colored marker"> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $('.marker').hover(function() {
+            $('.marker').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+</html>
