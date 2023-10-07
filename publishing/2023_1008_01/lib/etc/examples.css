@@ -1,0 +1,41 @@
+#fullpage {
+    width:100%;
+    height:100%;
+}
+header {
+    position: fixed;
+    background: #333;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+}
+.slimScrollBar {
+    background: red !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+}
+
+/*.container {*/
+/*    margin: 70px 20px;*/
+/*}*/
+
+
+
+.section {font-size: 3vw; text-align:center}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    justify-content:space-between !important;
+}
