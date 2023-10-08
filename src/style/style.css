@@ -4209,11 +4209,11 @@ button:hover {
 }
 
 .bg-darkgreen {
-  color: #73A568;
+  background-color: #73A568;
 }
 
 .bg-darkblue {
-  color: #6591C5;
+  background-color: #6591C5;
 }
 
 /* 보더컬러 */
@@ -4250,11 +4250,11 @@ button:hover {
 }
 
 .line-darkgreen {
-  color: #73A568;
+  border-color: #73A568 !important;
 }
 
 .line-darkblue {
-  color: #6591C5;
+  border-color: #6591C5 !important;
 }
 
 /* scroll  */
@@ -5058,10 +5058,15 @@ button:hover {
   align-items: flex-start;
   padding: 6px 0;
 }
-.mapInfoList_w .mapInfoList_inner .mapInfoList_cont:hover {
+/* .mapInfoList_w .mapInfoList_inner .mapInfoList_cont:hover {
+  color: red;
+  cursor: pointer;
+} */
+.mapInfoList_w .mapInfoList_inner .mapInfoList_cont.active {
   color: red;
   cursor: pointer;
 }
+
 .mapInfoList_w .mapInfoList_text {
   display: flex;
   align-items: flex-start;

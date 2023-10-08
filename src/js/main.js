@@ -50,21 +50,53 @@ function allMenu(){
 }
 
 function initMap() {
-    _initMarker();
+    _initMapList();
+    _initMapMarker();
 }
 
-function _initMarker() {
+function _initMapList() {
+    $('.map-list-item').mouseout(function() {
+        // $('.map-list-item').css('color', 'black').css('cursor', 'default');
+        //$('.map-list-item').removeClass('active');
+        __mapItemDefault();
+    });
+    $('.map-list-item').mouseover(function() {
+        // $(this).css('color', 'red').css('cursor', 'pointer');
+        // $(this).addClass('active');
+        const number = parseInt($(this).attr('art-item-index'));
+        __mapItemActive(number);
+    });
+}
+
+function _initMapMarker() {
     // $('.map-marker').hover(function() {
     //     $('.map-marker').removeClass('active');
     //     $(this).addClass('active');
     // });
 
     $('.map-marker').mouseout(function() {
-        $('.map-marker').removeClass('active');
+        //$('.map-marker').removeClass('active');
+        __mapItemDefault();
     });
     $('.map-marker').mouseover(function() {
-        $(this).addClass('active');
+        // $(this).addClass('active');
+        const number = parseInt($(this).attr('art-item-index'));
+        __mapItemActive(number);
     });
+}
+
+function __mapItemDefault() {
+    $('.map-list-item').removeClass('active');
+    $('.map-marker').removeClass('active');
+}
+function __mapItemActive(number) {
+    let index = 0;
+    if(number && number > 0) {
+        index = number - 1;
+    }
+
+    $($('.map-list-item')[index]).addClass('active');
+    $($('.map-marker')[index]).addClass('active');
 }
 
 function initSwiper() {
@@ -156,11 +188,37 @@ function joinClick(index) {
 }
 
 function _makeMapPopupContents(index) {
-    index = 0;
+    const $popup = $('#map-art-popup');
+    $popup.removeClass('line-yellow');
+    $popup.removeClass('line-pink');
+    $popup.removeClass('line-skyblue');
+    $popup.removeClass('line-green');
+    $popup.removeClass('line-dkOrange');
+    $popup.removeClass('line-brown');
+    $popup.removeClass('line-pupple');
+    $popup.removeClass('line-orange');
+    $popup.removeClass('line-darkgreen');
+    $popup.removeClass('line-darkblue');
+
+    let lineClass = '';
+    switch (index) {
+        case 1: lineClass = 'line-yellow'; break;
+        case 2: lineClass = 'line-pink'; break;
+        case 3: lineClass = 'line-skyblue'; break;
+        case 4: lineClass = 'line-green'; break;
+        case 5: lineClass = 'line-dkOrange'; break;
+        case 6: lineClass = 'line-brown'; break;
+        case 7: lineClass = 'line-pupple'; break;
+        case 8: lineClass = 'line-orange'; break;
+        case 9: lineClass = 'line-darkgreen'; break;
+        case 10: lineClass = 'line-darkblue'; break;
+    }
+    if(lineClass != '') {
+        $popup.addClass(lineClass);
+    }
 
     $('.art-item-wrap').hide();
     $('.art-item-' + index).show();
-
 };
 
 function _hideMapPopupContents() {
