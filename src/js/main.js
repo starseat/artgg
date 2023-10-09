@@ -1,6 +1,4 @@
 
-let swiper;
-
 $(document).ready(function() {  
     init();
 });
@@ -13,6 +11,7 @@ function init() {
     initSwiper();
     initFullPage();
     initArticlePlanningContents();
+    initProgramBackground();
     
     getInstargramData();
 }
@@ -102,6 +101,7 @@ function __mapItemActive(number) {
     $($('.map-marker')[index]).addClass('active');
 }
 
+let swiper;
 function initSwiper() {
     // swiper
     const length = $(".sec4 .swiper-slide").length;
@@ -147,6 +147,7 @@ function initSwiper() {
 }
 
 function initFullPage() {
+    $('#yraf-navi').hide();
     $('#fullpage').fullpage({
         sectionsColor: ['#ffffff', '#8ABADA', '#ffffff', '#777777'],
         anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
@@ -203,10 +204,26 @@ function initArticlePlanningContents() {
     })
 }
 
+let programTourBgInterval;
+let programTourBgIndex = 1;
+function initProgramBackground() {
+    programTourBgInterval = setInterval(() => {
+        programTourBgIndex++;
+        if(programTourBgIndex > 6) {
+            programTourBgIndex = 1;
+        }
+        // console.log('[initProgramBackground] bg index: ', programTourBgIndex);
+        $('#program-tour-bg-img').attr('src', './img/programTour_bg0' + programTourBgIndex + '.png');
+    }, 4000);
+    
+}
+
 function getInstargramData() {
+    $('#instargram-link').attr('href', 'https://www.instagram.com/yraf_2023/?hl=ko');
+
     // Generate Token 에서 토큰만 갱신
     // https://developers.facebook.com/apps/1357941785153009/instagram-basic-display/basic-display/
-    var token = 'IGQWRPWFVOclhfbkxoanZAHbHMySGVCUjY0NmdlY2I4SHNUYks0Y1JrWEd1cl9PSWVYYkhoY0JyTzJuc0h2NVJQbDNmR2o2N0xMSHppTWQyRDBWQTVKVFpYNmhMem9CLW5oanp5SWtvVGZApcUJOUmFxdWxTNWlEMTQZD';
+    var token = '';
     $.ajax({
         type: "GET",
         dataType: "jsonp",
@@ -236,8 +253,15 @@ function getInstargramData() {
 }
 
 function joinClick(index) {
-    console.log('joinclick - ', index);
-    alert('준비중 입니다.');
+    console.log('[joinClick] index: ', index);
+    switch (index) {
+        case 1: window.open('https://forms.gle/Hg6zVLfHVZGRdYi8A', '', '_blank'); break;
+        case 2: window.open('https://forms.gle/g5zDFsJPGKFhLDdE7', '', '_blank'); break;
+        case 3: window.open('https://forms.gle/yut5wzPQrNDt7Ecj6', '', '_blank'); break;
+        case 4: alert('학술 세미나 참석 및 문의사항은 yeongsanart2023@gmail.com 으로 연락바랍니다.'); break;
+        default:
+            break;
+    }
 }
 
 function _makeMapPopupContents(index) {
