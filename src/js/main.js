@@ -12,6 +12,9 @@ function init() {
     initMap();
     initSwiper();
     initFullPage();
+    initArticlePlanningContents();
+    
+    getInstargramData();
 }
 
 function initPopup(){
@@ -179,6 +182,56 @@ function initFullPage() {
                 $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
             }
         }
+    });
+}
+
+function initArticlePlanningContents() {
+    $('#article-planning-contents-type-ko').on('click', function() {
+        $('#article-planning-contents-type-en').removeClass('langCurrent');
+        $(this).addClass('langCurrent');
+
+        $('#article-planning-contents-box-en').hide();
+        $('#article-planning-contents-box-ko').show();
+    });
+
+    $('#article-planning-contents-type-en').on('click', function() {
+        $('#article-planning-contents-type-ko').removeClass('langCurrent');
+        $(this).addClass('langCurrent');
+
+        $('#article-planning-contents-box-ko').hide();
+        $('#article-planning-contents-box-en').show();
+    })
+}
+
+function getInstargramData() {
+    // Generate Token 에서 토큰만 갱신
+    // https://developers.facebook.com/apps/1357941785153009/instagram-basic-display/basic-display/
+    var token = 'IGQWRQZA2xxenV2a0JUUEJNN3ZAqcHBpQTZAUSGR6Mi1JMWl4SEVLZAWFCUm9QZAElPZATlNSVdTNWtBQ05aREZAXS0R0bmNlOTN4SGZAZAcVlEUTNTWlpLQ1U0dlFDMzBSelBZAbzFQQkF2TEFtV3llVDRwMUNEaS0ycHpFbGcZD';
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://graph.instagram.com/me/media?access_token=" + token + "&limit=1&fields=id,caption,media_type,media_url,thumbnail_url,permalink,username,timestamp,followers_count,media_count,media",
+        success: function(response) {
+            console.log('[instargram] response: ', response);
+            if (response.data != undefined && response.data.length > 0) {
+                var item = response.data[0];
+                console.log('[instargram] item: ', item);
+                var image_url = '';
+
+                if (item.media_type === "VIDEO") {
+                    image_url = item.thumbnail_url;
+                } else {
+                    image_url = item.media_url;
+                }
+
+                $('#instargram-link').attr('href', item.permalink);
+                $('#instargram-media').attr('src', image_url);
+                $('#instargram-text').text(item.caption);
+            }
+        },
+        error: function() {}
+
     });
 }
 
