@@ -386,12 +386,13 @@ button:hover {
 /* footer */
 .footer_w {
   background-color:#fff;
-  padding:22px 20px;
+  padding:22px 0;
   width:100%; 
   box-sizing:border-box;
   font-size:12px;
   border-top:1px solid #cdcdcd;
   color:#585858;
+
   .footerGroup {
     display:flex;
     justify-content: center;
@@ -405,7 +406,7 @@ button:hover {
     }
   }
   .footerText {
-    padding:22px 0;
+    padding:22px 20px;
     margin-top:20px;
     border-top:1px solid #cdcdcd;
     .eventDate {
@@ -958,7 +959,7 @@ button:hover {
     display:flex; 
     flex-wrap:wrap; 
     padding-left:20px;
-    max-height:37vh;
+    max-height:17vh;
     @include breakpoint(minDesktop){
       padding-left:0;
     }
@@ -1252,7 +1253,7 @@ button:hover {
     }
     strong {
       display:block;
-      font-size:22px;
+      font-size:20px;
       @include breakpoint(desktop){
         font-size:34px;
       }
@@ -1401,6 +1402,7 @@ button:hover {
 .sec5 {
   .contentSize{ 
     padding-top:80px;
+    padding-bottom:80px;
     box-sizing:border-box;
   }
 }
@@ -1431,6 +1433,13 @@ button:hover {
   margin-top:40px;
   text-align:left;
   &:first-of-type {margin-top:0;}
+  .contentTitle {
+    span {
+      display:inline-block;
+      color:#585858;
+      font-size:15px;
+    }
+  }
   strong {
     font-weight:700; 
     font-size:20px;
@@ -1473,6 +1482,25 @@ button:hover {
     }
   }
 }
+
+.planningText_w {
+  margin-top:40px;
+  &:first-of-type {
+    margin-top:0;
+  }
+  .planningPosition {
+    display:flex;
+    font-weight:700;
+    span {
+      display:inline-block;
+      padding:0 5px;
+    }
+  }
+  .planningText {
+    margin-top:10px;
+  }
+}
+
 //이벤트
 .eventimage_w {
   img {
@@ -1501,6 +1529,7 @@ button:hover {
   display:block;
   text-align:left;
   margin-top:20px;
+  max-height:12vh;
  }
  .instargram_img {
   border-radius:1em;

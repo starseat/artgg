@@ -4361,7 +4361,7 @@ button:hover {
 /* footer */
 .footer_w {
   background-color: #fff;
-  padding: 22px 20px;
+  padding: 22px 0;
   width: 100%;
   box-sizing: border-box;
   font-size: 12px;
@@ -4381,7 +4381,7 @@ button:hover {
   height: 100%;
 }
 .footer_w .footerText {
-  padding: 22px 0;
+  padding: 22px 20px;
   margin-top: 20px;
   border-top: 1px solid #cdcdcd;
 }
@@ -5027,7 +5027,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   padding-left: 20px;
-  max-height: 37vh;
+  max-height: 17vh;
 }
 @media screen and (min-width: 1024px) {
   .exhibitionList {
@@ -5335,7 +5335,7 @@ button:hover {
 }
 .sec4 .programTitle strong {
   display: block;
-  font-size: 22px;
+  font-size: 20px;
   /*1100이상 적용 */
 }
 @media screen and (min-width: 1400px) {
@@ -5512,6 +5512,7 @@ button:hover {
 /* 기획팀 소개 */
 .sec5 .contentSize {
   padding-top: 80px;
+  padding-bottom: 80px;
   box-sizing: border-box;
 }
 
@@ -5550,6 +5551,11 @@ button:hover {
 }
 .planningTeam_info_group:first-of-type {
   margin-top: 0;
+}
+.planningTeam_info_group .contentTitle span {
+  display: inline-block;
+  color: #585858;
+  font-size: 15px;
 }
 .planningTeam_info_group strong {
   font-weight: 700;
@@ -5596,6 +5602,24 @@ button:hover {
   display: none;
 }
 
+.planningText_w {
+  margin-top: 40px;
+}
+.planningText_w:first-of-type {
+  margin-top: 0;
+}
+.planningText_w .planningPosition {
+  display: flex;
+  font-weight: 700;
+}
+.planningText_w .planningPosition span {
+  display: inline-block;
+  padding: 0 5px;
+}
+.planningText_w .planningText {
+  margin-top: 10px;
+}
+
 .eventimage_w img {
   width: 100%;
 }
@@ -5626,6 +5650,7 @@ button:hover {
   display: block;
   text-align: left;
   margin-top: 20px;
+  max-height: 12vh;
 }
 
 .instargram_img {
