@@ -1,0 +1,71 @@
+// display flex center
+%flexCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-item: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+// bg 공통
+%bgCenter {
+    display:block;
+    background-repeat:no-repeat;
+    background-size:99% auto;
+    background-position:center;
+}
+%clearbgCenter {
+    left:0;
+    top:0;
+    transform:translate(0);
+}
+// 플로팅 해제
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// 말줄임
+%textEllipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+// 말줄임 해제
+%textEllipsisClear {
+    white-space: normal;
+    text-overflow: unset;
+    overflow: unset;
+}
+
+// 숨김처리
+.hidden,
+.sr_only,
+.sr-only {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 0px;
+    height: 0px;
+    margin: -1px;
+    padding: 0;
+    word-break: keep-all;
+    white-space: nowrap;
+    color: transparent;
+    border: 0;
+    text-indent: -9999px;
+}
+

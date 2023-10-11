@@ -20,26 +20,33 @@ function initPopup(){
     //전시개요 보기
     $(".overviewLink").on('click', function() {
         $(".overview_right").addClass('mobileShow');
+        _disableFullPageScrolling();
     });
     //전시개요 보기 X
     $(".btnClose").on('click', function() {
         $(this).parents(".overview_right").removeClass('mobileShow');
+        _enableFullPageScrolling();
     });
-    //map 팝업
-    $(".mapInfoList_cont").on('click', function() {
+
+    // map-list 팝업
+    // $(".mapInfoList_cont").on('click', function() {
+    $(".map-list-item").on('click', function() {
         _hideMapPopupContents();
 
-        let artItemIndex = parseInt($(this).attr('art-item-index'), 10);
-        console.log('map art item click! index: ', artItemIndex);
-        _makeMapPopupContents(artItemIndex);
+        let artGroupIndex = parseInt($(this).attr('art-group-index'), 10);
+        let artItemIndex = parseInt($(this).attr('art-item-index'), 10);        
+        console.log('map art item click! group: ', artGroupIndex, ', index: ', artItemIndex);
+        _makeMapPopupContents(artGroupIndex, artItemIndex);
 
-        $(".artistArea_w").addClass('mobileShow');        
+        $(".artistArea_w").addClass('mobileShow');
+        _disableFullPageScrolling();
     });
-    //map 팝업 X
+    // map-list 팝업 X
     $(".map-popup-close-btn").on('click', function() {
         _hideMapPopupContents();
         // $(this).parents(".artistArea_w").removeClass('mobileShow');
-    });    
+        _enableFullPageScrolling();
+    });
 }
 
 //모바일 전체메뉴
@@ -65,8 +72,8 @@ function _initMapList() {
     $('.map-list-item').mouseover(function() {
         // $(this).css('color', 'red').css('cursor', 'pointer');
         // $(this).addClass('active');
-        const number = parseInt($(this).attr('art-item-index'));
-        __mapItemActive(number);
+        const groupIndex = parseInt($(this).attr('art-group-index'));
+        __mapItemActive(groupIndex);
     });
 }
 
@@ -82,8 +89,8 @@ function _initMapMarker() {
     });
     $('.map-marker').mouseover(function() {
         // $(this).addClass('active');
-        const number = parseInt($(this).attr('art-item-index'));
-        __mapItemActive(number);
+        const groupIndex = parseInt($(this).attr('art-group-index'));
+        __mapItemActive(groupIndex);
     });
 }
 
@@ -91,14 +98,9 @@ function __mapItemDefault() {
     $('.map-list-item').removeClass('active');
     $('.map-marker').removeClass('active');
 }
-function __mapItemActive(number) {
-    let index = 0;
-    if(number && number > 0) {
-        index = number - 1;
-    }
-
-    $($('.map-list-item')[index]).addClass('active');
-    $($('.map-marker')[index]).addClass('active');
+function __mapItemActive(groupIndex) {
+    $('.map-list-group-' + groupIndex).addClass('active');
+    $('.map-marker.map-marker-group-' + groupIndex).addClass('active');
 }
 
 let swiper;
@@ -109,6 +111,7 @@ function initSwiper() {
         slidesPerView: 1,
         spaceBetween: 0,
         freeMode: false,
+        autoplay: false,
         speed: 1000,
         pagination: {
             el: '.swiper-pagination',
@@ -146,9 +149,10 @@ function initSwiper() {
     });
 }
 
+let isItemScroll = false;
 function initFullPage() {
     $('#yraf-navi').hide();
-    $('#fullpage').fullpage({
+    const fullPageOption = {
         sectionsColor: ['#ffffff', '#8ABADA', '#ffffff', '#777777'],
         anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
         menu: '#menu',
@@ -156,6 +160,7 @@ function initFullPage() {
         scrollOverflow: true,
     //      scrollBar: true,
         onLeave: function(origin, destination, direction) {
+            // console.log('[fullPage] onLeave - origin: ', origin, ' / destination: ', destination, ' / direction: ', direction);
             if (destination == 1) {
                 $('#yraf-navi').hide();
             } else {
@@ -164,6 +169,7 @@ function initFullPage() {
 
             // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
             $('#fullpage').on('scroll touchmove mousewheel', function(event) {
+                // console.log('[fullPage] onLeave - #fullpage scroll touchmove mousewheel event: ', event);
                 event.preventDefault();
                 event.stopPropagation();
                 return false;
@@ -171,6 +177,7 @@ function initFullPage() {
             swiper.mousewheel.disable();
         },
         afterLoad: function(anchorLink, index) {
+            // console.log('[fullPage] afterLoad - #fullpage anchorLink: ',  anchorLink, ' / index: ', index);
             // 전환이 끝난후 이벤트풀기
             $('#fullpage').off('scroll mousewheel');
             if(!$(".fp-completely .swiper-wrapper").length > 0) {
@@ -182,8 +189,48 @@ function initFullPage() {
             if(!$(".sec2").hasClass("active")) {
                 $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
             }
+        },
+        beforeLeave: function(origin, destination, direction, trigger) {
+            console.log('[fullPage] beforeLeave() argumnets: ', arguments);
+        },
+        afterRender: function() {
+            console.log('[fullPage] afterRender() argumnets: ', arguments);
+        }, 
+        afterResize: function(width, height) {
+            console.log('[fullPage] afterResize() argumnets: ', arguments);
+        },
+        afterReBuild: function() {
+            console.log('[fullPage] afterReBuild() argumnets: ', arguments);
+        },
+        afterResponsive: function(isResponsive) {
+            console.log('[fullPage] afterResponsive() argumnets: ', arguments);
+        },
+        afterSlideLoad: function(section, origin, destination, direction, trigger) {
+            console.log('[fullPage] afterSlideLoad() argumnets: ', arguments);
+        },
+        onSlideLeave: function(section, origin, destination, direction, trigger) {
+            console.log('[fullPage] onSlideLeave() argumnets: ', arguments);
+        },
+        onScrollOverflow: function(section, slide, position, direction) {
+            console.log('[fullPage] onScrollOverflow() argumnets: ', arguments);
         }
+    };
+    $('#fullpage').fullpage(fullPageOption);
+
+    $('.scrollStyle').on('mouseenter mouseover', function(event) {
+        $.fn.fullpage.setAllowScrolling(false);
     });
+    $('.scrollStyle').on('mouseleave mouseout', function(event) {
+        $.fn.fullpage.setAllowScrolling(true);
+    });
+}
+
+function _enableFullPageScrolling() {
+    $.fn.fullpage.setAllowScrolling(true);
+}
+
+function _disableFullPageScrolling() {
+    $.fn.fullpage.setAllowScrolling(false);
 }
 
 function initArticlePlanningContents() {
@@ -223,7 +270,7 @@ function getInstargramData() {
 
     // Generate Token 에서 토큰만 갱신
     // https://developers.facebook.com/apps/1357941785153009/instagram-basic-display/basic-display/
-    var token = '';
+    var token = 'IGQWRQR0EyN21YRndFbnhVLV9zWk54THNGcGF5ZAEQybUNUeGw0V05VRFVSbG9RdmZANWmg5dm1WQmp2YnNwUDNYeTAwR3pIZAFdkNWhrYWNpRWdfUE1vR3hqRjE2MWMwLXBzM3hBc2ZAvbW1MNHdubk5EakppSGgteXcZD';
     $.ajax({
         type: "GET",
         dataType: "jsonp",
@@ -264,7 +311,7 @@ function joinClick(index) {
     }
 }
 
-function _makeMapPopupContents(index) {
+function _makeMapPopupContents(groupIndex, itemIndex) {
     const $popup = $('#map-art-popup');
     $popup.removeClass('line-yellow');
     $popup.removeClass('line-pink');
@@ -278,7 +325,7 @@ function _makeMapPopupContents(index) {
     $popup.removeClass('line-darkblue');
 
     let lineClass = '';
-    switch (index) {
+    switch (groupIndex) {
         case 1: lineClass = 'line-yellow'; break;
         case 2: lineClass = 'line-pink'; break;
         case 3: lineClass = 'line-skyblue'; break;
@@ -290,12 +337,12 @@ function _makeMapPopupContents(index) {
         case 9: lineClass = 'line-darkgreen'; break;
         case 10: lineClass = 'line-darkblue'; break;
     }
-    if(lineClass != '') {
-        $popup.addClass(lineClass);
+    if(groupIndex != '') {
+        $popup.addClass(groupIndex);
     }
 
     $('.art-item-wrap').hide();
-    $('.art-item-' + index).show();
+    $('#popup-art-item-' + itemIndex).show();
 };
 
 function _hideMapPopupContents() {
