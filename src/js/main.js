@@ -270,7 +270,7 @@ function getInstargramData() {
 
     // Generate Token 에서 토큰만 갱신
     // https://developers.facebook.com/apps/1357941785153009/instagram-basic-display/basic-display/
-    var token = 'IGQWRQR0EyN21YRndFbnhVLV9zWk54THNGcGF5ZAEQybUNUeGw0V05VRFVSbG9RdmZANWmg5dm1WQmp2YnNwUDNYeTAwR3pIZAFdkNWhrYWNpRWdfUE1vR3hqRjE2MWMwLXBzM3hBc2ZAvbW1MNHdubk5EakppSGgteXcZD';
+    var token = '';
     $.ajax({
         type: "GET",
         dataType: "jsonp",
