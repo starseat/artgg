@@ -5732,3 +5732,11 @@ button:hover {
   background-size: 100% auto;
   background-image: url("./../img/instagram_icon_color.png");
 }/*# sourceMappingURL=style.css.map */
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 40px !important;
+}
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px)) !important;
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px)) !important;
+}
