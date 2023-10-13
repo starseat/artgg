@@ -186,7 +186,7 @@ function initFullPage() {
             if(swiper) {
                 swiper.mousewheel.enable();
             }
-            if(!$(".sec2").hasClass("active")) {
+            if(!$(".sec4").hasClass("active")) {
                 $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
             }
         },
