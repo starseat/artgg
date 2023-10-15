@@ -9,7 +9,10 @@ function init() {
 
     initMap();
     initSwiper();
-    initFullPage();
+    // if(!isMobile()) {
+        initFullPage();
+    // }
+    
     initArticlePlanningContents();
     initProgramBackground();
     
@@ -54,8 +57,7 @@ function allMenu(){
     $(".hamburger").on('click', function() {
         $(".menuList_w").toggleClass('menuOpen');
         $(".hamburger").toggleClass('is-active');
-    });
-    
+    });    
 }
 
 function initMap() {
@@ -154,7 +156,7 @@ function initFullPage() {
     $('#yraf-navi').hide();
     const fullPageOption = {
         sectionsColor: ['#ffffff', '#8ABADA', '#ffffff', '#777777'],
-        anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
+        anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5', 'sec6'],
         menu: '#menu',
         scrollingSpeed: 1000,
         scrollOverflow: true,
@@ -177,18 +179,19 @@ function initFullPage() {
             swiper.mousewheel.disable();
         },
         afterLoad: function(anchorLink, index) {
-            // console.log('[fullPage] afterLoad - #fullpage anchorLink: ',  anchorLink, ' / index: ', index);
+            // console.log('[fullPage] afterLoad - #fullpage anchorLink: ',  anchor Link, ' / index: ', index);
             // 전환이 끝난후 이벤트풀기
             $('#fullpage').off('scroll mousewheel');
-            if(!$(".fp-completely .swiper-wrapper").length > 0) {
+            if(!$(".fp-completely .swiper-wrapper").length >= 0) {
                 $('#fullpage').off('touchmove'); // 모바일분기
             }
             if(swiper) {
                 swiper.mousewheel.enable();
             }
-            if(!$(".sec4").hasClass("active")) {
+            // if($(".sec4").hasClass("active")) {
+            if( !(['sec2', 'sec3', 'sec4', 'sec5'].indexOf(anchorLink) >= 0)) {
                 $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
-            }
+            }            
         },
         beforeLeave: function(origin, destination, direction, trigger) {
             console.log('[fullPage] beforeLeave() argumnets: ', arguments);
@@ -348,4 +351,11 @@ function _makeMapPopupContents(groupIndex, itemIndex) {
 function _hideMapPopupContents() {
     console.log('_hideMapPopupContents');
     $('.map-popup-close-btn').parents(".artistArea_w").removeClass('mobileShow');
+}
+
+function isMobile() {
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        return true;
+    }
+    return false;
 }

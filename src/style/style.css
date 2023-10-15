@@ -4002,6 +4002,7 @@ html, body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, fo
   padding: 0;
   font-size: 16px;
   line-height: 1.25;
+  scroll-behavior: smooth;
 }
 
 img, fieldset {
@@ -5021,6 +5022,12 @@ button:hover {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+}
+.overviewVideo div iframe {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .exhibitionList {
@@ -5731,12 +5738,48 @@ button:hover {
   height: 27px;
   background-size: 100% auto;
   background-image: url("./../img/instagram_icon_color.png");
-}/*# sourceMappingURL=style.css.map */
+}
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 40px !important;
 }
+
 .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px)) !important;
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px)) !important;
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px)) !important;
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px)) !important;
 }
+
+.icon_scroll_mouse {
+  display: block;
+  z-index: 5;
+  width: 88px;
+  height: 88px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  position: Absolute;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .icon_scroll_mouse {
+    display: none;
+  }
+}
+
+.icon_scroll_mouse .icon_mouse {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  animation: mouseMove 1.3s ease-out infinite;
+}
+@keyframes mouseMove {
+  0% {
+    transform: translateY(-60px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
