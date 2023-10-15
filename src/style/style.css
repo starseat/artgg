@@ -5149,6 +5149,7 @@ button:hover {
   width: 12px;
   height: 12px;
   margin-top: 3px;
+  position: relative;
 }
 .mapInfoList_w .mapInfoList_text .mapInfoList_title {
   display: block;
