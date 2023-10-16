@@ -5146,10 +5146,11 @@ button:hover {
 .mapInfoList_w .mapInfoList_text .marker {
   display: block;
   flex-shrink: 0;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin-top: 3px;
   position: relative;
+  border-radius: 100%;
 }
 .mapInfoList_w .mapInfoList_text .mapInfoList_title {
   display: block;
